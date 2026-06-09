@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Work — Craft with Brennan · SG Interior</title>
+  <meta name="description" content="A selection of residential and commercial projects designed by Brennan at SG Interior." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">Craft <span>with Brennan</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="work.html" class="active" aria-current="page">My Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Get In Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container">
+      <p class="eyebrow">My Work</p>
+      <h1>Projects.</h1>
+      <p style="max-width: 60ch; margin-top: 1rem;">Residential and commercial — each space designed with the same intention. Click any project to see the full gallery.</p>
+
+      <!-- Filter tabs -->
+      <div class="filter-tabs" style="margin-top: 2rem;">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+      </div>
+
+      <div class="project-grid" style="margin-top: 2.5rem;">
+
+        <a href="projects/geylang.html" class="project-card" data-type="residential">
+          <div class="thumb">
+            <img src="photos/geylang/photo-01.jpg" alt="20A Lor 3 Geylang" loading="lazy" />
+          </div>
+          <div class="meta-row">
+            <h3>20A Lor 3 Geylang</h3>
+            <span class="meta">Condo</span>
+          </div>
+        </a>
+
+        <a href="projects/tampines-936.html" class="project-card" data-type="residential">
+          <div class="thumb">
+            <img src="photos/tampines-936/photo-01.jpg" alt="936 Tampines" loading="lazy" />
+          </div>
+          <div class="meta-row">
+            <h3>936 Tampines</h3>
+            <span class="meta">HDB</span>
+          </div>
+        </a>
+
+        <a href="projects/tampines-965.html" class="project-card" data-type="residential">
+          <div class="thumb">
+            <img src="photos/tampines-965/photo-01.jpg" alt="965 Tampines" loading="lazy" />
+          </div>
+          <div class="meta-row">
+            <h3>965 Tampines</h3>
+            <span class="meta">HDB</span>
+          </div>
+        </a>
+
+        <a href="projects/jurong.html" class="project-card" data-type="residential">
+          <div class="thumb">
+            <img src="photos/jurong/photo-01.jpg" alt="Jurong West" loading="lazy" />
+          </div>
+          <div class="meta-row">
+            <h3>Jurong West</h3>
+            <span class="meta">HDB</span>
+          </div>
+        </a>
+
+        <a href="projects/yishun.html" class="project-card" data-type="residential">
+          <div class="thumb">
+            <img src="photos/yishun/photo-01.jpg" alt="Yishun" loading="lazy" />
+          </div>
+          <div class="meta-row">
+            <h3>Yishun</h3>
+            <span class="meta">HDB</span>
+          </div>
+        </a>
+
+        <a href="projects/blue-tiffin.html" class="project-card" data-type="commercial">
+          <div class="thumb">
+            <img src="photos/blue-tiffin/photo-01.jpg" alt="Blue Tiffin" loading="lazy" />
+          </div>
+          <div class="meta-row">
+            <h3>Blue Tiffin</h3>
+            <span class="meta">F&amp;B</span>
+          </div>
+        </a>
+
+        <a href="projects/foundry.html" class="project-card" data-type="commercial">
+          <div class="thumb">
+            <img src="photos/foundry/photo-01.jpg" alt="The Foundry" loading="lazy" />
+          </div>
+          <div class="meta-row">
+            <h3>The Foundry</h3>
+            <span class="meta">Commercial</span>
+          </div>
+        </a>
+
+        <a href="projects/white-tiffin.html" class="project-card" data-type="commercial">
+          <div class="thumb">
+            <img src="photos/white-tiffin/photo-01.jpg" alt="White Tiffin" loading="lazy" />
+          </div>
+          <div class="meta-row">
+            <h3>White Tiffin</h3>
+            <span class="meta">F&amp;B</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Craft with Brennan</h4>
+          <p style="color: rgba(250,247,242,0.7); max-width: 32ch;">Interior designer at SG Interior. Japanese-influenced, luxury-considered spaces.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">My Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Get In Touch</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Find Me</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/brennen.sginterior" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@brennen.sginterior" target="_blank" rel="noopener">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Craft with Brennan · SG Interior (SGI Design Lab)</span>
+        <span>Site v0.1 · backbone</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

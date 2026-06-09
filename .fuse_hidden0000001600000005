@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Craft with Brennan · SG Interior</title>
+  <meta name="description" content="Brennan — interior designer at SG Interior. Japanese-influenced, luxury-considered design across residential and commercial." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">Craft <span>with Brennan</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="work.html">My Work</a>
+        <a href="about.html" class="active" aria-current="page">About</a>
+        <a href="contact.html">Get In Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container">
+      <div class="about-layout">
+        <div class="about-text">
+          <p class="eyebrow">About</p>
+          <h1>A little about me.</h1>
+
+          <p>I'm Brennan. Interior designer at SG Interior for the past four years, across close to seventy projects — residential, commercial, and everything in between.</p>
+
+          <p>I'm not a flashy person. I've always believed good design should speak by itself. If you have to explain it, something is off. What I care about is getting every decision right — the material, the proportion, the quiet detail that most people won't consciously name but would miss if it wasn't there.</p>
+
+          <p>My style draws from Japanese design: restraint, calm, a considered relationship with negative space. Layered with a luxury sensibility I've developed working across high-end residential and commercial projects. The two inform each other — commercial work demands a rigour that makes residential design sharper. I bring that to every brief.</p>
+
+          <div class="divider"></div>
+
+          <h3>What I work on</h3>
+          <ul style="padding-left: 1.2rem; margin-bottom: 1.5rem;">
+            <li style="margin-bottom: 0.5rem;">Residential — HDB, BTO, condo, landed</li>
+            <li style="margin-bottom: 0.5rem;">Commercial — F&amp;B, retail, office</li>
+            <li style="margin-bottom: 0.5rem;">Full design from concept to completion</li>
+            <li style="margin-bottom: 0.5rem;">Materials and finish specification</li>
+            <li style="margin-bottom: 0.5rem;">Site supervision and contractor coordination</li>
+          </ul>
+
+          <div class="divider"></div>
+
+          <h3>A few things about me</h3>
+          <p>I'm a new father — just moved into a new home myself, which changes how you think about every material decision you make for someone else's family. I'm drawn to commercial projects for the discipline they require. And I've been recognised three times for the Rolex incentive at SG Interior — something I don't mention much, but it reflects how seriously I take the work.</p>
+
+          <p>My aspiration isn't to be the loudest name in design. It's to become a bespoke, renowned designer known for the work itself — not the marketing around it.</p>
+
+          <p>If that sounds like someone you'd want to work with — <a href="contact.html">I'd like to hear about your project</a>.</p>
+        </div>
+
+        <div class="about-portrait">
+          <img src="assets/images/brennen-portrait.jpg" alt="Brennan — interior designer at SG Interior" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <p class="eyebrow">Get In Touch</p>
+        <h2>Want to talk about your project?</h2>
+        <p>Reach out and I'll get back to you within a couple of working days.</p>
+        <a href="contact.html" class="btn btn-accent mt-2">Get In Touch →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Craft with Brennan</h4>
+          <p style="color: rgba(250,247,242,0.7); max-width: 32ch;">Interior designer at SG Interior. Japanese-influenced, luxury-considered spaces.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">My Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Get In Touch</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Find Me</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/brennan.sginterior" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@brennan.sginterior" target="_blank" rel="noopener">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Craft with Brennan · SG Interior (SGI Design Lab)</span>
+        <span>Site v0.1 · backbone</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

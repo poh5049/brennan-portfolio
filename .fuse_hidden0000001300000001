@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Craft with Brennen — Interior Designer · SG Interior</title>
+  <meta name="description" content="Craft with Brennen — interior designer in Singapore. Japanese-influenced, luxury-considered spaces built with precision and intention." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">Craft <span>with Brennen</span></a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="work.html">My Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Get In Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== FULL-BLEED HERO — work takes centre stage ===== -->
+    <section class="hero-fullbleed">
+      <div class="hero-bg">
+        <img src="photos/jurong/photo-01.jpg" alt="Interior by Brennen" />
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Interior Designer</p>
+        <h1>Design that speaks for itself.</h1>
+        <p>Japanese restraint. Considered luxury. Every detail deliberate.</p>
+        <div class="cta-row">
+          <a href="work.html" class="btn btn-accent">View My Work →</a>
+          <a href="contact.html" class="btn">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INTRO STRIP — portrait is compact, not the centrepiece ===== -->
+    <section class="container">
+      <div class="intro-strip">
+        <div class="intro-portrait">
+          <img src="assets/images/brennen-portrait.jpg" alt="Brennen — interior designer" />
+        </div>
+        <div class="intro-text reveal">
+          <p>I'm Brennen. I'm naturally not a flashy person — I believe</p>
+          <p style="font-size: clamp(1.6rem, 3.2vw, 2.4rem); font-family: var(--font-display); font-style: italic; font-weight: 400; line-height: 1.2; color: var(--accent); margin-top: 0.4rem; margin-bottom: 1.2rem; max-width: none;">the design should speak by itself.</p>
+          <p class="sub">Four years at SG Interior. Close to seventy projects across residential and commercial. The same intention in every one.</p>
+          <a href="about.html" class="btn mt-2" style="margin-top: 1.5rem;">About Me →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SELECTED WORK — 6 projects ===== -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow reveal">Selected Work</p>
+        <h2 class="reveal delay-1">Recent projects.</h2>
+
+        <div class="project-grid" style="margin-top: 2.5rem;">
+
+          <a href="projects/geylang.html" class="project-card reveal">
+            <div class="thumb">
+              <img src="photos/geylang/photo-01.jpg" alt="20A Lor 3 Geylang" loading="lazy" />
+            </div>
+            <div class="meta-row">
+              <h3>20A Lor 3 Geylang</h3>
+              <span class="meta">Condo</span>
+            </div>
+          </a>
+
+          <a href="projects/jurong.html" class="project-card reveal delay-1">
+            <div class="thumb">
+              <img src="photos/jurong/photo-01.jpg" alt="Jurong West" loading="lazy" />
+            </div>
+            <div class="meta-row">
+              <h3>Jurong West</h3>
+              <span class="meta">HDB</span>
+            </div>
+          </a>
+
+          <a href="projects/blue-tiffin.html" class="project-card reveal delay-2">
+            <div class="thumb">
+              <img src="photos/blue-tiffin/photo-01.jpg" alt="Blue Tiffin" loading="lazy" />
+            </div>
+            <div class="meta-row">
+              <h3>Blue Tiffin</h3>
+              <span class="meta">F&amp;B</span>
+            </div>
+          </a>
+
+          <a href="projects/tampines-936.html" class="project-card reveal">
+            <div class="thumb">
+              <img src="photos/tampines-936/photo-01.jpg" alt="936 Tampines" loading="lazy" />
+            </div>
+            <div class="meta-row">
+              <h3>936 Tampines</h3>
+              <span class="meta">HDB</span>
+            </div>
+          </a>
+
+          <a href="projects/foundry.html" class="project-card reveal delay-1">
+            <div class="thumb">
+              <img src="photos/foundry/photo-01.jpg" alt="The Foundry" loading="lazy" />
+            </div>
+            <div class="meta-row">
+              <h3>The Foundry</h3>
+              <span class="meta">Commercial</span>
+            </div>
+          </a>
+
+          <a href="projects/white-tiffin.html" class="project-card reveal delay-2">
+            <div class="thumb">
+              <img src="photos/white-tiffin/photo-01.jpg" alt="White Tiffin" loading="lazy" />
+            </div>
+            <div class="meta-row">
+              <h3>White Tiffin</h3>
+              <span class="meta">F&amp;B</span>
+            </div>
+          </a>
+
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center;">
+          <a href="work.html" class="btn btn-accent">View All Projects →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONVICTION ===== -->
+    <section class="section section-alt">
+      <div class="container">
+        <p class="eyebrow reveal">How I Work</p>
+        <h2 class="reveal delay-1">Japanese restraint.<br/>Luxury in the detail.</h2>
+        <p class="reveal delay-2" style="margin-top: 1.5rem;">My style draws from Japanese design — restraint, calm, a considered use of negative space. Layered with a luxury sensibility built from working across residential and commercial projects. The discipline of commercial work makes residential design sharper. I bring that rigour to every brief.</p>
+        <p class="reveal delay-2">What I care about is getting every decision right: the material, the proportion, the quiet detail that most people won't consciously name but would miss if it wasn't there.</p>
+        <a href="about.html" class="btn mt-4 reveal delay-3">More about how I work →</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Craft with Brennen</h4>
+          <p style="color: rgba(250,247,242,0.7); max-width: 32ch;">Interior designer at SG Interior. Japanese-influenced, luxury-considered spaces.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">My Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Get In Touch</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Find Me</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/brennen.sginterior" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@brennen.sginterior" target="_blank" rel="noopener">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Craft with Brennen · SG Interior (SGI Design Lab)</span>
+        <span>Site v0.1 · backbone</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

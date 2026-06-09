@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Brennan Phua — Senior Interior Designer at SG Interior Design, Singapore. Spaces with identity."/>
+<title>Brennan Phua — Interior Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet"/>
+<link rel="preload" as="image" href="brennen-hero.jpg"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f0e0d;
+  --text:#d8d0c4;
+  --text-dim:#6e6860;
+  --gold:#8a7560;
+  --gold-dim:rgba(138,117,96,.15);
+  --ease:cubic-bezier(0.16,1,0.3,1);
+  --ease-out:cubic-bezier(0.22,1,0.36,1);
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:'Montserrat',sans-serif;font-weight:300;
+  overflow-x:hidden;cursor:none;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+::selection{background:rgba(138,117,96,.22);color:var(--text)}
+
+/* ── Loader ── */
+#loader{
+  position:fixed;inset:0;background:var(--bg);z-index:9999;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
+  transition:opacity 1.6s var(--ease),visibility 1.6s;
+}
+#loader.gone{opacity:0;visibility:hidden;pointer-events:none}
+.loader-line{width:1px;height:0;background:var(--gold);animation:loaderGrow 1.1s var(--ease) .2s forwards}
+.loader-word{font-size:7px;letter-spacing:.6em;text-transform:uppercase;color:var(--text-dim);opacity:0;animation:fu .8s var(--ease) .9s forwards}
+@keyframes loaderGrow{to{height:72px}}
+
+/* ── Cursor ── */
+.cur{
+  position:fixed;width:6px;height:6px;background:var(--gold);
+  border-radius:50%;pointer-events:none;z-index:9998;
+  transform:translate(-50%,-50%);
+  transition:width .3s var(--ease),height .3s var(--ease),background .3s;
+}
+.cur-r{
+  position:fixed;width:32px;height:32px;
+  border:1px solid rgba(138,117,96,.35);border-radius:50%;
+  pointer-events:none;z-index:9997;transform:translate(-50%,-50%);
+  transition:width .5s var(--ease),height .5s var(--ease),border-color .4s;
+}
+.cur.h{width:12px;height:12px;background:transparent;border:1px solid var(--gold)}
+.cur-r.h{width:56px;height:56px;border-color:rgba(138,117,96,.12)}
+
+/* ── Nav ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:40px 60px;
+  transition:padding .7s var(--ease),background .7s,border-color .7s;
+  border-bottom:1px solid transparent;
+  opacity:0;animation:fu 1s var(--ease) 1.6s forwards;
+}
+nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:rgba(138,117,96,.08)}
+.nav-logo{
+  font-size:10px;letter-spacing:.38em;text-transform:uppercase;
+  color:var(--text);font-weight:400;text-decoration:none;
+  transition:opacity .3s;
+}
+.nav-logo:hover{opacity:.55}
+.nav-right{display:flex;align-items:center;gap:48px}
+.nav-right a{
+  font-size:8px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--text-dim);text-decoration:none;
+  transition:color .4s;position:relative;
+  background:none;border:none;cursor:none;
+}
+.nav-right a::after{
+  content:'';position:absolute;bottom:-3px;left:0;
+  width:0;height:1px;background:var(--gold);
+  transition:width .4s var(--ease);
+}
+.nav-right a:hover{color:var(--text)}
+.nav-right a:hover::after{width:100%}
+
+/* ── About Overlay ── */
+#about-overlay{
+  position:fixed;inset:0;z-index:300;
+  display:flex;pointer-events:none;visibility:hidden;
+}
+#about-overlay.open{pointer-events:all;visibility:visible}
+.about-backdrop{
+  position:absolute;inset:0;background:rgba(10,9,8,.65);
+  opacity:0;transition:opacity .8s var(--ease);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+#about-overlay.open .about-backdrop{opacity:1}
+.about-panel{
+  position:relative;margin-left:auto;
+  width:min(580px,92vw);height:100%;
+  background:var(--bg);
+  border-left:1px solid rgba(138,117,96,.1);
+  padding:100px 56px 80px;
+  overflow-y:auto;
+  transform:translateX(100%);
+  transition:transform .9s var(--ease);
+  display:flex;flex-direction:column;justify-content:center;
+}
+#about-overlay.open .about-panel{transform:translateX(0)}
+.about-close{
+  position:absolute;top:40px;right:48px;
+  width:32px;height:32px;
+  display:flex;align-items:center;justify-content:center;
+  cursor:none;opacity:.5;transition:opacity .3s;
+  background:none;border:none;
+}
+.about-close:hover{opacity:1}
+.about-close::before,.about-close::after{
+  content:'';position:absolute;width:20px;height:1px;background:var(--text);
+}
+.about-close::before{transform:rotate(45deg)}
+.about-close::after{transform:rotate(-45deg)}
+.about-label{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:40px}
+.about-tagline{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(26px,3.2vw,44px);
+  font-weight:300;font-style:italic;
+  line-height:1.2;color:var(--text);margin-bottom:48px;
+}
+.about-divider{width:32px;height:1px;background:rgba(138,117,96,.3);margin-bottom:44px}
+.about-bio{
+  font-size:13px;line-height:2;
+  color:var(--text-dim);letter-spacing:.02em;
+  font-weight:300;margin-bottom:24px;
+}
+.about-bio:last-child{margin-bottom:0}
+
+/* ── Reveal ── */
+.r{opacity:0;transform:translateY(44px);transition:opacity 1.3s var(--ease),transform 1.3s var(--ease)}
+.r.v{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.38s}.d4{transition-delay:.56s}
+.d5{transition-delay:.76s}.d6{transition-delay:.98s}.d7{transition-delay:1.22s}.d8{transition-delay:1.48s}
+
+/* ── Hero ── */
+#hero{width:100vw}
+.hero-photo{
+  position:relative;width:100%;height:88vh;overflow:hidden;
+  animation:heroKB 5s var(--ease-out) both;
+}
+@keyframes heroKB{from{transform:scale(1.07)}to{transform:scale(1)}}
+.hero-img{
+  width:100%;height:100%;
+  object-fit:cover;object-position:90% 20%;
+  will-change:transform;
+}
+.hero-photo-grad{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(to top, rgba(15,14,13,.82) 0%, rgba(15,14,13,.2) 42%, transparent 68%),
+    linear-gradient(to right, rgba(15,14,13,.24) 0%, transparent 52%);
+}
+.hero-text{
+  position:absolute;bottom:40px;left:60px;z-index:2;
+  display:flex;flex-direction:column;gap:10px;
+}
+.hero-tag{
+  font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);
+  opacity:0;animation:fu 1s var(--ease) 1.5s forwards;
+}
+.hero-name{
+  font-size:clamp(32px,4.6vw,70px);font-weight:100;
+  letter-spacing:.22em;text-transform:uppercase;
+  line-height:1;color:var(--text);overflow:hidden;
+}
+.hero-name span{display:block;animation:lu 1.3s var(--ease) 1.7s both}
+
+/* ── Works ── */
+#works{padding:80px 60px}
+.works-header{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  margin-bottom:64px;
+  border-bottom:1px solid rgba(138,117,96,.1);
+  padding-bottom:24px;
+}
+.works-label{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold)}
+.works-count{font-size:8px;letter-spacing:.22em;color:var(--text-dim)}
+.works-grid{
+  columns:3;
+  column-gap:3px;
+}
+.work-item{
+  position:relative;overflow:hidden;background:#1a1815;
+  cursor:none;display:block;text-decoration:none;
+  break-inside:avoid;margin-bottom:3px;
+}
+/* Varied aspect ratios — organic editorial masonry rhythm */
+.work-item:nth-child(7n+1){aspect-ratio:2/3}
+.work-item:nth-child(7n+2){aspect-ratio:3/4}
+.work-item:nth-child(7n+3){aspect-ratio:4/5}
+.work-item:nth-child(7n+4){aspect-ratio:1}
+.work-item:nth-child(7n+5){aspect-ratio:3/4}
+.work-item:nth-child(7n+6){aspect-ratio:2/3}
+.work-item:nth-child(7n){aspect-ratio:4/3}
+/* Featured solo-rectangle panels — full-width blocks outside the column grid */
+.work-item.featured{
+  display:block;
+  width:100%;
+  aspect-ratio:21/9;
+  margin-bottom:3px;
+}
+.work-item.featured .work-info{
+  padding:56px 48px 44px;
+  transform:translateY(0);opacity:1;
+}
+.work-item.featured .work-name{font-size:16px;letter-spacing:.22em}
+.work-item.featured .work-num{font-size:8px}
+.work-item.featured .work-type{font-size:8px}
+.work-img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform 1.4s var(--ease),filter 1.4s var(--ease);
+  filter:brightness(.76) saturate(.85);
+}
+.work-item:hover .work-img{filter:brightness(.94) saturate(1.05);transform:scale(1.06)}
+.work-info{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:40px 26px 28px;
+  background:linear-gradient(to top,rgba(15,14,13,.92) 0%,rgba(15,14,13,.3) 60%,transparent 100%);
+  transform:translateY(12px);opacity:0;
+  transition:transform .7s var(--ease),opacity .7s var(--ease);
+}
+.work-item:hover .work-info{transform:translateY(0);opacity:1}
+.work-num{
+  font-size:7px;letter-spacing:.4em;color:var(--gold);
+  opacity:.6;margin-bottom:6px;
+}
+.work-type{font-size:7px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.work-name{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--text);font-weight:300}
+
+/* ── Statement ── */
+#statement{
+  padding:140px 60px;
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;
+  border-top:1px solid rgba(138,117,96,.08);
+  border-bottom:1px solid rgba(138,117,96,.08);
+}
+.stmt-line{
+  height:1px;background:rgba(138,117,96,.3);margin:0 auto 56px;
+  width:0;transition:width 1.2s var(--ease);
+}
+.stmt-line.v{width:72px}
+.stmt-text{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(36px,5.5vw,82px);
+  font-weight:300;font-style:italic;
+  line-height:1.2;color:var(--text);
+  max-width:960px;letter-spacing:.01em;
+}
+/* word reveal */
+.word-outer{display:inline-block;overflow:hidden;vertical-align:bottom}
+.word-inner{
+  display:inline-block;
+  transform:translateY(112%) rotate(1.5deg);
+  opacity:0;
+  transition:transform 1.1s var(--ease),opacity .5s ease;
+}
+.stmt-text.revealed .word-inner{transform:translateY(0) rotate(0deg);opacity:1}
+.stmt-attr{
+  font-size:7px;letter-spacing:.45em;text-transform:uppercase;
+  color:var(--text-dim);margin-top:52px;
+  opacity:0;transition:opacity 1s ease;
+}
+.stmt-attr.revealed{opacity:1}
+
+/* ── Contact ── */
+#contact{
+  padding:140px 60px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 100px;
+  align-items:start;
+}
+.contact-left{display:flex;flex-direction:column}
+.contact-pre{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:32px}
+.contact-heading{
+  font-size:clamp(34px,4vw,68px);font-weight:100;
+  letter-spacing:.16em;text-transform:uppercase;
+  line-height:1.05;color:var(--text);margin-bottom:60px;
+}
+.contact-details{
+  display:flex;flex-direction:column;gap:28px;
+  border-top:1px solid rgba(138,117,96,.08);padding-top:40px;
+}
+.detail .lbl{font-size:7px;letter-spacing:.4em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
+.detail .val{font-size:10px;letter-spacing:.14em;color:var(--text-dim)}
+.detail a{color:var(--text-dim);text-decoration:none;transition:color .3s}
+.detail a:hover{color:var(--gold)}
+
+/* ── Contact Form ── */
+.contact-right{padding-top:4px}
+.cf-label{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:40px;display:block}
+.cf-group{position:relative;margin-bottom:0}
+.cf-field{
+  width:100%;background:transparent;border:none;
+  border-bottom:1px solid rgba(138,117,96,.2);
+  padding:18px 0 14px;
+  font-family:'Montserrat',sans-serif;font-size:11px;
+  font-weight:300;letter-spacing:.08em;
+  color:var(--text);outline:none;
+  transition:border-color .4s var(--ease);
+  appearance:none;-webkit-appearance:none;
+}
+.cf-field::placeholder{color:var(--text-dim);transition:opacity .3s}
+.cf-field:focus::placeholder{opacity:.4}
+.cf-field:focus{border-color:rgba(138,117,96,.6)}
+.cf-field:focus + .cf-bar{transform:scaleX(1)}
+.cf-bar{
+  position:absolute;bottom:0;left:0;
+  width:100%;height:1px;background:var(--gold);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .5s var(--ease);
+}
+select.cf-field option{background:var(--bg);color:var(--text)}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.cf-textarea{resize:none;height:100px;padding-top:18px}
+.cf-submit{
+  margin-top:48px;
+  background:transparent;border:1px solid rgba(138,117,96,.35);
+  padding:18px 48px;
+  font-family:'Montserrat',sans-serif;font-size:7px;
+  letter-spacing:.45em;text-transform:uppercase;color:var(--text);
+  cursor:none;position:relative;overflow:hidden;
+  transition:color .5s var(--ease),border-color .5s var(--ease);
+}
+.cf-submit::before{
+  content:'';position:absolute;inset:0;
+  background:var(--gold);
+  transform:translateX(-101%);
+  transition:transform .6s var(--ease);
+}
+.cf-submit:hover{color:var(--bg);border-color:var(--gold)}
+.cf-submit:hover::before{transform:translateX(0)}
+.cf-submit span{position:relative;z-index:1}
+.cf-success{
+  display:none;padding:32px 0;
+  font-size:7px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);
+}
+.cf-form.sent .cf-success{display:block}
+.cf-form.sent .cf-fields{display:none}
+.cf-form.sent .cf-submit{display:none}
+
+/* ── Lightbox ── */
+#lightbox{
+  position:fixed;inset:0;z-index:500;
+  background:rgba(10,9,8,.96);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;
+  transition:opacity .5s var(--ease),visibility .5s;
+  cursor:none;
+}
+#lightbox.open{opacity:1;visibility:visible}
+#lightbox img{
+  max-width:92vw;max-height:90vh;
+  object-fit:contain;
+  transform:scale(.96);
+  transition:transform .6s var(--ease);
+  display:block;
+}
+#lightbox.open img{transform:scale(1)}
+.lb-close{
+  position:absolute;top:36px;right:48px;
+  width:36px;height:36px;
+  display:flex;align-items:center;justify-content:center;
+  cursor:none;opacity:.5;transition:opacity .3s;
+  background:none;border:none;
+}
+.lb-close:hover{opacity:1}
+.lb-close::before,.lb-close::after{
+  content:'';position:absolute;width:22px;height:1px;background:var(--text);
+}
+.lb-close::before{transform:rotate(45deg)}
+.lb-close::after{transform:rotate(-45deg)}
+.lb-info{
+  position:absolute;bottom:40px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  opacity:0;transition:opacity .4s var(--ease) .3s;
+}
+#lightbox.open .lb-info{opacity:1}
+.lb-num{font-size:7px;letter-spacing:.44em;color:var(--gold);text-transform:uppercase}
+.lb-title{font-size:8px;letter-spacing:.28em;color:var(--text-dim);text-transform:uppercase}
+.lb-nav{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:48px;height:80px;
+  display:flex;align-items:center;justify-content:center;
+  cursor:none;opacity:.3;transition:opacity .3s;
+  background:none;border:none;
+}
+.lb-nav:hover{opacity:1}
+.lb-nav::after{
+  content:'';width:10px;height:10px;
+  border-top:1px solid var(--text);
+  border-right:1px solid var(--text);
+}
+.lb-prev{left:24px}.lb-prev::after{transform:rotate(-135deg)}
+.lb-next{right:24px}.lb-next::after{transform:rotate(45deg)}
+
+/* ── Footer ── */
+footer{
+  padding:28px 60px;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(138,117,96,.08);
+}
+.ft-l{font-size:7px;letter-spacing:.32em;text-transform:uppercase;color:var(--text-dim)}
+.ft-r{font-size:7px;letter-spacing:.22em;color:var(--text-dim)}
+
+/* ── Keyframes ── */
+@keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes lu{from{transform:translateY(110%)}to{transform:translateY(0)}}
+@keyframes sp{0%,100%{opacity:.2}50%{opacity:1}}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  nav,#works,#statement,#contact,footer{padding-left:28px;padding-right:28px}
+  nav{padding-top:28px}nav.s{padding-top:18px}
+  .hero-photo{height:70vh}
+  .hero-text{left:28px;bottom:28px}
+  .works-grid{columns:2;column-gap:2px}
+  #contact{grid-template-columns:1fr;gap:64px 0;padding-top:100px;padding-bottom:80px}
+  .contact-details{flex-direction:row;flex-wrap:wrap;gap:36px}
+  .about-panel{padding:80px 32px 60px}
+  .about-close{right:28px}
+  .cf-row{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  nav{padding:20px 20px}
+  nav.s{padding:14px 20px}
+  .nav-logo{font-size:8px;letter-spacing:.22em}
+  .nav-right{gap:20px}
+  .nav-right a{font-size:7px;letter-spacing:.18em}
+  .works-header{flex-direction:column;align-items:flex-start;gap:10px}
+  .stmt-text{font-size:clamp(28px,8vw,48px)}
+  #works,#statement,#contact,footer{padding-left:20px;padding-right:20px}
+  .hero-text{left:20px;bottom:20px}
+  .works-grid{columns:2;column-gap:2px}
+  .work-item{margin-bottom:2px}
+  /* Keep desktop variation — only rein in 4/3 landscape which looks squished at half-phone width */
+  .work-item:nth-child(7n){aspect-ratio:3/4}
+  .work-item.featured{aspect-ratio:16/9}
+}
+</style>
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-line"></div>
+  <p class="loader-word">Brennan Phua</p>
+</div>
+
+<div class="cur" id="cur"></div>
+<div class="cur-r" id="curR"></div>
+
+<!-- About Overlay -->
+<div id="about-overlay">
+  <div class="about-backdrop" id="aboutBackdrop"></div>
+  <div class="about-panel">
+    <button class="about-close" id="aboutClose" aria-label="Close"></button>
+    <p class="about-label">About</p>
+    <h2 class="about-tagline">Spaces with identity.</h2>
+    <div class="about-divider"></div>
+    <p class="about-bio">
+      Brennan Phua is a Singapore-based senior interior designer at SG Interior Design, known for creating homes and commercial spaces that are both beautiful and practical. His work is guided by contrast — light and dark, bold and calm, open and cosy — resulting in interiors that feel personal, thoughtful, and never generic.
+    </p>
+    <p class="about-bio">
+      With a focus on materials, atmosphere, and everyday living, Brennan designs for clients who want more than a standard renovation. They want a space that feels like their own — a place to live, rest, host, and enjoy.
+    </p>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Close"></button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous"></button>
+  <img id="lbImg" src="" alt=""/>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next"></button>
+  <div class="lb-info">
+    <p class="lb-num" id="lbNum"></p>
+    <p class="lb-title" id="lbTitle"></p>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav id="nav">
+  <a class="nav-logo" href="#">Brennan Phua</a>
+  <div class="nav-right">
+    <a href="#" id="aboutBtn">About</a>
+    <a href="#works">Works</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+  <div class="hero-photo">
+    <img class="hero-img" id="heroImg" src="brennen-hero.jpg" alt="Brennan Phua" fetchpriority="high"/>
+    <div class="hero-photo-grad"></div>
+    <div class="hero-text">
+      <p class="hero-tag">Senior Interior Designer &middot; Singapore</p>
+      <h1 class="hero-name"><span>Brennan Phua</span></h1>
+    </div>
+  </div>
+</section>
+
+<!-- Statement -->
+<section id="statement">
+  <div class="stmt-line r"></div>
+  <p class="stmt-text">Spaces with identity.</p>
+  <p class="stmt-attr">Brennan Phua &mdash; Interior Designer</p>
+</section>
+
+<!-- Works -->
+<section id="works">
+  <div class="works-header r">
+    <p class="works-label">Selected Works</p>
+    <p class="works-count">30 Projects &mdash; Singapore</p>
+  </div>
+  <!-- Featured #1: Lor 3 Geylang — full-width solo panel -->
+  <a class="work-item featured r" href="https://brennanphua.com/lor-3-geylang" target="_blank" rel="noopener">
+    <img class="work-img" src="https://brennanphua.com/_assets/media/738263788b44532002a32c1d536eaad0.jpg" alt="Lor 3 Geylang" loading="eager" decoding="async"/>
+    <div class="work-info">
+      <p class="work-num">01</p>
+      <p class="work-type">Residential</p>
+      <p class="work-name">Lor 3 Geylang</p>
+    </div>
+  </a>
+
+  <!-- Grid section 1: items 02–10 -->
+  <div class="works-grid">
+
+    <a class="work-item r" href="https://brennanphua.com/upp-changi-rd" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/e258f1ac89701583a2624a2c9dccb20f.jpg" alt="Upp Changi Rd" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">02</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Upp Changi Rd</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/bras-basah-rd" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/a0b997ca5327a2838487b8263634d06c.jpg" alt="Bras Basah Rd" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">03</p>
+        <p class="work-type">Commercial</p>
+        <p class="work-name">Bras Basah Rd</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/bencoolen-st" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/5f31892e16c9bfcdce764e4056d6fcea.jpg" alt="Bencoolen St" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">04</p>
+        <p class="work-type">Commercial</p>
+        <p class="work-name">Bencoolen St</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/lor-8-toa-payoh" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/56de899d3901e4fa2138b94ae1ac652f.jpg" alt="Lor 8 Toa Payoh" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">05</p>
+        <p class="work-type">Commercial</p>
+        <p class="work-name">Lor 8 Toa Payoh</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/netheravon-rd" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/94fb3472e6bbe6772e2d4b751f30dd5b.png" alt="Netheravon Rd" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">06</p>
+        <p class="work-type">Commercial</p>
+        <p class="work-name">Netheravon Rd</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/tampines-st-96" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/015a3a6e67ad8924c76f9378464350d7.jpg" alt="Tampines St 96" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">07</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Tampines St 96</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/upp-jurong-rd" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/ff0a1a472d67b1ac9bb2641e08c91178.jpg" alt="Upp Jurong Rd" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">08</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Upp Jurong Rd</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/upp-jurong-rd-2" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/52f7410b711dd123ab07931c96040355.jpg" alt="Upp Jurong Rd" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">09</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Upp Jurong Rd</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/circuit-rd" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/413df78986843360218dc6501e55e718.jpg" alt="Circuit Rd" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">10</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Circuit Rd</p>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Featured #2: Orchard Boulevard — full-width solo panel -->
+  <a class="work-item featured r" href="https://brennanphua.com/orchard-boulevard" target="_blank" rel="noopener">
+    <img class="work-img" src="https://brennanphua.com/_assets/media/da0f3e6ee490eba61a7912011b826b68.png" alt="Orchard Boulevard" loading="lazy" decoding="async"/>
+    <div class="work-info">
+      <p class="work-num">11</p>
+      <p class="work-type">Residential</p>
+      <p class="work-name">Orchard Boulevard</p>
+    </div>
+  </a>
+
+  <!-- Grid section 2: items 12–20 -->
+  <div class="works-grid">
+
+    <a class="work-item r" href="https://brennanphua.com/normanton-park" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/41901cdd12fde98541cfd3da223faf22.png" alt="Normanton Park" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">12</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Normanton Park</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/canberra-drive" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/e282a76d34db41b66fb5634ded64345d.png" alt="Canberra Drive" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">13</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Canberra Drive</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/normanton-park-2" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/dfe3f96110c8f65f164809efaa5de1d5.png" alt="Normanton Park" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">14</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Normanton Park</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/choa-chu-kang-ave-3" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/e3cdc7d789e137bbdfb210b06bc6c07f.png" alt="Choa Chu Kang Ave 3" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">15</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Choa Chu Kang Ave 3</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/hillview-rise" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/13528f963ff148c0d83dace57d41fab1.jpg" alt="Hillview Rise" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">16</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Hillview Rise</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/tampines-st-96-2" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/89667afcbe71135ec425c4b85553fd46.jpg" alt="Tampines St 96" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">17</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Tampines St 96</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/north-gaia" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/d353f97784fd7accd8073da6e456bbb0.jpg" alt="North Gaia" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">18</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">North Gaia</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/serangoon-ave-4" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/6c4ff7723fca164dae1e68131a8bad5c.jpg" alt="Serangoon Ave 4" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">19</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Serangoon Ave 4</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/west-coast-vale" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/c4041476303c966ce9ba42f41f4a0cc1.jpg" alt="West Coast Vale" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">20</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">West Coast Vale</p>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Featured #3: Butterworth Lane — full-width solo panel -->
+  <a class="work-item featured r" href="https://brennanphua.com/butterworth-lane" target="_blank" rel="noopener">
+    <img class="work-img" src="https://brennanphua.com/_assets/media/666f960ab1255671ee2654097ec74b0f.png" alt="Butterworth Lane" loading="lazy" decoding="async"/>
+    <div class="work-info">
+      <p class="work-num">21</p>
+      <p class="work-type">Residential</p>
+      <p class="work-name">Butterworth Lane</p>
+    </div>
+  </a>
+
+  <!-- Grid section 3: items 22–30 -->
+  <div class="works-grid">
+
+    <a class="work-item r" href="https://brennanphua.com/upp-aljunied-rd" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/845ca9da19ce3abdb5abd0aa4e87020c.png" alt="Upp Aljunied Rd" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">22</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Upp Aljunied Rd</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/serangoon-garden-way" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/514ea61623c12b7970139b8403d4d9ab.png" alt="Serangoon Garden Way" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">23</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Serangoon Garden Way</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/normanton-park-3" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/ab1108a921c84ed200e927ddb660e187.jpg" alt="Normanton Park" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">24</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Normanton Park</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/choa-chu-kang-ave-3-2" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/284cbd55b2a742e89ac5d8f17330c421.png" alt="Choa Chu Kang Ave 3" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">25</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Choa Chu Kang Ave 3</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/woodlands-cres" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/a1efb9de3b83e4aea212e9e4bf037eed.png" alt="Woodlands Cres" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">26</p>
+        <p class="work-type">Residential</p>
+        <p class="work-name">Woodlands Cres</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/ang-mo-kio-ave-6" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/0a601bb4bed6dfc3e1f8d19506ae3612.png" alt="Ang Mo Kio Ave 6" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">27</p>
+        <p class="work-type">Commercial</p>
+        <p class="work-name">Ang Mo Kio Ave 6</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/bedok-north-st-3" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/c403a57371a4135eedb4ab9acc3c7131.jpg" alt="Bedok North St 3" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">28</p>
+        <p class="work-type">Commercial</p>
+        <p class="work-name">Bedok North St 3</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/anchorvale-rd" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/b5d78b7fd3727a208964462f5d99715c.jpg" alt="Anchorvale Rd" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">29</p>
+        <p class="work-type">Commercial</p>
+        <p class="work-name">Anchorvale Rd</p>
+      </div>
+    </a>
+
+    <a class="work-item r" href="https://brennanphua.com/ang-mo-kio-ave-3" target="_blank" rel="noopener">
+      <img class="work-img" src="https://brennanphua.com/_assets/media/c1b15e4d76df7472f406740676a60d81.jpg" alt="Ang Mo Kio Ave 3" loading="lazy" decoding="async"/>
+      <div class="work-info">
+        <p class="work-num">30</p>
+        <p class="work-type">Commercial</p>
+        <p class="work-name">Ang Mo Kio Ave 3</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+
+  <!-- Left: heading + info -->
+  <div class="contact-left">
+    <p class="contact-pre r">Begin a Conversation</p>
+    <h2 class="contact-heading r d1">Start a<br/>Project.</h2>
+    <div class="contact-details r d2">
+      <div class="detail">
+        <p class="lbl">Email</p>
+        <p class="val"><a href="mailto:brennan@sginterior.com.sg">brennan@sginterior.com.sg</a></p>
+      </div>
+      <div class="detail">
+        <p class="lbl">Studio</p>
+        <p class="val">Singapore</p>
+      </div>
+      <div class="detail">
+        <p class="lbl">Instagram</p>
+        <p class="val"><a href="https://instagram.com/brennan.id" target="_blank">@brennan.id</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: form -->
+  <div class="contact-right r d2">
+    <span class="cf-label">Send an Enquiry</span>
+    <form name="contact" netlify netlify-honeypot="bot-field" class="cf-form" id="cfForm">
+      <input type="hidden" name="form-name" value="contact"/>
+      <p style="display:none"><input name="bot-field"/></p>
+      <div class="cf-fields">
+        <div class="cf-row">
+          <div class="cf-group">
+            <input class="cf-field" type="text" name="name" placeholder="Your Name" required/>
+            <span class="cf-bar"></span>
+          </div>
+          <div class="cf-group">
+            <input class="cf-field" type="email" name="email" placeholder="Email Address" required/>
+            <span class="cf-bar"></span>
+          </div>
+        </div>
+        <div class="cf-group">
+          <input class="cf-field" type="tel" name="phone" placeholder="Phone Number (optional)"/>
+          <span class="cf-bar"></span>
+        </div>
+        <div class="cf-group">
+          <select class="cf-field" name="project-type" required>
+            <option value="" disabled selected>Project Type</option>
+            <option value="Residential HDB">Residential — HDB</option>
+            <option value="Residential Condo">Residential — Condo / Landed</option>
+            <option value="Commercial">Commercial / F&amp;B</option>
+            <option value="Other">Other</option>
+          </select>
+          <span class="cf-bar"></span>
+        </div>
+        <div class="cf-group">
+          <textarea class="cf-field cf-textarea" name="message" placeholder="Tell me about your space and vision"></textarea>
+          <span class="cf-bar"></span>
+        </div>
+        <button type="submit" class="cf-submit"><span>Send Enquiry</span></button>
+      </div>
+      <div class="cf-success">Message received — I&rsquo;ll be in touch shortly.</div>
+    </form>
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+  <p class="ft-l">Brennan Phua &middot; Interior Designer</p>
+  <p class="ft-r">&copy; 2026 SG Interior Design</p>
+</footer>
+
+<script>
+// ── Loader ──
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('loader').classList.add('gone'), 700);
+});
+
+// ── Cursor ──
+const cur = document.getElementById('cur');
+const curR = document.getElementById('curR');
+let mx = window.innerWidth / 2, my = window.innerHeight / 2, rx = mx, ry = my;
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  cur.style.left = mx + 'px'; cur.style.top = my + 'px';
+});
+(function tick() {
+  rx += (mx - rx) * 0.075;
+  ry += (my - ry) * 0.075;
+  curR.style.left = rx + 'px'; curR.style.top = ry + 'px';
+  requestAnimationFrame(tick);
+})();
+document.querySelectorAll('a, button, .work-item').forEach(el => {
+  el.addEventListener('mouseenter', () => { cur.classList.add('h'); curR.classList.add('h'); });
+  el.addEventListener('mouseleave', () => { cur.classList.remove('h'); curR.classList.remove('h'); });
+});
+
+// ── About ──
+const overlay = document.getElementById('about-overlay');
+function openAbout() { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeAbout() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('aboutBtn').addEventListener('click', e => { e.preventDefault(); openAbout(); });
+document.getElementById('aboutClose').addEventListener('click', closeAbout);
+document.getElementById('aboutBackdrop').addEventListener('click', closeAbout);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAbout(); });
+
+// ── Nav ──
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('s', scrollY > 60), { passive: true });
+
+// ── Scroll Reveal ──
+const io = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('v'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.r, .rf').forEach(el => io.observe(el));
+
+// ── Hero Parallax + fade ──
+const heroImg = document.getElementById('heroImg');
+const heroTag = document.querySelector('.hero-tag');
+const heroName = document.querySelector('.hero-name');
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      const ph = document.querySelector('.hero-photo').offsetHeight;
+      const p = scrollY / ph;
+      // parallax
+      if (p < 1.4) heroImg.style.transform = `translateY(${scrollY * 0.1}px) scale(1.04)`;
+      // fade text on scroll
+      const fade = Math.max(1 - p / 0.45, 0);
+      const shift = (1 - fade) * 22;
+      if (heroTag) { heroTag.style.opacity = fade; heroTag.style.transform = `translateY(${-shift}px)`; }
+      if (heroName) { heroName.style.opacity = fade; heroName.style.transform = `translateY(${-shift * 1.2}px)`; }
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
+
+// ── Works Mouse Parallax ──
+document.querySelectorAll('.work-item').forEach(item => {
+  let raf;
+  item.addEventListener('mousemove', e => {
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => {
+      const r = item.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      const img = item.querySelector('.work-img');
+      img.style.transform = `scale(1.06) translate(${x * 10}px, ${y * 10}px)`;
+      img.style.filter = 'brightness(.94) saturate(1.05)';
+      img.style.transition = 'transform .12s ease, filter .3s ease';
+    });
+  });
+  item.addEventListener('mouseleave', () => {
+    cancelAnimationFrame(raf);
+    const img = item.querySelector('.work-img');
+    img.style.transform = '';
+    img.style.filter = '';
+    img.style.transition = 'transform 1.4s var(--ease), filter 1.4s var(--ease)';
+  });
+});
+
+// ── Smooth Scroll ──
+document.querySelectorAll('a[href^="#"]:not(#aboutBtn)').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+// ── Contact Form ──
+const cfForm = document.getElementById('cfForm');
+if (cfForm) {
+  cfForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    const data = new FormData(cfForm);
+    try {
+      await fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() });
+      cfForm.classList.add('sent');
+    } catch(_) {
+      cfForm.classList.add('sent'); // show success anyway — Netlify handles it
+    }
+  });
+}
+
+// ── Statement Word Reveal ──
+(function(){
+  const el = document.querySelector('.stmt-text');
+  const attr = document.querySelector('.stmt-attr');
+  if (!el) return;
+
+  // split into word spans
+  const words = el.textContent.trim().split(/\s+/);
+  el.textContent = '';
+  words.forEach((w, i) => {
+    if (i > 0) el.appendChild(document.createTextNode(' '));
+    const outer = document.createElement('span');
+    outer.className = 'word-outer';
+    const inner = document.createElement('span');
+    inner.className = 'word-inner';
+    inner.textContent = w;
+    inner.style.transitionDelay = (0.08 + i * 0.14) + 's';
+    outer.appendChild(inner);
+    el.appendChild(outer);
+  });
+
+  const lastDelay = 0.08 + (words.length - 1) * 0.14;
+  if (attr) attr.style.transitionDelay = (lastDelay + 0.5) + 's';
+
+  const obs = new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) {
+      el.classList.add('revealed');
+      if (attr) attr.classList.add('revealed');
+      obs.unobserve(el);
+    }
+  }, { threshold: 0.35 });
+  obs.observe(el);
+})();
+
+// ── Lightbox ──
+const lb       = document.getElementById('lightbox');
+const lbImg    = document.getElementById('lbImg');
+const lbNum    = document.getElementById('lbNum');
+const lbTitle  = document.getElementById('lbTitle');
+const items    = Array.from(document.querySelectorAll('.work-item'));
+let current    = 0;
+
+function lbData(i) {
+  const img   = items[i].querySelector('.work-img');
+  const num   = items[i].querySelector('.work-num').textContent;
+  const title = items[i].querySelector('.work-name').textContent;
+  return { src: img.src, num, title };
+}
+
+function openLb(i) {
+  current = i;
+  const d = lbData(i);
+  lbImg.src      = d.src;
+  lbNum.textContent   = d.num;
+  lbTitle.textContent = d.title;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLb() {
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function lbGo(dir) {
+  current = (current + dir + items.length) % items.length;
+  const d = lbData(current);
+  lbImg.style.opacity = '0';
+  setTimeout(() => {
+    lbImg.src = d.src;
+    lbNum.textContent   = d.num;
+    lbTitle.textContent = d.title;
+    lbImg.style.opacity = '1';
+  }, 180);
+}
+
+lbImg.style.transition = 'opacity .18s ease, transform .6s var(--ease)';
+
+items.forEach((item, i) => item.addEventListener('click', () => openLb(i)));
+document.getElementById('lbClose').addEventListener('click', closeLb);
+document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); lbGo(-1); });
+document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); lbGo(1); });
+lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('keydown', e => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape')      closeLb();
+  if (e.key === 'ArrowLeft')   lbGo(-1);
+  if (e.key === 'ArrowRight')  lbGo(1);
+});
+
+// register lightbox elements for cursor hover
+[document.getElementById('lbClose'),
+ document.getElementById('lbPrev'),
+ document.getElementById('lbNext')].forEach(el => {
+  el.addEventListener('mouseenter', () => { cur.classList.add('h'); curR.classList.add('h'); });
+  el.addEventListener('mouseleave', () => { cur.classList.remove('h'); curR.classList.remove('h'); });
+});
+</script>
+</body>
+</html>

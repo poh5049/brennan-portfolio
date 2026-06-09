@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commission a Project — Brennan Phua · Interior Designer · Singapore</title>
+  <meta name="description" content="Commission a project with Brennan — Singapore's most considered Japanese-luxury interior designer. Premium residential and commercial, by appointment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="site-logo">
+      Brennan Phua
+      <span>Interior Designer · Singapore</span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="work.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active" aria-current="page">Commission</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section container">
+      <div class="contact-block">
+        <p class="eyebrow">Commission a Project</p>
+        <h1>Selected projects only.</h1>
+
+        <p>I accept a limited number of projects each year. Each one receives my full attention — from the first sketch to handover. If you are considering commissioning a project, complete the form below and I will be in touch.</p>
+
+        <p>If you have floor plans, reference images, or a design direction in mind, you are welcome to share those after the first exchange. I read every submission personally.</p>
+
+        <!--
+          =====================================================================
+          FORM SETUP
+          ---------------------------------------------------------------------
+          This form is wired for Formspree (free, simple, no backend required).
+
+          To activate it:
+            1. Sign up at https://formspree.io with your email
+            2. Create a new form (call it "Brennan Site — Consultation Requests")
+            3. Copy the form endpoint URL (looks like https://formspree.io/f/xxxxxxxx)
+            4. Replace YOUR_FORM_ID below with that ID
+            5. Verify the email on Formspree's side — done.
+
+          Free tier: 50 submissions/month.
+          =====================================================================
+        -->
+        <form class="consult-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              id="consultForm">
+
+          <input type="hidden" name="_subject" value="New consultation request — Brennan site" />
+          <input type="hidden" name="_replyto" value="" id="replytoField" />
+
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Your name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="phone">Mobile / HP <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+65 ..." />
+            </div>
+            <div class="field">
+              <label for="property">Project type <span class="req">*</span></label>
+              <select id="property" name="property_type" required>
+                <option value="">— Select —</option>
+                <option value="HDB">HDB</option>
+                <option value="BTO">BTO</option>
+                <option value="EC">EC (Executive Condo)</option>
+                <option value="Condo">Condo</option>
+                <option value="Landed">Landed</option>
+                <option value="Commercial">Commercial</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">Tell me about your project <span class="muted" style="font-weight:400; letter-spacing:0.1em;">(optional)</span></label>
+            <textarea id="message" name="message" placeholder="Style direction, key spaces, rough timeline, or anything else that would help me understand the project. Optional — but the more context you share, the more useful my first reply will be."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="source">How did you hear about me?</label>
+            <select id="source" name="source">
+              <option value="">— Select —</option>
+              <option value="Instagram">Instagram</option>
+              <option value="TikTok">TikTok</option>
+              <option value="Word of mouth / referral">Word of mouth / referral</option>
+              <option value="Google search">Google search</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-gold">Send Request →</button>
+            <p class="privacy-note">Your details go straight to me. I don't share them and I don't run ads against your email.</p>
+          </div>
+
+          <div class="form-success" id="formSuccess">
+            Thanks. I've got your message and will reply within 2 working days.
+          </div>
+        </form>
+
+        <div class="divider"></div>
+
+        <h3>Find me on social</h3>
+        <dl class="contact-list">
+          <li>
+            <dt>Instagram</dt>
+            <dd><a href="https://www.instagram.com/brennan.sginterior" target="_blank" rel="noopener">@brennan.sginterior</a></dd>
+          </li>
+          <li>
+            <dt>TikTok</dt>
+            <dd><a href="https://www.tiktok.com/@brennan.sginterior" target="_blank" rel="noopener">@brennan.sginterior</a></dd>
+          </li>
+        </dl>
+
+        <div class="divider"></div>
+
+        <h3>A note on selection</h3>
+        <p>The spaces I design are for clients who want something considered and enduring — not trend-driven or show-flat-styled. I work with a small number of projects at a time, by design. If my schedule is full when you reach out, I will tell you directly and give you a realistic timeline for when I can begin.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function() {
+      var emailField = document.getElementById('email');
+      var replytoField = document.getElementById('replytoField');
+      if (emailField && replytoField) {
+        emailField.addEventListener('input', function() {
+          replytoField.value = emailField.value;
+        });
+      }
+    })();
+  </script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Brennan Phua</h4>
+          <p style="color: rgba(250,247,242,0.7); max-width: 32ch;">Interior designer at SG Interior. Japanese-influenced, luxury-considered spaces.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">My Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Commission a Project</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Find Me</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/brennan.sginterior" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@brennan.sginterior" target="_blank" rel="noopener">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Brennan Phua · SG Interior (SGI Design Lab)</span>
+        <span>Site v0.1 · backbone</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
