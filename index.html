@@ -206,20 +206,15 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .work-item:nth-child(7n+5){aspect-ratio:3/4}
 .work-item:nth-child(7n+6){aspect-ratio:2/3}
 .work-item:nth-child(7n){aspect-ratio:4/3}
-/* Featured solo-rectangle panels — full-width blocks outside the column grid */
+/* Featured panels — full-width, hover text same as rest */
 .work-item.featured{
   display:block;
   width:100%;
   aspect-ratio:21/9;
   margin-bottom:3px;
+  break-inside:avoid;
 }
-.work-item.featured .work-info{
-  padding:56px 48px 44px;
-  transform:translateY(0);opacity:1;
-}
-.work-item.featured .work-name{font-size:16px;letter-spacing:.22em}
-.work-item.featured .work-num{font-size:8px}
-.work-item.featured .work-type{font-size:8px}
+@media(max-width:600px){.work-item.featured{aspect-ratio:16/9}}
 .work-img{
   width:100%;height:100%;object-fit:cover;display:block;
   transition:transform 1.4s var(--ease),filter 1.4s var(--ease);
@@ -450,7 +445,6 @@ footer{
   .work-item{margin-bottom:2px}
   /* Keep desktop variation — only rein in 4/3 landscape which looks squished at half-phone width */
   .work-item:nth-child(7n){aspect-ratio:3/4}
-  .work-item.featured{aspect-ratio:16/9}
 }
 </style>
 </head>
@@ -529,7 +523,7 @@ footer{
     <p class="works-label">Selected Works</p>
     <p class="works-count">30 Projects &mdash; Singapore</p>
   </div>
-  <!-- Featured #1: Lor 3 Geylang — full-width solo panel -->
+  <!-- Featured #1: Lor 3 Geylang -->
   <a class="work-item featured r" href="https://brennanphua.com/lor-3-geylang" target="_blank" rel="noopener">
     <img class="work-img" src="https://brennanphua.com/_assets/media/738263788b44532002a32c1d536eaad0.jpg" alt="Lor 3 Geylang" loading="eager" decoding="async"/>
     <div class="work-info">
@@ -539,7 +533,7 @@ footer{
     </div>
   </a>
 
-  <!-- Grid section 1: items 02–10 -->
+  <!-- Grid section 1: 02–10 -->
   <div class="works-grid">
 
     <a class="work-item r" href="https://brennanphua.com/upp-changi-rd" target="_blank" rel="noopener">
@@ -623,9 +617,10 @@ footer{
       </div>
     </a>
 
+
   </div>
 
-  <!-- Featured #2: Orchard Boulevard — full-width solo panel -->
+  <!-- Featured #2: Orchard Boulevard -->
   <a class="work-item featured r" href="https://brennanphua.com/orchard-boulevard" target="_blank" rel="noopener">
     <img class="work-img" src="https://brennanphua.com/_assets/media/da0f3e6ee490eba61a7912011b826b68.png" alt="Orchard Boulevard" loading="lazy" decoding="async"/>
     <div class="work-info">
@@ -635,7 +630,7 @@ footer{
     </div>
   </a>
 
-  <!-- Grid section 2: items 12–20 -->
+  <!-- Grid section 2: 12–20 -->
   <div class="works-grid">
 
     <a class="work-item r" href="https://brennanphua.com/normanton-park" target="_blank" rel="noopener">
@@ -719,9 +714,10 @@ footer{
       </div>
     </a>
 
+
   </div>
 
-  <!-- Featured #3: Butterworth Lane — full-width solo panel -->
+  <!-- Featured #3: Butterworth Lane -->
   <a class="work-item featured r" href="https://brennanphua.com/butterworth-lane" target="_blank" rel="noopener">
     <img class="work-img" src="https://brennanphua.com/_assets/media/666f960ab1255671ee2654097ec74b0f.png" alt="Butterworth Lane" loading="lazy" decoding="async"/>
     <div class="work-info">
@@ -731,7 +727,7 @@ footer{
     </div>
   </a>
 
-  <!-- Grid section 3: items 22–30 -->
+  <!-- Grid section 3: 22–30 -->
   <div class="works-grid">
 
     <a class="work-item r" href="https://brennanphua.com/upp-aljunied-rd" target="_blank" rel="noopener">
