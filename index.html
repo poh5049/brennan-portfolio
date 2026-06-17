@@ -811,7 +811,7 @@ footer{
       </div>
     </a>
 
-    <div class="work-item r">
+    <div class="work-item r" data-gallery='["727-ang-mo-kio/amk-01.jpg","727-ang-mo-kio/amk-02.jpg","727-ang-mo-kio/amk-03.jpg","727-ang-mo-kio/amk-04.jpg","727-ang-mo-kio/amk-05.jpg","727-ang-mo-kio/amk-06.jpg","727-ang-mo-kio/amk-07.jpg"]'>
       <img class="work-img" src="727-ang-mo-kio/amk-04.jpg" alt="727 Ang Mo Kio" loading="lazy" decoding="async"/>
       <div class="work-info">
         <p class="work-num">31</p>
@@ -1046,26 +1046,43 @@ if (cfForm) {
 })();
 
 // ── Lightbox ──
-const lb       = document.getElementById('lightbox');
-const lbImg    = document.getElementById('lbImg');
-const lbNum    = document.getElementById('lbNum');
-const lbTitle  = document.getElementById('lbTitle');
-const items    = Array.from(document.querySelectorAll('.work-item'));
-let current    = 0;
+const lb      = document.getElementById('lightbox');
+const lbImg   = document.getElementById('lbImg');
+const lbNum   = document.getElementById('lbNum');
+const lbTitle = document.getElementById('lbTitle');
+const items   = Array.from(document.querySelectorAll('.work-item'));
 
-function lbData(i) {
-  const img   = items[i].querySelector('.work-img');
-  const num   = items[i].querySelector('.work-num').textContent;
-  const title = items[i].querySelector('.work-name').textContent;
-  return { src: img.src, num, title };
+// State
+let projectIdx  = 0; // which work-item
+let galleryIdx  = 0; // which photo within that project
+let gallery     = []; // current photo list
+let projectList = []; // [{title, num, photos:[]}]
+
+// Build project list on load
+projectList = items.map(item => {
+  const raw = item.dataset.gallery;
+  const photos = raw ? JSON.parse(raw) : [item.querySelector('.work-img').src];
+  return {
+    num:    item.querySelector('.work-num').textContent,
+    title:  item.querySelector('.work-name').textContent,
+    photos
+  };
+});
+
+function showPhoto(pIdx, gIdx) {
+  projectIdx = pIdx;
+  galleryIdx = gIdx;
+  gallery    = projectList[pIdx].photos;
+  const src  = gallery[gIdx];
+  lbImg.src  = src;
+  lbNum.textContent   = gallery.length > 1
+    ? `${projectList[pIdx].num}  ·  ${gIdx + 1} / ${gallery.length}`
+    : projectList[pIdx].num;
+  lbTitle.textContent = projectList[pIdx].title;
 }
 
 function openLb(i) {
-  current = i;
-  const d = lbData(i);
-  lbImg.src      = d.src;
-  lbNum.textContent   = d.num;
-  lbTitle.textContent = d.title;
+  showPhoto(i, 0);
   lb.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -1076,20 +1093,30 @@ function closeLb() {
 }
 
 function lbGo(dir) {
-  current = (current + dir + items.length) % items.length;
-  const d = lbData(current);
+  const g = projectList[projectIdx].photos;
+  // Navigate within gallery first; wrap to next/prev project when exhausted
+  const nextG = galleryIdx + dir;
+  let newP = projectIdx, newG = nextG;
+  if (nextG < 0) {
+    newP = (projectIdx - 1 + items.length) % items.length;
+    newG = projectList[newP].photos.length - 1;
+  } else if (nextG >= g.length) {
+    newP = (projectIdx + 1) % items.length;
+    newG = 0;
+  }
   lbImg.style.opacity = '0';
   setTimeout(() => {
-    lbImg.src = d.src;
-    lbNum.textContent   = d.num;
-    lbTitle.textContent = d.title;
+    showPhoto(newP, newG);
     lbImg.style.opacity = '1';
   }, 180);
 }
 
 lbImg.style.transition = 'opacity .18s ease, transform .6s var(--ease)';
 
-items.forEach((item, i) => item.addEventListener('click', () => openLb(i)));
+items.forEach((item, i) => item.addEventListener('click', e => {
+  e.preventDefault();
+  openLb(i);
+}));
 document.getElementById('lbClose').addEventListener('click', closeLb);
 document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); lbGo(-1); });
 document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); lbGo(1); });
