@@ -1089,11 +1089,12 @@ function lbGo(dir) {
 
 lbImg.style.transition = 'opacity .18s ease, transform .6s var(--ease)';
 
-items.forEach((item, i) => item.addEventListener('click', () => openLb(i)));
+// project cards navigate via href — lightbox not triggered from grid
 document.getElementById('lbClose').addEventListener('click', closeLb);
 document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); lbGo(-1); });
 document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); lbGo(1); });
 lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+document.addEventListener('visibilitychange', () => { if (document.hidden && lb.classList.contains('open')) closeLb(); });
 document.addEventListener('keydown', e => {
   if (!lb.classList.contains('open')) return;
   if (e.key === 'Escape')      closeLb();
