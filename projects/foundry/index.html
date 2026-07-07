@@ -77,8 +77,8 @@ nav.s{padding:20px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .gallery-item:hover img{filter:brightness(1);transform:scale(1.03)}
 
 /* Reveal */
-.gallery-item{animation:gfade .9s var(--ease) both}
-@keyframes gfade{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.gallery-item{animation:gslide .8s cubic-bezier(0.16,1,0.3,1) both}
+@keyframes gslide{from{transform:translateY(20px)}to{transform:translateY(0)}}
 
 /* Lightbox */
 #lightbox{position:fixed;inset:0;z-index:500;background:rgba(10,9,8,.97);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s;cursor:none}
