@@ -79,17 +79,7 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
 .ft-r{font-size:7px;letter-spacing:.22em;color:var(--text-dim)}
 @keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes lu{from{transform:translateY(110%)}to{transform:translateY(0)}}
-@media(max-width:900px){
-  nav{padding-left:28px;padding-right:28px;padding-top:28px}
-  nav.s{padding-top:18px;padding-left:28px;padding-right:28px}
-  .proj-header{padding:140px 28px 72px}
-  .gallery{padding:4px 4px 80px}
-  .proj-footer{grid-template-columns:1fr}
-  .proj-nav-item:first-child{border-right:none;border-bottom:1px solid rgba(138,117,96,.08)}
-  .proj-nav-item{padding:40px 28px}
-  footer{padding:24px 28px}
-  .proj-meta{gap:32px;flex-wrap:wrap}
-}
+@media(max-width:900px){nav{padding-left:28px;padding-right:28px;padding-top:28px}nav.s{padding-top:18px;padding-left:28px;padding-right:28px}.proj-header{padding:140px 28px 72px}.gallery{padding:4px 4px 80px}.proj-footer{grid-template-columns:1fr}.proj-nav-item:first-child{border-right:none;border-bottom:1px solid rgba(138,117,96,.08)}.proj-nav-item{padding:40px 28px}footer{padding:24px 28px}.proj-meta{gap:32px;flex-wrap:wrap}}
 @media(max-width:600px){.gallery-grid{columns:1}}
 </style>
 </head>
@@ -115,13 +105,13 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
     <div class="proj-meta">
       <div class="meta-item"><p class="lbl">Category</p><p class="val">2 Bedder Condo</p></div>
       <div class="meta-item"><p class="lbl">Location</p><p class="val">Singapore</p></div>
-      <div class="meta-item"><p class="lbl">Photos</p><p class="val">5 Images</p></div>
+      <div class="meta-item"><p class="lbl">Photos</p><p class="val">8 Images</p></div>
     </div>
     <div class="proj-featured">
       <p class="featured-lbl">Featured on</p>
       <div class="featured-links">
-      <a class="featured-link" href="https://idcs.sg/dea2025/gallery/idea" target="_blank" rel="noopener" data-icon="★">I-DEA 2025 Finalist</a>
-      <a class="featured-link" href="https://www.lookboxliving.com.sg/project/a-holiday-home-with-a-man-cave-twist" target="_blank" rel="noopener" data-icon="◆">Lookbox Living</a>
+          <a class="featured-link" href="https://idcs.sg/dea2025/gallery/idea" target="_blank" rel="noopener" data-icon="★">I-DEA 2025 Finalist</a>
+          <a class="featured-link" href="https://www.lookboxliving.com.sg/project/a-holiday-home-with-a-man-cave-twist" target="_blank" rel="noopener" data-icon="◆">Lookbox Living</a>
       </div>
     </div>
   </div>
@@ -129,10 +119,13 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
 <section class="gallery">
   <div class="gallery-grid">
     <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/764aad4642fc19eb9097c281e54bb55f.jpg" width="2400" height="1600" alt="" loading="eager" decoding="async"/></div>
+    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/6548f907d16471da904d80415ad35572.jpg" width="2400" height="1599" alt="" loading="eager" decoding="async"/></div>
     <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/11567b49edc3a54173ea8f477341af09.jpg" width="1600" height="2400" alt="" loading="eager" decoding="async"/></div>
     <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/2d66e3febc97209f639e18bf8180340d.jpg" width="2400" height="1599" alt="" loading="eager" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/b72073f67dd44ce9d7d6285ec424479b.jpg" width="2400" height="1600" alt="" loading="eager" decoding="async"/></div>
+    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/b72073f67dd44ce9d7d6285ec424479b.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
+    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/74c77804711cd6d311d2d56fa9e7465d.jpg" width="1600" height="2400" alt="" loading="lazy" decoding="async"/></div>
     <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/c6be570677f4c2dd42348fd65ae1ce65.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
+    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/883840b02f9a5abdb11f01b2a6c53491.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
   </div>
 </section>
 <div class="proj-footer">
@@ -155,30 +148,17 @@ const cur=document.getElementById('cur'),curR=document.getElementById('curR');
 let mx=window.innerWidth/2,my=window.innerHeight/2,rx=mx,ry=my;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
 (function tick(){rx+=(mx-rx)*.075;ry+=(my-ry)*.075;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(tick)})();
-document.querySelectorAll('a,button,.gallery-item').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.classList.add('h');curR.classList.add('h')});
-  el.addEventListener('mouseleave',()=>{cur.classList.remove('h');curR.classList.remove('h')});
-});
-window.addEventListener('scroll',()=>{
-  const nav=document.getElementById('nav');
-  nav.classList.toggle('s',window.scrollY>40);
-});
+document.querySelectorAll('a,button,.gallery-item').forEach(el=>{el.addEventListener('mouseenter',()=>{cur.classList.add('h');curR.classList.add('h')});el.addEventListener('mouseleave',()=>{cur.classList.remove('h');curR.classList.remove('h')})});
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('s',window.scrollY>40)});
 const items=document.querySelectorAll('.gallery-item');
-const lbEl=document.getElementById('lightbox');
-const lbImg=document.getElementById('lbImg');
-const lbInfo=document.getElementById('lbInfo');
-const lbClose=document.getElementById('lbClose');
-const lbPrev=document.getElementById('lbPrev');
-const lbNext=document.getElementById('lbNext');
-let cur_idx=0;
-const srcs=[...items].map(el=>el.querySelector('img').src);
-function openLb(i){cur_idx=i;lbImg.src=srcs[i];lbInfo.textContent=(i+1)+' / '+srcs.length;lbEl.classList.add('open');document.body.style.overflow='hidden'}
+const lbEl=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbInfo=document.getElementById('lbInfo');
+const lbClose=document.getElementById('lbClose'),lbPrev=document.getElementById('lbPrev'),lbNext=document.getElementById('lbNext');
+let ci=0;const srcs=[...items].map(el=>el.querySelector('img').src);
+function openLb(i){ci=i;lbImg.src=srcs[i];lbInfo.textContent=(i+1)+' / '+srcs.length;lbEl.classList.add('open');document.body.style.overflow='hidden'}
 function closeLb(){lbEl.classList.remove('open');document.body.style.overflow=''}
-function navLb(d){cur_idx=(cur_idx+d+srcs.length)%srcs.length;lbImg.src=srcs[cur_idx];lbInfo.textContent=(cur_idx+1)+' / '+srcs.length}
+function navLb(d){ci=(ci+d+srcs.length)%srcs.length;lbImg.src=srcs[ci];lbInfo.textContent=(ci+1)+' / '+srcs.length}
 items.forEach((el,i)=>el.addEventListener('click',()=>openLb(i)));
-lbClose.addEventListener('click',closeLb);
-lbPrev.addEventListener('click',()=>navLb(-1));
-lbNext.addEventListener('click',()=>navLb(1));
+lbClose.addEventListener('click',closeLb);lbPrev.addEventListener('click',()=>navLb(-1));lbNext.addEventListener('click',()=>navLb(1));
 lbEl.addEventListener('click',e=>{if(e.target===lbEl)closeLb()});
 document.addEventListener('keydown',e=>{if(!lbEl.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')navLb(-1);if(e.key==='ArrowRight')navLb(1)});
 </script>

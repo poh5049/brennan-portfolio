@@ -79,17 +79,7 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
 .ft-r{font-size:7px;letter-spacing:.22em;color:var(--text-dim)}
 @keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes lu{from{transform:translateY(110%)}to{transform:translateY(0)}}
-@media(max-width:900px){
-  nav{padding-left:28px;padding-right:28px;padding-top:28px}
-  nav.s{padding-top:18px;padding-left:28px;padding-right:28px}
-  .proj-header{padding:140px 28px 72px}
-  .gallery{padding:4px 4px 80px}
-  .proj-footer{grid-template-columns:1fr}
-  .proj-nav-item:first-child{border-right:none;border-bottom:1px solid rgba(138,117,96,.08)}
-  .proj-nav-item{padding:40px 28px}
-  footer{padding:24px 28px}
-  .proj-meta{gap:32px;flex-wrap:wrap}
-}
+@media(max-width:900px){nav{padding-left:28px;padding-right:28px;padding-top:28px}nav.s{padding-top:18px;padding-left:28px;padding-right:28px}.proj-header{padding:140px 28px 72px}.gallery{padding:4px 4px 80px}.proj-footer{grid-template-columns:1fr}.proj-nav-item:first-child{border-right:none;border-bottom:1px solid rgba(138,117,96,.08)}.proj-nav-item{padding:40px 28px}footer{padding:24px 28px}.proj-meta{gap:32px;flex-wrap:wrap}}
 @media(max-width:600px){.gallery-grid{columns:1}}
 </style>
 </head>
@@ -115,19 +105,24 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
     <div class="proj-meta">
       <div class="meta-item"><p class="lbl">Category</p><p class="val">Landed</p></div>
       <div class="meta-item"><p class="lbl">Location</p><p class="val">Singapore</p></div>
-      <div class="meta-item"><p class="lbl">Photos</p><p class="val">6 Images</p></div>
+      <div class="meta-item"><p class="lbl">Photos</p><p class="val">12 Images</p></div>
     </div>
-
   </div>
 </section>
 <section class="gallery">
   <div class="gallery-grid">
     <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/62cdf8894c97df83c5f89008513083aa.png" width="2348" height="1266" alt="" loading="eager" decoding="async"/></div>
+    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/79ebd6b4af58bdc1563e865cca1239a4.png" width="2348" height="1266" alt="" loading="eager" decoding="async"/></div>
     <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/a826550f24a56517c2dff5761f686222.png" width="2400" height="1235" alt="" loading="eager" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/ac9f23636ec09f5902a5b7c5996c3886.png" width="2400" height="1418" alt="" loading="eager" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/c2542d44c38a63e515be4a286fcf3a11.png" width="2206" height="1254" alt="" loading="eager" decoding="async"/></div>
+    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/51f0dc80423f3235b18bb2ddc9d42b63.png" width="2400" height="1235" alt="" loading="eager" decoding="async"/></div>
+    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/ac9f23636ec09f5902a5b7c5996c3886.png" width="2400" height="1418" alt="" loading="lazy" decoding="async"/></div>
+    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/1c2338031931106f81c793bcba223352.png" width="2400" height="1418" alt="" loading="lazy" decoding="async"/></div>
+    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/c2542d44c38a63e515be4a286fcf3a11.png" width="2206" height="1254" alt="" loading="lazy" decoding="async"/></div>
+    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/c7cdab9a424f74c885c271001c0d137a.png" width="2206" height="1254" alt="" loading="lazy" decoding="async"/></div>
     <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/2132069d8e2a89f47e7119e6869db175.png" width="2186" height="1260" alt="" loading="lazy" decoding="async"/></div>
+    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/514ea61623c12b7970139b8403d4d9ab.png" width="2186" height="1260" alt="" loading="lazy" decoding="async"/></div>
     <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/fd8dfb91925b9698a5b090ee8abddfa2.png" width="1576" height="1110" alt="" loading="lazy" decoding="async"/></div>
+    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/feb77799d14ca5d9fc06b79d9ffafc4a.png" width="1576" height="1110" alt="" loading="lazy" decoding="async"/></div>
   </div>
 </section>
 <div class="proj-footer">
@@ -150,30 +145,17 @@ const cur=document.getElementById('cur'),curR=document.getElementById('curR');
 let mx=window.innerWidth/2,my=window.innerHeight/2,rx=mx,ry=my;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
 (function tick(){rx+=(mx-rx)*.075;ry+=(my-ry)*.075;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(tick)})();
-document.querySelectorAll('a,button,.gallery-item').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.classList.add('h');curR.classList.add('h')});
-  el.addEventListener('mouseleave',()=>{cur.classList.remove('h');curR.classList.remove('h')});
-});
-window.addEventListener('scroll',()=>{
-  const nav=document.getElementById('nav');
-  nav.classList.toggle('s',window.scrollY>40);
-});
+document.querySelectorAll('a,button,.gallery-item').forEach(el=>{el.addEventListener('mouseenter',()=>{cur.classList.add('h');curR.classList.add('h')});el.addEventListener('mouseleave',()=>{cur.classList.remove('h');curR.classList.remove('h')})});
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('s',window.scrollY>40)});
 const items=document.querySelectorAll('.gallery-item');
-const lbEl=document.getElementById('lightbox');
-const lbImg=document.getElementById('lbImg');
-const lbInfo=document.getElementById('lbInfo');
-const lbClose=document.getElementById('lbClose');
-const lbPrev=document.getElementById('lbPrev');
-const lbNext=document.getElementById('lbNext');
-let cur_idx=0;
-const srcs=[...items].map(el=>el.querySelector('img').src);
-function openLb(i){cur_idx=i;lbImg.src=srcs[i];lbInfo.textContent=(i+1)+' / '+srcs.length;lbEl.classList.add('open');document.body.style.overflow='hidden'}
+const lbEl=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbInfo=document.getElementById('lbInfo');
+const lbClose=document.getElementById('lbClose'),lbPrev=document.getElementById('lbPrev'),lbNext=document.getElementById('lbNext');
+let ci=0;const srcs=[...items].map(el=>el.querySelector('img').src);
+function openLb(i){ci=i;lbImg.src=srcs[i];lbInfo.textContent=(i+1)+' / '+srcs.length;lbEl.classList.add('open');document.body.style.overflow='hidden'}
 function closeLb(){lbEl.classList.remove('open');document.body.style.overflow=''}
-function navLb(d){cur_idx=(cur_idx+d+srcs.length)%srcs.length;lbImg.src=srcs[cur_idx];lbInfo.textContent=(cur_idx+1)+' / '+srcs.length}
+function navLb(d){ci=(ci+d+srcs.length)%srcs.length;lbImg.src=srcs[ci];lbInfo.textContent=(ci+1)+' / '+srcs.length}
 items.forEach((el,i)=>el.addEventListener('click',()=>openLb(i)));
-lbClose.addEventListener('click',closeLb);
-lbPrev.addEventListener('click',()=>navLb(-1));
-lbNext.addEventListener('click',()=>navLb(1));
+lbClose.addEventListener('click',closeLb);lbPrev.addEventListener('click',()=>navLb(-1));lbNext.addEventListener('click',()=>navLb(1));
 lbEl.addEventListener('click',e=>{if(e.target===lbEl)closeLb()});
 document.addEventListener('keydown',e=>{if(!lbEl.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')navLb(-1);if(e.key==='ArrowRight')navLb(1)});
 </script>
