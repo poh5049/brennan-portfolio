@@ -30,7 +30,7 @@ nav.s{padding:20px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .nav-back:hover::before{width:36px}
 .nav-logo{font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:var(--text);font-weight:400;text-decoration:none;transition:opacity .3s}
 .nav-logo:hover{opacity:.55}
-.proj-header{padding:180px 60px 100px;border-bottom:1px solid rgba(138,117,96,.08)}
+.proj-header{padding:180px 60px 80px;border-bottom:1px solid rgba(138,117,96,.08)}
 .proj-type{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;opacity:0;animation:fu .9s var(--ease) .8s forwards}
 .proj-title{font-size:clamp(40px,6vw,96px);font-weight:100;letter-spacing:.18em;text-transform:uppercase;line-height:1;color:var(--text);overflow:hidden;margin-bottom:40px}
 .proj-title span{display:block;animation:lu 1.2s var(--ease) .95s both}
@@ -38,6 +38,12 @@ nav.s{padding:20px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .meta-item .lbl{font-size:7px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
 .meta-item .val{font-size:9px;letter-spacing:.18em;color:var(--text)}
 .proj-meta-wrap{opacity:0;animation:fu .9s var(--ease) 1.2s forwards}
+.proj-featured{margin-top:28px;padding-top:28px;border-top:1px solid rgba(138,117,96,.1)}
+.featured-lbl{font-size:7px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px}
+.featured-links{display:flex;gap:20px;flex-wrap:wrap}
+.featured-link{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .3s}
+.featured-link:hover{color:var(--text)}
+.featured-link::before{content:attr(data-icon);font-size:10px}
 .gallery{padding:4px 4px 120px}
 .gallery-grid{columns:2;column-gap:4px}
 .gallery-item{break-inside:avoid;margin-bottom:4px;overflow:hidden;cursor:none;position:relative;background:#1a1815}
@@ -82,6 +88,7 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
   .proj-nav-item:first-child{border-right:none;border-bottom:1px solid rgba(138,117,96,.08)}
   .proj-nav-item{padding:40px 28px}
   footer{padding:24px 28px}
+  .proj-meta{gap:32px;flex-wrap:wrap}
 }
 @media(max-width:600px){.gallery-grid{columns:1}}
 </style>
@@ -102,14 +109,15 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
   <a class="nav-logo" href="../../index.html">Brennan Phua</a>
 </nav>
 <section class="proj-header">
-  <p class="proj-type">Residential</p>
+  <p class="proj-type">4 Room BTO</p>
   <h1 class="proj-title"><span>Upp Jurong Rd</span></h1>
   <div class="proj-meta-wrap">
     <div class="proj-meta">
-      <div class="meta-item"><p class="lbl">Category</p><p class="val">Residential</p></div>
+      <div class="meta-item"><p class="lbl">Category</p><p class="val">4 Room BTO</p></div>
       <div class="meta-item"><p class="lbl">Location</p><p class="val">Singapore</p></div>
       <div class="meta-item"><p class="lbl">Photos</p><p class="val">9 Images</p></div>
     </div>
+
   </div>
 </section>
 <section class="gallery">
@@ -123,7 +131,6 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
     <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/efa18478cec534c97f2918c2654e6e9e.jpg" width="1280" height="720" alt="" loading="lazy" decoding="async"/></div>
     <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/077b479d2955af4ee35f14118ea3f7d4.jpg" width="1280" height="720" alt="" loading="lazy" decoding="async"/></div>
     <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/a397d8832c616efd3bf7f82385ea3cf8.jpg" width="1280" height="720" alt="" loading="lazy" decoding="async"/></div>
-</div>
   </div>
 </section>
 <div class="proj-footer">
@@ -150,22 +157,28 @@ document.querySelectorAll('a,button,.gallery-item').forEach(el=>{
   el.addEventListener('mouseenter',()=>{cur.classList.add('h');curR.classList.add('h')});
   el.addEventListener('mouseleave',()=>{cur.classList.remove('h');curR.classList.remove('h')});
 });
-const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>60),{passive:true});
-// gallery items animate via CSS (gfade keyframe)
-const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbInfo=document.getElementById('lbInfo');
-const items=Array.from(document.querySelectorAll('.gallery-item'));
-let cur2=0;
-function openLb(i){cur2=i;lbImg.src=items[i].querySelector('img').src;lbInfo.textContent=(i+1)+' / '+items.length;lb.classList.add('open');document.body.style.overflow='hidden'}
-function closeLb(){lb.classList.remove('open');document.body.style.overflow=''}
-function go(d){cur2=(cur2+d+items.length)%items.length;lbImg.style.opacity='0';setTimeout(()=>{lbImg.src=items[cur2].querySelector('img').src;lbInfo.textContent=(cur2+1)+' / '+items.length;lbImg.style.opacity='1'},160)}
-lbImg.style.transition='opacity .16s ease,transform .6s var(--ease)';
-items.forEach((it,i)=>it.addEventListener('click',()=>openLb(i)));
-document.getElementById('lbClose').addEventListener('click',closeLb);
-document.getElementById('lbPrev').addEventListener('click',e=>{e.stopPropagation();go(-1)});
-document.getElementById('lbNext').addEventListener('click',e=>{e.stopPropagation();go(1)});
-lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
-document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')go(-1);if(e.key==='ArrowRight')go(1)});
+window.addEventListener('scroll',()=>{
+  const nav=document.getElementById('nav');
+  nav.classList.toggle('s',window.scrollY>40);
+});
+const items=document.querySelectorAll('.gallery-item');
+const lbEl=document.getElementById('lightbox');
+const lbImg=document.getElementById('lbImg');
+const lbInfo=document.getElementById('lbInfo');
+const lbClose=document.getElementById('lbClose');
+const lbPrev=document.getElementById('lbPrev');
+const lbNext=document.getElementById('lbNext');
+let cur_idx=0;
+const srcs=[...items].map(el=>el.querySelector('img').src);
+function openLb(i){cur_idx=i;lbImg.src=srcs[i];lbInfo.textContent=(i+1)+' / '+srcs.length;lbEl.classList.add('open');document.body.style.overflow='hidden'}
+function closeLb(){lbEl.classList.remove('open');document.body.style.overflow=''}
+function navLb(d){cur_idx=(cur_idx+d+srcs.length)%srcs.length;lbImg.src=srcs[cur_idx];lbInfo.textContent=(cur_idx+1)+' / '+srcs.length}
+items.forEach((el,i)=>el.addEventListener('click',()=>openLb(i)));
+lbClose.addEventListener('click',closeLb);
+lbPrev.addEventListener('click',()=>navLb(-1));
+lbNext.addEventListener('click',()=>navLb(1));
+lbEl.addEventListener('click',e=>{if(e.target===lbEl)closeLb()});
+document.addEventListener('keydown',e=>{if(!lbEl.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')navLb(-1);if(e.key==='ArrowRight')navLb(1)});
 </script>
 </body>
 </html>
