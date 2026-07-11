@@ -198,6 +198,13 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
   cursor:none;display:block;text-decoration:none;
   break-inside:avoid;margin-bottom:3px;
 }
+.work-item:nth-child(7n+1){aspect-ratio:2/3}
+.work-item:nth-child(7n+2){aspect-ratio:3/4}
+.work-item:nth-child(7n+3){aspect-ratio:4/5}
+.work-item:nth-child(7n+4){aspect-ratio:1}
+.work-item:nth-child(7n+5){aspect-ratio:3/4}
+.work-item:nth-child(7n+6){aspect-ratio:2/3}
+.work-item:nth-child(7n){aspect-ratio:4/3}
 /* Varied aspect ratios — organic editorial masonry rhythm */
 /* Featured panels — full-width, hover text same as rest */
 .work-item.featured{
@@ -436,6 +443,7 @@ footer{
   .hero-text{left:20px;bottom:20px}
   .works-grid{columns:2;column-gap:2px}
   .work-item{margin-bottom:2px}
+    .work-item:nth-child(7n){aspect-ratio:3/4}
   /* Keep desktop variation — only rein in 4/3 landscape which looks squished at half-phone width */
   }
 </style>
