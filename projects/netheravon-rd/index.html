@@ -45,12 +45,37 @@ nav.s{padding:20px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .featured-link:hover{color:var(--text)}
 .featured-link::before{content:attr(data-icon);font-size:10px}
 .gallery{padding:4px 4px 120px}
-.gallery-grid{columns:2;column-gap:4px}
-.gallery-item{break-inside:avoid;margin-bottom:4px;overflow:hidden;cursor:none;position:relative;background:#1a1815}
-.gallery-item img{width:100%;height:auto;display:block;filter:brightness(.88);transition:filter 1.3s var(--ease),transform 1.4s var(--ease);will-change:transform,filter}
+.slides{display:flex;flex-direction:column;gap:4px}
+.slide{width:100%;overflow:hidden}
+.gallery-item{overflow:hidden;cursor:none;position:relative;background:#1a1815}
+.slide:not(.slide-1) .gallery-item{height:100%}
+.gallery-item img{width:100%;display:block;filter:brightness(.88);transition:filter 1.3s var(--ease),transform 1.4s var(--ease);will-change:transform,filter}
+.slide-1 .gallery-item img{height:auto}
+.slide:not(.slide-1) .gallery-item img{height:100%;object-fit:cover}
 .gallery-item:hover img{filter:brightness(1);transform:scale(1.03)}
 .gallery-item{animation:gslide .8s cubic-bezier(0.16,1,0.3,1) both}
 @keyframes gslide{from{transform:translateY(20px)}to{transform:translateY(0)}}
+.slide-2-ll,.slide-2-pp{display:grid;grid-template-columns:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-2-lp{display:grid;grid-template-columns:56fr 44fr;gap:4px;aspect-ratio:16/9}
+.slide-2-pl{display:grid;grid-template-columns:44fr 56fr;gap:4px;aspect-ratio:16/9}
+.slide-3-llp{display:grid;grid-template-columns:62fr 38fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-3-llp .gallery-item:nth-child(3){grid-row:1/3}
+.slide-3-pll{display:grid;grid-template-columns:38fr 62fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-3-pll .gallery-item:nth-child(1){grid-row:1/3}
+.slide-3-lpl,.slide-3-lll,.slide-3-ppp{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-3-lpp{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:4px}
+.slide-3-lpp .gallery-item:nth-child(1){grid-column:1/3;aspect-ratio:16/7}
+.slide-3-lpp .gallery-item:nth-child(1) img{height:100%}
+.slide-3-lpp .gallery-item:nth-child(2),.slide-3-lpp .gallery-item:nth-child(3){aspect-ratio:2/3;height:auto}
+.slide-3-ppl{display:grid;grid-template-columns:38fr 62fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-3-ppl .gallery-item:nth-child(3){grid-row:1/3}
+.slide-4{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-5{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-5 .gallery-item:nth-child(1),.slide-5 .gallery-item:nth-child(2),.slide-5 .gallery-item:nth-child(3){grid-column:span 2}
+.slide-5 .gallery-item:nth-child(4){grid-column:1/4}
+.slide-5 .gallery-item:nth-child(5){grid-column:4/7}
+.slide-6{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-many{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;aspect-ratio:16/9}
 #lightbox{position:fixed;inset:0;z-index:500;background:rgba(10,9,8,.97);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s;cursor:none}
 #lightbox.open{opacity:1;visibility:visible}
 #lightbox img{max-width:92vw;max-height:90vh;object-fit:contain;transform:scale(.96);transition:transform .6s var(--ease);display:block}
@@ -80,7 +105,7 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
 @keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes lu{from{transform:translateY(110%)}to{transform:translateY(0)}}
 @media(max-width:900px){nav{padding-left:28px;padding-right:28px;padding-top:28px}nav.s{padding-top:18px;padding-left:28px;padding-right:28px}.proj-header{padding:140px 28px 72px}.gallery{padding:4px 4px 80px}.proj-footer{grid-template-columns:1fr}.proj-nav-item:first-child{border-right:none;border-bottom:1px solid rgba(138,117,96,.08)}.proj-nav-item{padding:40px 28px}footer{padding:24px 28px}.proj-meta{gap:32px;flex-wrap:wrap}}
-@media(max-width:600px){.gallery-grid{columns:1}}
+@media(max-width:600px){}
 </style>
 </head>
 <body>
@@ -110,17 +135,25 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
   </div>
 </section>
 <section class="gallery">
-  <div class="gallery-grid">
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/54db608e3fec97bd373caeb7ef05bf8c.jpg" width="2400" height="1591" alt="" loading="eager" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/e847551a48b9702bd72097677026493c.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/8bf9c148225fe225cb67ccc14810be0e.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/35b991141b53225c4361b06ea5d94c4b.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/a630842ca4e501f6e01ae78bd75117f1.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/0340b44707d9f84744f1fa3d2fbbd509.jpg" width="2400" height="1640" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/531ce9e5d1cf90a1a780d32093f8ffd0.jpg" width="2400" height="1605" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/c7499a3ce2799ff03c53e4d2826f0430.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/3d4fd1268da218ad1b51fbd498c6099e.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/4c2c0060df0bc98c75f2caaa0eb31359.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
+  <div class="slides">
+    <div class="slide slide-1">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/54db608e3fec97bd373caeb7ef05bf8c.jpg" width="2400" height="1591" alt="" loading="eager" decoding="async"/></div>
+    </div>
+    <div class="slide slide-3-lll">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/e847551a48b9702bd72097677026493c.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/8bf9c148225fe225cb67ccc14810be0e.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/35b991141b53225c4361b06ea5d94c4b.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
+    </div>
+    <div class="slide slide-3-lll">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/a630842ca4e501f6e01ae78bd75117f1.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/0340b44707d9f84744f1fa3d2fbbd509.jpg" width="2400" height="1640" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/531ce9e5d1cf90a1a780d32093f8ffd0.jpg" width="2400" height="1605" alt="" loading="lazy" decoding="async"/></div>
+    </div>
+    <div class="slide slide-3-lll">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/c7499a3ce2799ff03c53e4d2826f0430.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/3d4fd1268da218ad1b51fbd498c6099e.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/4c2c0060df0bc98c75f2caaa0eb31359.jpg" width="2400" height="1600" alt="" loading="lazy" decoding="async"/></div>
+    </div>
   </div>
 </section>
 <div class="proj-footer">

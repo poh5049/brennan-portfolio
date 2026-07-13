@@ -45,12 +45,37 @@ nav.s{padding:20px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .featured-link:hover{color:var(--text)}
 .featured-link::before{content:attr(data-icon);font-size:10px}
 .gallery{padding:4px 4px 120px}
-.gallery-grid{columns:2;column-gap:4px}
-.gallery-item{break-inside:avoid;margin-bottom:4px;overflow:hidden;cursor:none;position:relative;background:#1a1815}
-.gallery-item img{width:100%;height:auto;display:block;filter:brightness(.88);transition:filter 1.3s var(--ease),transform 1.4s var(--ease);will-change:transform,filter}
+.slides{display:flex;flex-direction:column;gap:4px}
+.slide{width:100%;overflow:hidden}
+.gallery-item{overflow:hidden;cursor:none;position:relative;background:#1a1815}
+.slide:not(.slide-1) .gallery-item{height:100%}
+.gallery-item img{width:100%;display:block;filter:brightness(.88);transition:filter 1.3s var(--ease),transform 1.4s var(--ease);will-change:transform,filter}
+.slide-1 .gallery-item img{height:auto}
+.slide:not(.slide-1) .gallery-item img{height:100%;object-fit:cover}
 .gallery-item:hover img{filter:brightness(1);transform:scale(1.03)}
 .gallery-item{animation:gslide .8s cubic-bezier(0.16,1,0.3,1) both}
 @keyframes gslide{from{transform:translateY(20px)}to{transform:translateY(0)}}
+.slide-2-ll,.slide-2-pp{display:grid;grid-template-columns:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-2-lp{display:grid;grid-template-columns:56fr 44fr;gap:4px;aspect-ratio:16/9}
+.slide-2-pl{display:grid;grid-template-columns:44fr 56fr;gap:4px;aspect-ratio:16/9}
+.slide-3-llp{display:grid;grid-template-columns:62fr 38fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-3-llp .gallery-item:nth-child(3){grid-row:1/3}
+.slide-3-pll{display:grid;grid-template-columns:38fr 62fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-3-pll .gallery-item:nth-child(1){grid-row:1/3}
+.slide-3-lpl,.slide-3-lll,.slide-3-ppp{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-3-lpp{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:4px}
+.slide-3-lpp .gallery-item:nth-child(1){grid-column:1/3;aspect-ratio:16/7}
+.slide-3-lpp .gallery-item:nth-child(1) img{height:100%}
+.slide-3-lpp .gallery-item:nth-child(2),.slide-3-lpp .gallery-item:nth-child(3){aspect-ratio:2/3;height:auto}
+.slide-3-ppl{display:grid;grid-template-columns:38fr 62fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-3-ppl .gallery-item:nth-child(3){grid-row:1/3}
+.slide-4{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-5{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-5 .gallery-item:nth-child(1),.slide-5 .gallery-item:nth-child(2),.slide-5 .gallery-item:nth-child(3){grid-column:span 2}
+.slide-5 .gallery-item:nth-child(4){grid-column:1/4}
+.slide-5 .gallery-item:nth-child(5){grid-column:4/7}
+.slide-6{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-many{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;aspect-ratio:16/9}
 #lightbox{position:fixed;inset:0;z-index:500;background:rgba(10,9,8,.97);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s;cursor:none}
 #lightbox.open{opacity:1;visibility:visible}
 #lightbox img{max-width:92vw;max-height:90vh;object-fit:contain;transform:scale(.96);transition:transform .6s var(--ease);display:block}
@@ -80,7 +105,7 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
 @keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes lu{from{transform:translateY(110%)}to{transform:translateY(0)}}
 @media(max-width:900px){nav{padding-left:28px;padding-right:28px;padding-top:28px}nav.s{padding-top:18px;padding-left:28px;padding-right:28px}.proj-header{padding:140px 28px 72px}.gallery{padding:4px 4px 80px}.proj-footer{grid-template-columns:1fr}.proj-nav-item:first-child{border-right:none;border-bottom:1px solid rgba(138,117,96,.08)}.proj-nav-item{padding:40px 28px}footer{padding:24px 28px}.proj-meta{gap:32px;flex-wrap:wrap}}
-@media(max-width:600px){.gallery-grid{columns:1}}
+@media(max-width:600px){}
 </style>
 </head>
 <body>
@@ -110,23 +135,43 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
   </div>
 </section>
 <section class="gallery">
-  <div class="gallery-grid">
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/0de89b757542a2f141a6b5f2f7e424c6.png" width="2400" height="1224" alt="" loading="eager" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/f5a529ccc7b0aa6c2cc535f09adc4104.png" width="2400" height="1507" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/bdcb0c29024a509e4bfc41b6d54e1c1d.png" width="1824" height="1280" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/d15228b5e171755bc5b69bc8c008ca4e.png" width="2206" height="1128" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/d2f82b10987f6741185a66565727d9e3.png" width="2206" height="1128" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/7d68360eea213029ed4891e6122ceb36.png" width="2400" height="1443" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/327f4bcee08361071e29d90412367d4a.png" width="2400" height="1512" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/71339b601af7813a8ac076062a512d9c.png" width="2270" height="1594" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/a35a457aa29d8686b52dcba07062b0d8.png" width="2398" height="1780" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/02d59e4c4bcae630ea10c347885d07fc.png" width="2352" height="1800" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/57c650db571009b0b1032bf7d88b03af.png" width="2400" height="1598" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/3e39b536527f38d48935b2ff26db0b11.png" width="2342" height="1136" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/904ad14a2785c7e2c6daab5b0fa02c03.png" width="2400" height="1375" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/3b75b7f2d4988187607f6c65003a2a6d.png" width="2400" height="1375" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/f9566b2cebb7ab455fabed06f46d2cf3.png" width="2400" height="1206" alt="" loading="lazy" decoding="async"/></div>
-    <div class="gallery-item r"><img src="https://brennanp.my.canva.site/_assets/media/eb426b76ec7e818665a589e0188376dd.png" width="2400" height="1206" alt="" loading="lazy" decoding="async"/></div>
+  <div class="slides">
+    <div class="slide slide-1">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/0de89b757542a2f141a6b5f2f7e424c6.png" width="2400" height="1224" alt="" loading="eager" decoding="async"/></div>
+    </div>
+    <div class="slide slide-2-ll">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/f5a529ccc7b0aa6c2cc535f09adc4104.png" width="2400" height="1507" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/bdcb0c29024a509e4bfc41b6d54e1c1d.png" width="1824" height="1280" alt="" loading="lazy" decoding="async"/></div>
+    </div>
+    <div class="slide slide-2-ll">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/d15228b5e171755bc5b69bc8c008ca4e.png" width="2206" height="1128" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/d2f82b10987f6741185a66565727d9e3.png" width="2206" height="1128" alt="" loading="lazy" decoding="async"/></div>
+    </div>
+    <div class="slide slide-1">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/7d68360eea213029ed4891e6122ceb36.png" width="2400" height="1443" alt="" loading="lazy" decoding="async"/></div>
+    </div>
+    <div class="slide slide-2-ll">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/327f4bcee08361071e29d90412367d4a.png" width="2400" height="1512" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/71339b601af7813a8ac076062a512d9c.png" width="2270" height="1594" alt="" loading="lazy" decoding="async"/></div>
+    </div>
+    <div class="slide slide-1">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/a35a457aa29d8686b52dcba07062b0d8.png" width="2398" height="1780" alt="" loading="lazy" decoding="async"/></div>
+    </div>
+    <div class="slide slide-2-ll">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/02d59e4c4bcae630ea10c347885d07fc.png" width="2352" height="1800" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/57c650db571009b0b1032bf7d88b03af.png" width="2400" height="1598" alt="" loading="lazy" decoding="async"/></div>
+    </div>
+    <div class="slide slide-1">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/3e39b536527f38d48935b2ff26db0b11.png" width="2342" height="1136" alt="" loading="lazy" decoding="async"/></div>
+    </div>
+    <div class="slide slide-2-ll">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/904ad14a2785c7e2c6daab5b0fa02c03.png" width="2400" height="1375" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/3b75b7f2d4988187607f6c65003a2a6d.png" width="2400" height="1375" alt="" loading="lazy" decoding="async"/></div>
+    </div>
+    <div class="slide slide-2-ll">
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/f9566b2cebb7ab455fabed06f46d2cf3.png" width="2400" height="1206" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/eb426b76ec7e818665a589e0188376dd.png" width="2400" height="1206" alt="" loading="lazy" decoding="async"/></div>
+    </div>
   </div>
 </section>
 <div class="proj-footer">
