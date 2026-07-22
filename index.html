@@ -984,7 +984,7 @@ if (cfForm) {
   const words = el.textContent.trim().split(/\s+/);
   el.textContent = '';
   words.forEach((w, i) => {
-    if (i > 0) el.appendChild(document.createTextNode(' \u2014 '));
+    if (i > 0) el.appendChild(document.createTextNode(' '));
     const outer = document.createElement('span');
     outer.className = 'word-outer';
     const inner = document.createElement('span');
