@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Brennan Phua ÃÂ¢ÃÂÃÂ Senior Interior Designer at SG Interior Design, Singapore. Spaces with identity."/>
-<title>Brennan Phua ÃÂ¢ÃÂÃÂ Interior Designer</title>
+<meta name="description" content="Brennan Phua — Senior Interior Designer at SG Interior Design, Singapore. Spaces with identity."/>
+<title>Brennan Phua — Interior Designer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet"/>
@@ -30,7 +30,7 @@ body{
 }
 ::selection{background:rgba(138,117,96,.22);color:var(--text)}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Loader ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Loader — */
 #loader{
   position:fixed;inset:0;background:var(--bg);z-index:9999;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
@@ -41,7 +41,7 @@ body{
 .loader-word{font-size:7px;letter-spacing:.6em;text-transform:uppercase;color:var(--text-dim);opacity:0;animation:fu .8s var(--ease) .9s forwards}
 @keyframes loaderGrow{to{height:72px}}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Cursor ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Cursor — */
 .cur{
   position:fixed;width:6px;height:6px;background:var(--gold);
   border-radius:50%;pointer-events:none;z-index:9998;
@@ -57,7 +57,7 @@ body{
 .cur.h{width:12px;height:12px;background:transparent;border:1px solid var(--gold)}
 .cur-r.h{width:56px;height:56px;border-color:rgba(138,117,96,.12)}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Nav ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Nav — */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
   display:flex;justify-content:space-between;align-items:center;
@@ -88,7 +88,7 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .nav-right a:hover{color:var(--text)}
 .nav-right a:hover::after{width:100%}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ About Overlay ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — About Overlay — */
 #about-overlay{
   position:fixed;inset:0;z-index:300;
   display:flex;pointer-events:none;visibility:hidden;
@@ -140,13 +140,13 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 }
 .about-bio:last-child{margin-bottom:0}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Reveal ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Reveal — */
 .r{opacity:0;transform:translateY(44px);transition:opacity 1.3s var(--ease),transform 1.3s var(--ease)}
 .r.v{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.38s}.d4{transition-delay:.56s}
 .d5{transition-delay:.76s}.d6{transition-delay:.98s}.d7{transition-delay:1.22s}.d8{transition-delay:1.48s}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Hero ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Hero — */
 #hero{width:100vw}
 .hero-photo{
   position:relative;width:100%;height:88vh;overflow:hidden;
@@ -179,7 +179,7 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 }
 .hero-name span{display:block;animation:lu 1.3s var(--ease) 1.7s both}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Works ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Works — */
 #works{padding:80px 60px}
 .works-header{
   display:flex;justify-content:space-between;align-items:flex-end;
@@ -194,7 +194,7 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
   aspect-ratio:3/2;position:relative;overflow:hidden;background:#1a1815;
   cursor:none;display:block;text-decoration:none;
   }
-/* Varied aspect ratios ÃÂ¢ÃÂÃÂ organic editorial masonry rhythm */
+/* Varied aspect ratios — organic editorial masonry rhythm */
 .work-item.featured{display:block;aspect-ratio:3/2}
 
 .work-img{
@@ -218,7 +218,7 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .work-type{font-size:7px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
 .work-name{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--text);font-weight:300}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Statement ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Statement — */
 #statement{
   padding:140px 60px;
   display:flex;flex-direction:column;align-items:center;
@@ -254,7 +254,7 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 }
 .stmt-attr.revealed{opacity:1}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Contact ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Contact — */
 #contact{
   padding:140px 60px;
   display:grid;
@@ -278,7 +278,7 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .detail a{color:var(--text-dim);text-decoration:none;transition:color .3s}
 .detail a:hover{color:var(--gold)}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Contact Form ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Contact Form — */
 .contact-right{padding-top:4px}
 .cf-label{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:40px;display:block}
 .cf-group{position:relative;margin-bottom:0}
@@ -331,7 +331,7 @@ select.cf-field option{background:var(--bg);color:var(--text)}
 .cf-form.sent .cf-fields{display:none}
 .cf-form.sent .cf-submit{display:none}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Lightbox ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Lightbox — */
 #lightbox{
   position:fixed;inset:0;z-index:500;
   background:rgba(10,9,8,.96);
@@ -386,7 +386,7 @@ select.cf-field option{background:var(--bg);color:var(--text)}
 .lb-prev{left:24px}.lb-prev::after{transform:rotate(-135deg)}
 .lb-next{right:24px}.lb-next::after{transform:rotate(45deg)}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Footer ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Footer — */
 footer{
   padding:28px 60px;
   display:flex;justify-content:space-between;align-items:center;
@@ -395,12 +395,12 @@ footer{
 .ft-l{font-size:7px;letter-spacing:.32em;text-transform:uppercase;color:var(--text-dim)}
 .ft-r{font-size:7px;letter-spacing:.22em;color:var(--text-dim)}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Keyframes ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Keyframes — */
 @keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes lu{from{transform:translateY(110%)}to{transform:translateY(0)}}
 @keyframes sp{0%,100%{opacity:.2}50%{opacity:1}}
 
-/* ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Responsive ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ */
+/* — Responsive — */
 @media(max-width:900px){
   nav,#works,#statement,#contact,footer{padding-left:28px;padding-right:28px}
   nav{padding-top:28px}nav.s{padding-top:18px}
@@ -426,10 +426,10 @@ footer{
   .hero-text{left:20px;bottom:20px}
   .works-grid{grid-template-columns:repeat(2,1fr)}
   .work-item{margin-bottom:2px}
-      /* Keep desktop variation ÃÂ¢ÃÂÃÂ only rein in 4/3 landscape which looks squished at half-phone width */
+      /* Keep desktop variation — only rein in 4/3 landscape which looks squished at half-phone width */
   }
 
-  /* Ã¢ÂÂÃ¢ÂÂ PRESS / FEATURED SECTION Ã¢ÂÂÃ¢ÂÂ */
+  /* — PRESS / FEATURED SECTION — */
   #press{padding:100px 60px 90px;background:#100f0a;border-top:3px solid #c4a060;border-bottom:3px solid rgba(196,160,96,.25);text-align:center}
   .press-label{font-size:11px;letter-spacing:.4em;color:#c4a060;margin-bottom:8px;text-transform:uppercase;font-weight:400}
   .press-sublabel{font-size:14px;letter-spacing:.05em;color:rgba(255,255,255,.5);margin-bottom:52px;font-weight:300}
@@ -465,10 +465,10 @@ footer{
     <h2 class="about-tagline">Spaces with identity.</h2>
     <div class="about-divider"></div>
     <p class="about-bio">
-      Brennan Phua is a Singapore-based senior interior designer at SG Interior Design, known for creating homes and commercial spaces that are both beautiful and practical. His work is guided by contrast ÃÂ¢ÃÂÃÂ light and dark, bold and calm, open and cosy ÃÂ¢ÃÂÃÂ resulting in interiors that feel personal, thoughtful, and never generic.
+      Brennan Phua is a Singapore-based senior interior designer at SG Interior Design, known for creating homes and commercial spaces that are both beautiful and practical. His work is guided by contrast — light and dark, bold and calm, open and cosy — resulting in interiors that feel personal, thoughtful, and never generic.
     </p>
     <p class="about-bio">
-      With a focus on materials, atmosphere, and everyday living, Brennan designs for clients who want more than a standard renovation. They want a space that feels like their own ÃÂ¢ÃÂÃÂ a place to live, rest, host, and enjoy.
+      With a focus on materials, atmosphere, and everyday living, Brennan designs for clients who want more than a standard renovation. They want a space that feels like their own — a place to live, rest, host, and enjoy.
     </p>
   </div>
 </div>
@@ -810,8 +810,8 @@ footer{
         <div class="cf-group">
           <select class="cf-field" name="project-type" required>
             <option value="" disabled selected>Project Type</option>
-            <option value="Residential HDB">Residential ÃÂ¢ÃÂÃÂ HDB</option>
-            <option value="Residential Condo">Residential ÃÂ¢ÃÂÃÂ Condo / Landed</option>
+            <option value="Residential HDB">Residential — HDB</option>
+            <option value="Residential Condo">Residential — Condo / Landed</option>
             <option value="Commercial">Commercial / F&amp;B</option>
             <option value="Other">Other</option>
           </select>
@@ -823,7 +823,7 @@ footer{
         </div>
         <button type="submit" class="cf-submit"><span>Send Enquiry</span></button>
       </div>
-      <div class="cf-success">Message received ÃÂ¢ÃÂÃÂ I&rsquo;ll be in touch shortly.</div>
+      <div class="cf-success">Message received — I&rsquo;ll be in touch shortly.</div>
     </form>
   </div>
 
@@ -859,12 +859,12 @@ footer{
 </footer>
 
 <script>
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Loader ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// — Loader —
 window.addEventListener('load', () => {
   setTimeout(() => document.getElementById('loader').classList.add('gone'), 700);
 });
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Cursor ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// — Cursor —
 const cur = document.getElementById('cur');
 const curR = document.getElementById('curR');
 let mx = window.innerWidth / 2, my = window.innerHeight / 2, rx = mx, ry = my;
@@ -883,7 +883,7 @@ document.querySelectorAll('a, button, .work-item').forEach(el => {
   el.addEventListener('mouseleave', () => { cur.classList.remove('h'); curR.classList.remove('h'); });
 });
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ About ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// — About —
 const overlay = document.getElementById('about-overlay');
 function openAbout() { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
 function closeAbout() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
@@ -892,11 +892,11 @@ document.getElementById('aboutClose').addEventListener('click', closeAbout);
 document.getElementById('aboutBackdrop').addEventListener('click', closeAbout);
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAbout(); });
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Nav ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// — Nav —
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('s', scrollY > 60), { passive: true });
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Scroll Reveal ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// — Scroll Reveal —
 const io = new IntersectionObserver(es => {
   es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('v'); io.unobserve(e.target); }
@@ -904,7 +904,7 @@ const io = new IntersectionObserver(es => {
 }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.r, .rf').forEach(el => io.observe(el));
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Hero Parallax + fade ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// — Hero Parallax + fade —
 const heroImg = document.getElementById('heroImg');
 const heroTag = document.querySelector('.hero-tag');
 const heroName = document.querySelector('.hero-name');
@@ -927,7 +927,7 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Works Mouse Parallax ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// — Works Mouse Parallax —
 document.querySelectorAll('.work-item').forEach(item => {
   let raf;
   item.addEventListener('mousemove', e => {
@@ -951,7 +951,7 @@ document.querySelectorAll('.work-item').forEach(item => {
   });
 });
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Smooth Scroll ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// — Smooth Scroll —
 document.querySelectorAll('a[href^="#"]:not(#aboutBtn)').forEach(a => {
   a.addEventListener('click', e => {
     const t = document.querySelector(a.getAttribute('href'));
@@ -959,7 +959,7 @@ document.querySelectorAll('a[href^="#"]:not(#aboutBtn)').forEach(a => {
   });
 });
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Contact Form ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// — Contact Form —
 const cfForm = document.getElementById('cfForm');
 if (cfForm) {
   cfForm.addEventListener('submit', async e => {
@@ -969,12 +969,12 @@ if (cfForm) {
       await fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() });
       cfForm.classList.add('sent');
     } catch(_) {
-      cfForm.classList.add('sent'); // show success anyway ÃÂ¢ÃÂÃÂ Netlify handles it
+      cfForm.classList.add('sent'); // show success anyway — Netlify handles it
     }
   });
 }
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Statement Word Reveal ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// — Statement Word Reveal —
 (function(){
   const el = document.querySelector('.stmt-text');
   const attr = document.querySelector('.stmt-attr');
@@ -984,7 +984,7 @@ if (cfForm) {
   const words = el.textContent.trim().split(/\s+/);
   el.textContent = '';
   words.forEach((w, i) => {
-    if (i > 0) el.appendChild(document.createTextNode('ÃÂÃÂ '));
+    if (i > 0) el.appendChild(document.createTextNode(' \u2014 '));
     const outer = document.createElement('span');
     outer.className = 'word-outer';
     const inner = document.createElement('span');
@@ -1008,7 +1008,7 @@ if (cfForm) {
   obs.observe(el);
 })();
 
-// ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ Lightbox ÃÂ¢ÃÂÃÂÃÂ¢ÃÂÃÂ
+// — Lightbox —
 const lb       = document.getElementById('lightbox');
 const lbImg    = document.getElementById('lbImg');
 const lbNum    = document.getElementById('lbNum');
@@ -1052,7 +1052,7 @@ function lbGo(dir) {
 
 lbImg.style.transition = 'opacity .18s ease, transform .6s var(--ease)';
 
-// project cards navigate via href ÃÂ¢ÃÂÃÂ lightbox not triggered from grid
+// project cards navigate via href — lightbox not triggered from grid
 document.getElementById('lbClose').addEventListener('click', closeLb);
 document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); lbGo(-1); });
 document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); lbGo(1); });
