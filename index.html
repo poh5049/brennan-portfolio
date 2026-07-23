@@ -443,6 +443,19 @@ footer{
   .press-arrow{font-size:16px;color:rgba(12,10,6,.7);margin-left:auto;padding-left:20px;transition:transform .25s}
   .press-badge:hover .press-arrow{transform:translateX(5px);color:#0c0a06}
   @media(max-width:640px){#press{padding:70px 24px 60px} .press-badge{padding:22px 28px;min-width:0;width:100%;max-width:320px} .press-badges{flex-direction:column;align-items:center}}
+#testimonials{padding:100px 60px 90px;background:#0c0a06;text-align:center;border-top:1px solid rgba(196,160,96,.15)}
+.test-label{font-size:11px;letter-spacing:.4em;color:#c4a060;margin-bottom:8px;text-transform:uppercase;font-weight:400}
+.test-sub{font-size:14px;letter-spacing:.05em;color:rgba(255,255,255,.4);margin-bottom:64px;font-weight:300}
+.test-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;max-width:1300px;margin:0 auto;background:rgba(196,160,96,.12)}
+.test-card{background:#0c0a06;padding:52px 44px;text-align:left;grid-column:span 2}
+.test-card:nth-child(4){grid-column:2/4}
+.test-card:nth-child(5){grid-column:4/6}
+.test-stars{color:#c4a060;letter-spacing:4px;font-size:11px;margin-bottom:28px}
+.test-quote{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;font-weight:300;line-height:1.75;color:rgba(255,255,255,.82);margin-bottom:36px}
+.test-name{font-size:10px;letter-spacing:.3em;color:#c4a060;text-transform:uppercase;font-weight:500}
+.test-via{font-size:9px;letter-spacing:.18em;color:rgba(255,255,255,.28);margin-top:5px}
+@media(max-width:960px){.test-grid{grid-template-columns:1fr 1fr;background:none;gap:2px}.test-card{grid-column:auto!important;padding:40px 32px}}
+@media(max-width:580px){#testimonials{padding:70px 0 60px}.test-grid{grid-template-columns:1fr}.test-card{padding:40px 28px}}
 </style>
 </head>
 <body>
@@ -831,6 +844,42 @@ footer{
 
 <!-- Footer -->
 
+<section id="testimonials">
+  <p class="test-label">Client Stories</p>
+  <p class="test-sub">What clients say about the work</p>
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="test-quote">"He went out of his way throughout. Furniture shopping, defects checks, site coordination. The design turned out better than expected. We are extremely pleased."</p>
+      <p class="test-name">Gideon Tan</p>
+      <p class="test-via">Google Review &#183; Local Guide</p>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="test-quote">"His ability to balance both aesthetics and functionality was commendable. He managed to align the design perfectly with our needs."</p>
+      <p class="test-name">Lauren Lim</p>
+      <p class="test-via">Google Review</p>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="test-quote">"Their ability to translate our ideas into a space that feels both beautiful and functional is truly remarkable. A home we are proud to call our own."</p>
+      <p class="test-name">Melody Tan</p>
+      <p class="test-via">Google Review</p>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="test-quote">"Designed the space well and were practical throughout. Transparent, easy to communicate with. Honestly the smoothest renovation experience we could have asked for."</p>
+      <p class="test-name">Just Nx</p>
+      <p class="test-via">Google Review</p>
+    </div>
+    <div class="test-card">
+      <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="test-quote">"Prompt, professional, and organised throughout. Paid good attention to details, keeping everything on schedule. We are really happy with the final outcome."</p>
+      <p class="test-name">Jamie Ann Chew</p>
+      <p class="test-via">Google Review</p>
+    </div>
+  </div>
+</section>
 <section id="press">
   <p class="press-label">Featured On</p>
   <div class="press-badges">
