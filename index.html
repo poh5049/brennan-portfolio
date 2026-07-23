@@ -460,7 +460,7 @@ footer{
 .test-label{font-size:11px;letter-spacing:.4em;color:#c4a060;margin-bottom:60px;text-transform:uppercase;font-weight:400}
 .test-slider{position:relative;max-width:800px;margin:0 auto;padding:0 40px}
 .test-track{display:grid}
-.test-slide{grid-area:1/1;opacity:0;transition:opacity .8s ease;pointer-events:none}
+.test-slide{grid-area:1/1;opacity:0;transition:opacity 1s ease;pointer-events:none}
 .test-slide.active{opacity:1;pointer-events:auto}
 .test-stars{color:#c4a060;letter-spacing:5px;font-size:11px;margin-bottom:32px}
 .test-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2.4vw,26px);font-style:italic;font-weight:300;line-height:1.75;color:rgba(255,255,255,.85);margin-bottom:44px}
@@ -911,7 +911,7 @@ footer{
 (function(){
   var sl=document.querySelectorAll('.test-slide'),dt=document.querySelectorAll('.test-dot'),cur=0,tmr;
   function goTo(n){sl[cur].classList.remove('active');dt[cur].classList.remove('active');cur=(n+sl.length)%sl.length;sl[cur].classList.add('active');dt[cur].classList.add('active');}
-  function start(){tmr=setInterval(function(){goTo(cur+1);},5000);}
+  function start(){tmr=setInterval(function(){goTo(cur+1);},7000);}
   function stop(){clearInterval(tmr);}
   dt.forEach(function(d,i){d.addEventListener('click',function(){stop();goTo(i);start();});});
   document.querySelector('.test-prev').addEventListener('click',function(){stop();goTo(cur-1);start();});
