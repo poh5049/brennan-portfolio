@@ -904,32 +904,33 @@ footer{
 </section>
 <script>
 (function(){
-  var sl=document.querySelectorAll('.test-slide'),dt=document.querySelectorAll('.test-dot'),cur=0,tmr;
-  var track=document.querySelector('.test-track'),hts=[];
-  // Measure each slide's natural height using off-screen clones
-  var md=document.createElement('div');
-  md.style.cssText='position:fixed;visibility:hidden;top:-9999px;left:0;width:'+track.clientWidth+'px;overflow:visible';
-  document.body.appendChild(md);
-  Array.from(sl).forEach(function(s){
-    var c=s.cloneNode(true);
-    c.style.cssText='display:block;position:static;opacity:1;grid-area:auto;pointer-events:auto';
-    md.appendChild(c);
-    hts.push(md.lastChild.scrollHeight);
-    md.removeChild(c);
-  });
-  document.body.removeChild(md);
-  track.style.height=hts[0]+'px';
-  function goTo(n){sl[cur].classList.remove('active');dt[cur].classList.remove('active');cur=(n+sl.length)%sl.length;sl[cur].classList.add('active');dt[cur].classList.add('active');track.style.height=hts[cur]+'px';}
+  var sl=document.querySelectorAll('.test-slide'),dt=document.querySelectorAll('.test-dot'),cur=0,tmr,hts=[];
+  var track=document.querySelector('.test-track');
+  function setH(){if(hts.length)track.style.height=hts[cur]+'px';}
+  function goTo(n){sl[cur].classList.remove('active');dt[cur].classList.remove('active');cur=(n+sl.length)%sl.length;sl[cur].classList.add('active');dt[cur].classList.add('active');setH();}
   function start(){tmr=setInterval(function(){goTo(cur+1);},3500);}
   function stop(){clearInterval(tmr);}
+  // Measure after fonts load so Cormorant Garamond heights are accurate
+  document.fonts.ready.then(function(){
+    var tw=track.clientWidth||320,md=document.createElement('div');
+    md.style.cssText='position:fixed;visibility:hidden;top:-9999px;left:0;width:'+tw+'px;overflow:visible';
+    document.body.appendChild(md);
+    Array.from(sl).forEach(function(s){
+      var c=s.cloneNode(true);
+      c.style.cssText='display:block;position:static;opacity:1;grid-area:auto;pointer-events:auto';
+      md.appendChild(c);hts.push(md.lastChild.scrollHeight);md.removeChild(c);
+    });
+    document.body.removeChild(md);
+    setH();
+  });
   dt.forEach(function(d,i){d.addEventListener('click',function(){stop();goTo(i);start();});});
   document.querySelector('.test-prev').addEventListener('click',function(){stop();goTo(cur-1);start();});
   document.querySelector('.test-next').addEventListener('click',function(){stop();goTo(cur+1);start();});
-  var w=document.querySelector('.test-slider');
-  w.addEventListener('mouseenter',stop);w.addEventListener('mouseleave',start);
+  var ws=document.querySelector('.test-slider');
+  ws.addEventListener('mouseenter',stop);ws.addEventListener('mouseleave',start);
   var tx=0;
-  w.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
-  w.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40){stop();goTo(dx<0?cur+1:cur-1);start();}},{passive:true});
+  ws.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+  ws.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40){stop();goTo(dx<0?cur+1:cur-1);start();}},{passive:true});
   start();
 })();
 </script>
