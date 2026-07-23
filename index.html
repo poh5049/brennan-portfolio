@@ -469,10 +469,10 @@ footer{
 .test-dots{display:flex;justify-content:center;gap:12px;margin-top:52px}
 .test-dot{width:28px;height:2px;background:rgba(196,160,96,.25);border:none;padding:8px 0;cursor:pointer;transition:background .3s;box-sizing:content-box}
 .test-dot.active{background:#c4a060}
-.test-prev,.test-next{position:absolute;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(196,160,96,.4);font-size:20px;cursor:pointer;transition:color .25s;padding:8px;line-height:1;z-index:10}
-.test-prev{left:-32px}.test-next{right:-32px}
-.test-prev:hover,.test-next:hover{color:#c4a060}
-@media(max-width:640px){#testimonials{padding:70px 24px 60px}.test-slider{padding:0 10px}.test-quote{font-size:18px}.test-prev,.test-next{display:none}}
+.test-prev,.test-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(196,160,96,.12);border:1px solid rgba(196,160,96,.3);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:rgba(196,160,96,.8);font-size:22px;cursor:pointer;transition:background .25s,color .25s,border-color .25s;padding:0;line-height:1;z-index:10}
+.test-prev{left:-22px}.test-next{right:-22px}
+.test-prev:hover,.test-next:hover{background:rgba(196,160,96,.25);color:#c4a060;border-color:rgba(196,160,96,.7)}
+@media(max-width:640px){#testimonials{padding:70px 24px 60px}.test-slider{padding:0 28px}.test-quote{font-size:18px}.test-prev,.test-next{width:36px;height:36px;font-size:18px}.test-prev{left:-18px}.test-next{right:-18px}}
 </style>
 
 <meta name="author" content="Brennan Phua">
