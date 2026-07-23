@@ -793,6 +793,70 @@ footer{
   </div>
 </section>
 
+<section id="testimonials">
+  <p class="test-label">Client Stories</p>
+  <div class="test-slider">
+    <button class="test-prev" aria-label="Previous">&#8592;</button>
+    <button class="test-next" aria-label="Next">&#8594;</button>
+    <div class="test-track">
+      <div class="test-slide active">
+        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="test-quote">&#8220;He went out of his way throughout. Furniture shopping, defects checks, site coordination. The design turned out better than expected. We are extremely pleased.&#8221;</p>
+        <p class="test-name">Gideon Tan</p>
+        <p class="test-via">Google Review &#183; Local Guide</p>
+      </div>
+      <div class="test-slide">
+        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="test-quote">&#8220;His ability to balance both aesthetics and functionality was commendable. He managed to align the design perfectly with our needs.&#8221;</p>
+        <p class="test-name">Lauren Lim</p>
+        <p class="test-via">Google Review</p>
+      </div>
+      <div class="test-slide">
+        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="test-quote">&#8220;Their ability to translate our ideas into a space that feels both beautiful and functional is truly remarkable. A home we are proud to call our own.&#8221;</p>
+        <p class="test-name">Melody Tan</p>
+        <p class="test-via">Google Review</p>
+      </div>
+      <div class="test-slide">
+        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="test-quote">&#8220;Designed the space well and were practical throughout. Transparent, easy to communicate with. Honestly the smoothest renovation experience we could have asked for.&#8221;</p>
+        <p class="test-name">Just Nx</p>
+        <p class="test-via">Google Review</p>
+      </div>
+      <div class="test-slide">
+        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="test-quote">&#8220;Prompt, professional, and organised throughout. Paid good attention to details, keeping everything on schedule. We are really happy with the final outcome.&#8221;</p>
+        <p class="test-name">Jamie Ann Chew</p>
+        <p class="test-via">Google Review</p>
+      </div>
+    </div>
+    <div class="test-dots">
+      <button class="test-dot active" aria-label="1"></button>
+      <button class="test-dot" aria-label="2"></button>
+      <button class="test-dot" aria-label="3"></button>
+      <button class="test-dot" aria-label="4"></button>
+      <button class="test-dot" aria-label="5"></button>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var sl=document.querySelectorAll('.test-slide'),dt=document.querySelectorAll('.test-dot'),cur=0,tmr;
+  function goTo(n){sl[cur].classList.remove('active');dt[cur].classList.remove('active');cur=(n+sl.length)%sl.length;sl[cur].classList.add('active');dt[cur].classList.add('active');}
+  function start(){tmr=setInterval(function(){goTo(cur+1);},5000);}
+  function stop(){clearInterval(tmr);}
+  dt.forEach(function(d,i){d.addEventListener('click',function(){stop();goTo(i);start();});});
+  document.querySelector('.test-prev').addEventListener('click',function(){stop();goTo(cur-1);start();});
+  document.querySelector('.test-next').addEventListener('click',function(){stop();goTo(cur+1);start();});
+  var w=document.querySelector('.test-slider');
+  w.addEventListener('mouseenter',stop);w.addEventListener('mouseleave',start);
+  var tx=0;
+  w.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+  w.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40){stop();goTo(dx<0?cur+1:cur-1);start();}},{passive:true});
+  start();
+})();
+</script>
+
 <!-- Contact -->
 <section id="contact">
 
@@ -861,69 +925,7 @@ footer{
 
 <!-- Footer -->
 
-<section id="testimonials">
-  <p class="test-label">Client Stories</p>
-  <div class="test-slider">
-    <button class="test-prev" aria-label="Previous">&#8592;</button>
-    <button class="test-next" aria-label="Next">&#8594;</button>
-    <div class="test-track">
-      <div class="test-slide active">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">&#8220;He went out of his way throughout. Furniture shopping, defects checks, site coordination. The design turned out better than expected. We are extremely pleased.&#8221;</p>
-        <p class="test-name">Gideon Tan</p>
-        <p class="test-via">Google Review &#183; Local Guide</p>
-      </div>
-      <div class="test-slide">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">&#8220;His ability to balance both aesthetics and functionality was commendable. He managed to align the design perfectly with our needs.&#8221;</p>
-        <p class="test-name">Lauren Lim</p>
-        <p class="test-via">Google Review</p>
-      </div>
-      <div class="test-slide">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">&#8220;Their ability to translate our ideas into a space that feels both beautiful and functional is truly remarkable. A home we are proud to call our own.&#8221;</p>
-        <p class="test-name">Melody Tan</p>
-        <p class="test-via">Google Review</p>
-      </div>
-      <div class="test-slide">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">&#8220;Designed the space well and were practical throughout. Transparent, easy to communicate with. Honestly the smoothest renovation experience we could have asked for.&#8221;</p>
-        <p class="test-name">Just Nx</p>
-        <p class="test-via">Google Review</p>
-      </div>
-      <div class="test-slide">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">&#8220;Prompt, professional, and organised throughout. Paid good attention to details, keeping everything on schedule. We are really happy with the final outcome.&#8221;</p>
-        <p class="test-name">Jamie Ann Chew</p>
-        <p class="test-via">Google Review</p>
-      </div>
-    </div>
-    <div class="test-dots">
-      <button class="test-dot active" aria-label="1"></button>
-      <button class="test-dot" aria-label="2"></button>
-      <button class="test-dot" aria-label="3"></button>
-      <button class="test-dot" aria-label="4"></button>
-      <button class="test-dot" aria-label="5"></button>
-    </div>
-  </div>
-</section>
-<script>
-(function(){
-  var sl=document.querySelectorAll('.test-slide'),dt=document.querySelectorAll('.test-dot'),cur=0,tmr;
-  function goTo(n){sl[cur].classList.remove('active');dt[cur].classList.remove('active');cur=(n+sl.length)%sl.length;sl[cur].classList.add('active');dt[cur].classList.add('active');}
-  function start(){tmr=setInterval(function(){goTo(cur+1);},5000);}
-  function stop(){clearInterval(tmr);}
-  dt.forEach(function(d,i){d.addEventListener('click',function(){stop();goTo(i);start();});});
-  document.querySelector('.test-prev').addEventListener('click',function(){stop();goTo(cur-1);start();});
-  document.querySelector('.test-next').addEventListener('click',function(){stop();goTo(cur+1);start();});
-  var w=document.querySelector('.test-slider');
-  w.addEventListener('mouseenter',stop);w.addEventListener('mouseleave',start);
-  var tx=0;
-  w.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
-  w.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40){stop();goTo(dx<0?cur+1:cur-1);start();}},{passive:true});
-  start();
-})();
-</script>
+
 
 
 <footer>
