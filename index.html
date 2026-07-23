@@ -856,18 +856,6 @@ footer{
       </div>
       <div class="test-slide">
         <div class="test-stars">★★★★★</div>
-        <p class="test-quote">"Brennan goes the extra mile — constructive advice, creative ideas, and total dedication to the project. A designer who truly invests in your vision."</p>
-        <p class="test-name">John Thang</p>
-        <p class="test-via">Google Review · Restaurant Renovation</p>
-      </div>
-      <div class="test-slide">
-        <div class="test-stars">★★★★★</div>
-        <p class="test-quote">"Very good recommendations and exceptional attention to detail. Even with tight timelines, he ensures smooth completion every time."</p>
-        <p class="test-name">John Thang</p>
-        <p class="test-via">Google Review · The White Tiffin</p>
-      </div>
-      <div class="test-slide">
-        <div class="test-stars">★★★★★</div>
         <p class="test-quote">"Patient through every change of mind. Transparent guidance, zero pressure — just a designer who genuinely wants you to love the result."</p>
         <p class="test-name">Winne</p>
         <p class="test-via">Google Review · Local Guide</p>
@@ -884,35 +872,22 @@ footer{
         <p class="test-name">Caz Wee</p>
         <p class="test-via">Google Review</p>
       </div>
-      <div class="test-slide">
-        <div class="test-stars">★★★★★</div>
-        <p class="test-quote">"One of the most genuine designers I've encountered. He truly listens, always acts in the client's interest, and executes with professional precision."</p>
-        <p class="test-name">Sibyl Lim</p>
-        <p class="test-via">Google Review · Local Guide</p>
-      
-      <button class="test-prev" aria-label="Previous">&#8592;</button>
-      <button class="test-next" aria-label="Next">&#8594;</button>
-    </div>
       <div class="test-dots">
-      <button class="test-dot active" aria-label="1"></button>
-      <button class="test-dot" aria-label="2"></button>
-      <button class="test-dot" aria-label="3"></button>
-      <button class="test-dot" aria-label="4"></button>
-      <button class="test-dot" aria-label="5"></button>
-    
-        <button class="test-dot" aria-label="Review 7"></button>
-        <button class="test-dot" aria-label="Review 8"></button>
-        <button class="test-dot" aria-label="Review 9"></button>
-        <button class="test-dot" aria-label="Review 10"></button>
-        <button class="test-dot" aria-label="Review 11"></button>
-        <button class="test-dot" aria-label="Review 12"></button>
-        <button class="test-dot" aria-label="Review 13"></button>
-      </div>
+    <button class="test-dot active" aria-label="Review 1"></button>
+    <button class="test-dot" aria-label="Review 2"></button>
+    <button class="test-dot" aria-label="Review 3"></button>
+    <button class="test-dot" aria-label="Review 4"></button>
+    <button class="test-dot" aria-label="Review 5"></button>
+    <button class="test-dot" aria-label="Review 6"></button>
+    <button class="test-dot" aria-label="Review 7"></button>
+    <button class="test-dot" aria-label="Review 8"></button>
+    <button class="test-dot" aria-label="Review 9"></button>
+  </div>
   </div>
 </section>
 <script>
 (function(){
-  var sl=document.querySelectorAll('.test-slide'),dt=document.querySelectorAll('.test-dot'),cur=0,tmr,hts=[],busy=false;
+  var sl=document.querySelectorAll('.test-slide'),dt=document.querySelectorAll('.test-dot'),cur=0,hts=[],busy=false;
   var track=document.querySelector('.test-track');
   function setH(){if(hts.length)track.style.height=hts[cur]+'px';}
   function goTo(n){
@@ -929,8 +904,6 @@ footer{
       busy=false;
     },320);
   }
-  function start(){tmr=setInterval(function(){goTo(cur+1);},3500);}
-  function stop(){clearInterval(tmr);}
   document.fonts.ready.then(function(){
     var tw=track.clientWidth||320,md=document.createElement('div');
     md.style.cssText='position:fixed;visibility:hidden;top:-9999px;left:0;width:'+tw+'px;overflow:visible';
@@ -939,15 +912,13 @@ footer{
     document.body.removeChild(md);
     setH();
   });
-  dt.forEach(function(d,i){d.addEventListener('click',function(){stop();goTo(i);start();});});
-  document.querySelector('.test-prev').addEventListener('click',function(){stop();goTo(cur-1);start();});
-  document.querySelector('.test-next').addEventListener('click',function(){stop();goTo(cur+1);start();});
-  var ws=document.querySelector('.test-slider');
-  ws.addEventListener('mouseenter',stop);ws.addEventListener('mouseleave',start);
+  dt.forEach(function(d,i){d.addEventListener('click',function(){goTo(i);});});
+  document.querySelector('.test-prev').addEventListener('click',function(){goTo(cur-1);});
+  document.querySelector('.test-next').addEventListener('click',function(){goTo(cur+1);});
   var tx=0;
+  var ws=document.querySelector('.test-slider');
   ws.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
-  ws.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40){stop();goTo(dx<0?cur+1:cur-1);start();}},{passive:true});
-  start();
+  ws.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40){goTo(dx<0?cur+1:cur-1);}},{passive:true});
 })();
 </script>
 
