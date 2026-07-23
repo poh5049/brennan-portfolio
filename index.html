@@ -30,7 +30,7 @@ body{
 }
 ::selection{background:rgba(138,117,96,.22);color:var(--text)}
 
-/* — Loader — */
+/* â Loader â */
 #loader{
   position:fixed;inset:0;background:var(--bg);z-index:9999;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
@@ -41,7 +41,7 @@ body{
 .loader-word{font-size:7px;letter-spacing:.6em;text-transform:uppercase;color:var(--text-dim);opacity:0;animation:fu .8s var(--ease) .9s forwards}
 @keyframes loaderGrow{to{height:72px}}
 
-/* — Cursor — */
+/* â Cursor â */
 .cur{
   position:fixed;width:6px;height:6px;background:var(--gold);
   border-radius:50%;pointer-events:none;z-index:9998;
@@ -57,7 +57,7 @@ body{
 .cur.h{width:12px;height:12px;background:transparent;border:1px solid var(--gold)}
 .cur-r.h{width:56px;height:56px;border-color:rgba(138,117,96,.12)}
 
-/* — Nav — */
+/* â Nav â */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:200;
   display:flex;justify-content:space-between;align-items:center;
@@ -88,7 +88,7 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .nav-right a:hover{color:var(--text)}
 .nav-right a:hover::after{width:100%}
 
-/* — About Overlay — */
+/* â About Overlay â */
 #about-overlay{
   position:fixed;inset:0;z-index:300;
   display:flex;pointer-events:none;visibility:hidden;
@@ -140,13 +140,13 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 }
 .about-bio:last-child{margin-bottom:0}
 
-/* — Reveal — */
+/* â Reveal â */
 .r{opacity:0;transform:translateY(44px);transition:opacity 1.3s var(--ease),transform 1.3s var(--ease)}
 .r.v{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.38s}.d4{transition-delay:.56s}
 .d5{transition-delay:.76s}.d6{transition-delay:.98s}.d7{transition-delay:1.22s}.d8{transition-delay:1.48s}
 
-/* — Hero — */
+/* â Hero â */
 #hero{width:100vw}
 .hero-photo{
   position:relative;width:100%;height:88vh;overflow:hidden;
@@ -179,7 +179,7 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 }
 .hero-name span{display:block;animation:lu 1.3s var(--ease) 1.7s both}
 
-/* — Works — */
+/* â Works â */
 #works{padding:80px 60px}
 .works-header{
   display:flex;justify-content:space-between;align-items:flex-end;
@@ -194,7 +194,7 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
   aspect-ratio:3/2;position:relative;overflow:hidden;background:#1a1815;
   cursor:none;display:block;text-decoration:none;
   }
-/* Varied aspect ratios — organic editorial masonry rhythm */
+/* Varied aspect ratios â organic editorial masonry rhythm */
 .work-item.featured{display:block;aspect-ratio:3/2}
 
 .work-img{
@@ -218,7 +218,7 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .work-type{font-size:7px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
 .work-name{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--text);font-weight:300}
 
-/* — Statement — */
+/* â Statement â */
 #statement{
   padding:140px 60px;
   display:flex;flex-direction:column;align-items:center;
@@ -254,7 +254,7 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 }
 .stmt-attr.revealed{opacity:1}
 
-/* — Contact — */
+/* â Contact â */
 #contact{
   padding:140px 60px;
   display:grid;
@@ -278,7 +278,7 @@ nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .detail a{color:var(--text-dim);text-decoration:none;transition:color .3s}
 .detail a:hover{color:var(--gold)}
 
-/* — Contact Form — */
+/* â Contact Form â */
 .contact-right{padding-top:4px}
 .cf-label{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:40px;display:block}
 .cf-group{position:relative;margin-bottom:0}
@@ -331,7 +331,7 @@ select.cf-field option{background:var(--bg);color:var(--text)}
 .cf-form.sent .cf-fields{display:none}
 .cf-form.sent .cf-submit{display:none}
 
-/* — Lightbox — */
+/* â Lightbox â */
 #lightbox{
   position:fixed;inset:0;z-index:500;
   background:rgba(10,9,8,.96);
@@ -386,7 +386,7 @@ select.cf-field option{background:var(--bg);color:var(--text)}
 .lb-prev{left:24px}.lb-prev::after{transform:rotate(-135deg)}
 .lb-next{right:24px}.lb-next::after{transform:rotate(45deg)}
 
-/* — Footer — */
+/* â Footer â */
 footer{
   padding:28px 60px;
   display:flex;justify-content:space-between;align-items:center;
@@ -395,12 +395,12 @@ footer{
 .ft-l{font-size:7px;letter-spacing:.32em;text-transform:uppercase;color:var(--text-dim)}
 .ft-r{font-size:7px;letter-spacing:.22em;color:var(--text-dim)}
 
-/* — Keyframes — */
+/* â Keyframes â */
 @keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 @keyframes lu{from{transform:translateY(110%)}to{transform:translateY(0)}}
 @keyframes sp{0%,100%{opacity:.2}50%{opacity:1}}
 
-/* — Responsive — */
+/* â Responsive â */
 @media(max-width:900px){
   nav,#works,#statement,#contact,footer{padding-left:28px;padding-right:28px}
   nav{padding-top:28px}nav.s{padding-top:18px}
@@ -426,10 +426,10 @@ footer{
   .hero-text{left:20px;bottom:20px}
   .works-grid{grid-template-columns:repeat(2,1fr)}
   .work-item{margin-bottom:2px}
-      /* Keep desktop variation — only rein in 4/3 landscape which looks squished at half-phone width */
+      /* Keep desktop variation â only rein in 4/3 landscape which looks squished at half-phone width */
   }
 
-  /* — PRESS / FEATURED SECTION — */
+  /* â PRESS / FEATURED SECTION â */
   #press{padding:100px 60px 90px;background:#100f0a;border-top:3px solid #c4a060;border-bottom:3px solid rgba(196,160,96,.25);text-align:center}
   .press-label{font-size:11px;letter-spacing:.4em;color:#c4a060;margin-bottom:8px;text-transform:uppercase;font-weight:400}
   .press-sublabel{font-size:14px;letter-spacing:.05em;color:rgba(255,255,255,.5);margin-bottom:52px;font-weight:300}
@@ -470,9 +470,9 @@ footer{
 .test-dot{width:28px;height:2px;background:rgba(196,160,96,.25);border:none;padding:8px 0;cursor:pointer;transition:background .3s;box-sizing:content-box}
 .test-dot.active{background:#c4a060}
 .test-prev,.test-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(196,160,96,.12);border:1px solid rgba(196,160,96,.3);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:rgba(196,160,96,.8);font-size:22px;cursor:pointer;transition:background .25s,color .25s,border-color .25s;padding:0;line-height:1;z-index:10}
-.test-prev{left:-22px}.test-next{right:-22px}
+.test-prev{left:0}.test-next{right:0}
 .test-prev:hover,.test-next:hover{background:rgba(196,160,96,.25);color:#c4a060;border-color:rgba(196,160,96,.7)}
-@media(max-width:640px){#testimonials{padding:70px 24px 60px}.test-slider{padding:0 28px}.test-quote{font-size:18px}.test-prev,.test-next{width:36px;height:36px;font-size:18px}.test-prev{left:-18px}.test-next{right:-18px}}
+@media(max-width:640px){#testimonials{padding:70px 24px 60px}.test-slider{padding:0 28px}.test-quote{font-size:18px}.test-prev,.test-next{width:36px;height:36px;font-size:18px}.test-prev{left:0}.test-next{right:0}}
 </style>
 
 <meta name="author" content="Brennan Phua">
@@ -506,10 +506,10 @@ footer{
     <h2 class="about-tagline">Spaces with identity.</h2>
     <div class="about-divider"></div>
     <p class="about-bio">
-      Brennan Phua is a Singapore-based senior interior designer at SG Interior Design, known for creating homes and commercial spaces that are both beautiful and practical. His work is guided by contrast — light and dark, bold and calm, open and cosy — resulting in interiors that feel personal, thoughtful, and never generic.
+      Brennan Phua is a Singapore-based senior interior designer at SG Interior Design, known for creating homes and commercial spaces that are both beautiful and practical. His work is guided by contrast â light and dark, bold and calm, open and cosy â resulting in interiors that feel personal, thoughtful, and never generic.
     </p>
     <p class="about-bio">
-      With a focus on materials, atmosphere, and everyday living, Brennan designs for clients who want more than a standard renovation. They want a space that feels like their own — a place to live, rest, host, and enjoy.
+      With a focus on materials, atmosphere, and everyday living, Brennan designs for clients who want more than a standard renovation. They want a space that feels like their own â a place to live, rest, host, and enjoy.
     </p>
   </div>
 </div>
@@ -849,36 +849,38 @@ footer{
     </div>
     
       <div class="test-slide">
-        <div class="test-stars">★★★★★</div>
+        <div class="test-stars">âââââ</div>
         <p class="test-quote">"Very detailed carpentry work and meticulous execution throughout. One of the most responsible and reliable designers I've worked with. Strongly recommend."</p>
         <p class="test-name">Boon Hon Tan</p>
         <p class="test-via">Google Review</p>
       </div>
       <div class="test-slide">
-        <div class="test-stars">★★★★★</div>
-        <p class="test-quote">"Patient through every change of mind. Transparent guidance, zero pressure — just a designer who genuinely wants you to love the result."</p>
+        <div class="test-stars">âââââ</div>
+        <p class="test-quote">"Patient through every change of mind. Transparent guidance, zero pressure â just a designer who genuinely wants you to love the result."</p>
         <p class="test-name">Winne</p>
-        <p class="test-via">Google Review · Local Guide</p>
+        <p class="test-via">Google Review Â· Local Guide</p>
       </div>
       <div class="test-slide">
-        <div class="test-stars">★★★★★</div>
-        <p class="test-quote">"Exceptionally hands-on — liaising with contractors until 1am when needed. The kind of designer you can leave everything to. My project was in the best hands."</p>
+        <div class="test-stars">âââââ</div>
+        <p class="test-quote">"Exceptionally hands-on â liaising with contractors until 1am when needed. The kind of designer you can leave everything to. My project was in the best hands."</p>
         <p class="test-name">Marcus Ang</p>
-        <p class="test-via">Google Review · Local Guide</p>
+        <p class="test-via">Google Review Â· Local Guide</p>
       </div>
       <div class="test-slide">
-        <div class="test-stars">★★★★★</div>
-        <p class="test-quote">"No delays, no stress. Brennan took time to truly understand my vision — and delivered it with workmanship that exceeded expectations."</p>
+        <div class="test-stars">âââââ</div>
+        <p class="test-quote">"No delays, no stress. Brennan took time to truly understand my vision â and delivered it with workmanship that exceeded expectations."</p>
         <p class="test-name">Caz Wee</p>
         <p class="test-via">Google Review</p>
       </div>
       <div class="test-slide">
-        <div class="test-stars">★★★★★</div>
-        <p class="test-quote">"The entire process was seamless — Brennan captured our modern luxe vision and brought it to life in ways we couldn't have imagined. His use of marble, bespoke carpentry, and the signature design arch tied everything together beautifully. Every detail reflected his commitment to quality and excellence."</p>
+        <div class="test-stars">âââââ</div>
+        <p class="test-quote">"The entire process was seamless â Brennan captured our modern luxe vision and brought it to life in ways we couldn't have imagined. His use of marble, bespoke carpentry, and the signature design arch tied everything together beautifully. Every detail reflected his commitment to quality and excellence."</p>
         <p class="test-name">Belicia Tan</p>
         <p class="test-via">Google Review</p>
       </div>
-      <div class="test-dots">
+      <button class="test-prev" aria-label="Previous review">‹</button>
+    <button class="test-next" aria-label="Next review">›</button>
+    <div class="test-dots">
     <button class="test-dot active" aria-label="Review 1"></button>
     <button class="test-dot" aria-label="Review 2"></button>
     <button class="test-dot" aria-label="Review 3"></button>
@@ -976,8 +978,8 @@ footer{
         <div class="cf-group">
           <select class="cf-field" name="project-type" required>
             <option value="" disabled selected>Project Type</option>
-            <option value="Residential HDB">Residential — HDB</option>
-            <option value="Residential Condo">Residential — Condo / Landed</option>
+            <option value="Residential HDB">Residential â HDB</option>
+            <option value="Residential Condo">Residential â Condo / Landed</option>
             <option value="Commercial">Commercial / F&amp;B</option>
             <option value="Other">Other</option>
           </select>
@@ -989,7 +991,7 @@ footer{
         </div>
         <button type="submit" class="cf-submit"><span>Send Enquiry</span></button>
       </div>
-      <div class="cf-success">Message received — I&rsquo;ll be in touch shortly.</div>
+      <div class="cf-success">Message received â I&rsquo;ll be in touch shortly.</div>
     </form>
   </div>
 
@@ -1006,12 +1008,12 @@ footer{
 </footer>
 
 <script>
-// — Loader —
+// â Loader â
 window.addEventListener('load', () => {
   setTimeout(() => document.getElementById('loader').classList.add('gone'), 700);
 });
 
-// — Cursor —
+// â Cursor â
 const cur = document.getElementById('cur');
 const curR = document.getElementById('curR');
 let mx = window.innerWidth / 2, my = window.innerHeight / 2, rx = mx, ry = my;
@@ -1030,7 +1032,7 @@ document.querySelectorAll('a, button, .work-item').forEach(el => {
   el.addEventListener('mouseleave', () => { cur.classList.remove('h'); curR.classList.remove('h'); });
 });
 
-// — About —
+// â About â
 const overlay = document.getElementById('about-overlay');
 function openAbout() { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
 function closeAbout() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
@@ -1039,11 +1041,11 @@ document.getElementById('aboutClose').addEventListener('click', closeAbout);
 document.getElementById('aboutBackdrop').addEventListener('click', closeAbout);
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAbout(); });
 
-// — Nav —
+// â Nav â
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('s', scrollY > 60), { passive: true });
 
-// — Scroll Reveal —
+// â Scroll Reveal â
 const io = new IntersectionObserver(es => {
   es.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('v'); io.unobserve(e.target); }
@@ -1051,7 +1053,7 @@ const io = new IntersectionObserver(es => {
 }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.r, .rf').forEach(el => io.observe(el));
 
-// — Hero Parallax + fade —
+// â Hero Parallax + fade â
 const heroImg = document.getElementById('heroImg');
 const heroTag = document.querySelector('.hero-tag');
 const heroName = document.querySelector('.hero-name');
@@ -1074,7 +1076,7 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-// — Works Mouse Parallax —
+// â Works Mouse Parallax â
 document.querySelectorAll('.work-item').forEach(item => {
   let raf;
   item.addEventListener('mousemove', e => {
@@ -1098,7 +1100,7 @@ document.querySelectorAll('.work-item').forEach(item => {
   });
 });
 
-// — Smooth Scroll —
+// â Smooth Scroll â
 document.querySelectorAll('a[href^="#"]:not(#aboutBtn)').forEach(a => {
   a.addEventListener('click', e => {
     const t = document.querySelector(a.getAttribute('href'));
@@ -1106,7 +1108,7 @@ document.querySelectorAll('a[href^="#"]:not(#aboutBtn)').forEach(a => {
   });
 });
 
-// — Contact Form —
+// â Contact Form â
 const cfForm = document.getElementById('cfForm');
 if (cfForm) {
   cfForm.addEventListener('submit', async e => {
@@ -1116,12 +1118,12 @@ if (cfForm) {
       await fetch('/', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() });
       cfForm.classList.add('sent');
     } catch(_) {
-      cfForm.classList.add('sent'); // show success anyway — Netlify handles it
+      cfForm.classList.add('sent'); // show success anyway â Netlify handles it
     }
   });
 }
 
-// — Statement Word Reveal —
+// â Statement Word Reveal â
 (function(){
   const el = document.querySelector('.stmt-text');
   const attr = document.querySelector('.stmt-attr');
@@ -1155,7 +1157,7 @@ if (cfForm) {
   obs.observe(el);
 })();
 
-// — Lightbox —
+// â Lightbox â
 const lb       = document.getElementById('lightbox');
 const lbImg    = document.getElementById('lbImg');
 const lbNum    = document.getElementById('lbNum');
@@ -1199,7 +1201,7 @@ function lbGo(dir) {
 
 lbImg.style.transition = 'opacity .18s ease, transform .6s var(--ease)';
 
-// project cards navigate via href — lightbox not triggered from grid
+// project cards navigate via href â lightbox not triggered from grid
 document.getElementById('lbClose').addEventListener('click', closeLb);
 document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); lbGo(-1); });
 document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); lbGo(1); });
