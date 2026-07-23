@@ -459,8 +459,8 @@ footer{
 #testimonials{padding:100px 60px 90px;background:#0c0a06;text-align:center;border-top:1px solid rgba(196,160,96,.15)}
 .test-label{font-size:11px;letter-spacing:.4em;color:#c4a060;margin-bottom:60px;text-transform:uppercase;font-weight:400}
 .test-slider{position:relative;max-width:800px;margin:0 auto;padding:0 40px}
-.test-track{display:grid;position:relative;overflow:hidden;max-height:600px}
-.test-slide{grid-area:1/1;opacity:0;transition:opacity 0.8s ease;pointer-events:none}
+.test-track{position:relative;overflow:hidden;transition:height 0.4s ease}
+.test-slide{position:absolute;top:0;left:0;width:100%;opacity:0;transition:opacity 0.6s ease;pointer-events:none}
 .test-slide.active{opacity:1;pointer-events:auto}
 .test-stars{color:#c4a060;letter-spacing:5px;font-size:11px;margin-bottom:32px}
 .test-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2.4vw,26px);font-style:italic;font-weight:300;line-height:1.75;color:rgba(255,255,255,.85);margin-bottom:44px}
@@ -910,16 +910,11 @@ footer{
   function goTo(n){sl[cur].classList.remove('active');dt[cur].classList.remove('active');cur=(n+sl.length)%sl.length;sl[cur].classList.add('active');dt[cur].classList.add('active');setH();}
   function start(){tmr=setInterval(function(){goTo(cur+1);},3500);}
   function stop(){clearInterval(tmr);}
-  // Measure after fonts load so Cormorant Garamond heights are accurate
   document.fonts.ready.then(function(){
     var tw=track.clientWidth||320,md=document.createElement('div');
     md.style.cssText='position:fixed;visibility:hidden;top:-9999px;left:0;width:'+tw+'px;overflow:visible';
     document.body.appendChild(md);
-    Array.from(sl).forEach(function(s){
-      var c=s.cloneNode(true);
-      c.style.cssText='display:block;position:static;opacity:1;grid-area:auto;pointer-events:auto';
-      md.appendChild(c);hts.push(md.lastChild.scrollHeight);md.removeChild(c);
-    });
+    Array.from(sl).forEach(function(s){var c=s.cloneNode(true);c.style.cssText='position:static;display:block;opacity:1;pointer-events:auto';md.appendChild(c);hts.push(md.lastChild.scrollHeight);md.removeChild(c);});
     document.body.removeChild(md);
     setH();
   });
