@@ -911,7 +911,7 @@ footer{
 (function(){
   var sl=document.querySelectorAll('.test-slide'),dt=document.querySelectorAll('.test-dot'),cur=0,tmr;
   function goTo(n){sl[cur].classList.remove('active');dt[cur].classList.remove('active');cur=(n+sl.length)%sl.length;sl[cur].classList.add('active');dt[cur].classList.add('active');}
-  function start(){tmr=setInterval(function(){goTo(cur+1);},7000);}
+  function start(){tmr=setInterval(function(){goTo(cur+1);},5000);}
   function stop(){clearInterval(tmr);}
   dt.forEach(function(d,i){d.addEventListener('click',function(){stop();goTo(i);start();});});
   document.querySelector('.test-prev').addEventListener('click',function(){stop();goTo(cur-1);start();});
