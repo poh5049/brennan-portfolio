@@ -1109,16 +1109,29 @@ document.querySelectorAll('a[href^="#"]:not(#aboutBtn)').forEach(a => {
 });
 
 // &#8212; Contact Form &#8212;
-const cfForm = document.getElementById('cfForm');
+const cfForm = document.querySelector('.cf-form');
 if (cfForm) {
-  cfForm.addEventListener('submit', async e => {
+  cfForm.addEventListener('submit', async function(e) {
     e.preventDefault();
-    const data = Object.fromEntries(new FormData(cfForm));
+    const btn = cfForm.querySelector('.cf-submit');
+    if (btn) btn.disabled = true;
     try {
-      await fetch('https://formspree.io/f/xqerwkbk', { method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(data) });
-      cfForm.classList.add('sent');
-    } catch(_) {
-      console.error('Form error');
+      const res = await fetch('https://formspree.io/f/xqerwkbk', {
+        method: 'POST',
+        body: new FormData(cfForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        cfForm.classList.add('sent');
+      } else {
+        const json = await res.json();
+        const msg = (json.errors||[]).map(function(err){return err.message;}).join(', ') || 'Submission failed. Please try again.';
+        alert(msg);
+        if (btn) btn.disabled = false;
+      }
+    } catch(err) {
+      alert('Network error. Please try again.');
+      if (btn) btn.disabled = false;
     }
   });
 }
