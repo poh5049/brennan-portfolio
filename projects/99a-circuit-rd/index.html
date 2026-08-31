@@ -114,6 +114,21 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
 @keyframes lu{from{transform:translateY(110%)}to{transform:translateY(0)}}
 @media(max-width:900px){nav{padding-left:28px;padding-right:28px;padding-top:28px}nav.s{padding-top:18px;padding-left:28px;padding-right:28px}.proj-header{padding:140px 28px 72px}.gallery{padding:4px 4px 80px}.proj-footer{grid-template-columns:1fr}.proj-nav-item:first-child{border-right:none;border-bottom:1px solid rgba(138,117,96,.08)}.proj-nav-item{padding:40px 28px}footer{padding:24px 28px}.proj-meta{gap:32px;flex-wrap:wrap}}
 @media(max-width:600px){}
+
+/* Gallery: show photos at natural proportions, capped at viewport height */
+.gallery .slide .gallery-item {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:var(--bg);
+}
+.gallery .slide .gallery-item img {
+  width:auto;
+  max-width:100%;
+  max-height:85vh;
+  height:auto;
+  object-fit:contain;
+}
 </style>
 </head>
 <body>
