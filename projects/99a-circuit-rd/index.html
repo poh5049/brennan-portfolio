@@ -167,7 +167,11 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
     <div class="pg-item"><img src="SWA_6513.jpg" alt="Ensuite bathroom with warm cove lighting" loading="lazy"></div>
     <div class="pg-item"><img src="SWA_6516.jpg" alt="Ensuite shelving niche with toiletries" loading="lazy"></div>
   </div>
-</section>IntersectionObserver(function(entries){
+</section>
+<script>
+(function(){
+  const items = document.querySelectorAll('.pg-item');
+  const ob = new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(e.isIntersecting){e.target.style.animationDelay=Math.random()*0.15+'s';e.target.classList.add('visible');ob.unobserve(e.target);}
     });
