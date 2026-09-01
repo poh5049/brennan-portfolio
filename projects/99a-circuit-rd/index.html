@@ -115,10 +115,10 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
 @media(max-width:900px){nav{padding-left:28px;padding-right:28px;padding-top:28px}nav.s{padding-top:18px;padding-left:28px;padding-right:28px}.proj-header{padding:140px 28px 72px}.gallery{padding:4px 4px 80px}.proj-footer{grid-template-columns:1fr}.proj-nav-item:first-child{border-right:none;border-bottom:1px solid rgba(138,117,96,.08)}.proj-nav-item{padding:40px 28px}footer{padding:24px 28px}.proj-meta{gap:32px;flex-wrap:wrap}}
 @media(max-width:600px){}
 
-/* Gallery: natural proportions, no crop, no gaps */
-.gallery .slide {height:auto!important;grid-template-rows:auto!important}
-.gallery .slide .gallery-item {height:auto!important;overflow:visible!important}
-.gallery .slide .gallery-item img {width:100%!important;height:auto!important;object-fit:unset!important;max-height:none!important}
+/* Gallery: 2-col masonry, no crop, no gaps */
+.photo-grid{columns:2;column-gap:4px;padding:0}
+.photo-grid .pg-item{break-inside:avoid;margin-bottom:4px;display:block}
+.photo-grid .pg-item img{width:100%;height:auto;display:block;object-fit:unset}
 </style>
 </head>
 <body>
@@ -141,69 +141,34 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
   <div class="slides">
 
     <!-- Living Room -->
-    <div class="slide slide-1">
-      <div class="gallery-item"><img src="SWA_6573.jpg" alt="99A Circuit Rd — living room with fluted glass partition, bonsai console and backlit stone columns" loading="lazy"></div>
-    </div>
-    <div class="slide slide-2-ll">
-      <div class="gallery-item"><img src="SWA_6558.jpg" alt="99A Circuit Rd — open-plan living and dining with woven pendants and stone feature wall" loading="lazy"></div>
-      <div class="gallery-item"><img src="SWA_6554.jpg" alt="99A Circuit Rd — living room sofa with rust throw and curved coffee table" loading="lazy"></div>
-    </div>
-    <div class="slide slide-2-pp">
-      <div class="gallery-item"><img src="SWA_6551.jpg" alt="99A Circuit Rd — TV feature wall with timber slats and yin-yang rug" loading="lazy"></div>
-      <div class="gallery-item"><img src="SWA_6548.jpg" alt="99A Circuit Rd — dining area with woven pendant lights" loading="lazy"></div>
-    </div>
-    <div class="slide slide-1">
-      <div class="gallery-item"><img src="SWA_6586.jpg" alt="99A Circuit Rd — arched fluted glass door and hallway corridor" loading="lazy"></div>
-    </div>
-    <div class="slide slide-3-ppp">
-      <div class="gallery-item"><img src="SWA_6541.jpg" alt="99A Circuit Rd — dry kitchen console with coffee machine and open timber shelving" loading="lazy"></div>
-      <div class="gallery-item"><img src="SWA_6563.jpg" alt="99A Circuit Rd — bonsai feature console with stone niche and LED cove lighting" loading="lazy"></div>
-      <div class="gallery-item"><img src="SWA_6567.jpg" alt="99A Circuit Rd — bonsai close-up with rock garden and pagoda figurine" loading="lazy"></div>
-    </div>
-    <div class="slide slide-2-pp">
-      <div class="gallery-item"><img src="SWA_6565.jpg" alt="99A Circuit Rd — stone column texture detail with bonsai and starburst light" loading="lazy"></div>
-      <div class="gallery-item"><img src="SWA_6524.jpg" alt="99A Circuit Rd — LED arch framing kitchen view with curved console" loading="lazy"></div>
-    </div>
-
-    <!-- Master Bedroom -->
-    <div class="slide slide-2-ll">
-      <div class="gallery-item"><img src="SWA_6496.jpg" alt="99A Circuit Rd — master bedroom headboard with dual pendant lights and linen bedding" loading="lazy"></div>
-      <div class="gallery-item"><img src="SWA_6500.jpg" alt="99A Circuit Rd — master bedroom front view with timber panel wall" loading="lazy"></div>
-    </div>
-    <div class="slide slide-2-ll">
-      <div class="gallery-item"><img src="SWA_6504.jpg" alt="99A Circuit Rd — master bedroom from foot of bed showing wardrobe" loading="lazy"></div>
-      <div class="gallery-item"><img src="SWA_6507.jpg" alt="99A Circuit Rd — master bedroom alternate angle with venetian blinds" loading="lazy"></div>
-    </div>
-    <div class="slide slide-2-pp">
-      <div class="gallery-item"><img src="SWA_6489.jpg" alt="99A Circuit Rd — master bedroom side view with timber headboard" loading="lazy"></div>
-      <div class="gallery-item"><img src="SWA_6493.jpg" alt="99A Circuit Rd — master bedroom detail with pendant light and bonsai" loading="lazy"></div>
-    </div>
-
-    <!-- Kitchen -->
-    <div class="slide slide-2-ll">
-      <div class="gallery-item"><img src="SWA_6530.jpg" alt="99A Circuit Rd — kitchen with under-cabinet LED lighting and stone backsplash" loading="lazy"></div>
-      <div class="gallery-item"><img src="SWA_6528.jpg" alt="99A Circuit Rd — kitchen cabinetry with black sink and induction hob" loading="lazy"></div>
-    </div>
-    <div class="slide slide-1">
-      <div class="gallery-item"><img src="SWA_6533.jpg" alt="99A Circuit Rd — kitchen countertop with water purifier and travertine backsplash" loading="lazy"></div>
-    </div>
-
-    <!-- Toilets -->
-    <div class="slide slide-2-pp">
-      <div class="gallery-item"><img src="SWA_6579.jpg" alt="99A Circuit Rd — common bathroom with stone basin and backlit mirror" loading="lazy"></div>
-      <div class="gallery-item"><img src="SWA_6512.jpg" alt="99A Circuit Rd — ensuite toilet with hand-carved stone basin and timber vanity" loading="lazy"></div>
-    </div>
-    <div class="slide slide-2-pp">
-      <div class="gallery-item"><img src="SWA_6513.jpg" alt="99A Circuit Rd — ensuite bathroom with warm cove lighting" loading="lazy"></div>
-      <div class="gallery-item"><img src="SWA_6516.jpg" alt="99A Circuit Rd — ensuite shelving niche with toiletries" loading="lazy"></div>
-    </div>
-
+    <div class="s<section class="gallery">
+  <div class="photo-grid">
+    <div class="pg-item"><img src="SWA_6573.jpg" alt="Living room — fluted glass partition and bonsai console" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6558.jpg" alt="Open-plan living and dining with woven pendants" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6551.jpg" alt="TV feature wall with timber slats and yin-yang rug" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6554.jpg" alt="Living room sofa with rust throw and curved coffee table" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6548.jpg" alt="Dining area with woven pendant lights" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6586.jpg" alt="Arched fluted glass door and hallway corridor" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6541.jpg" alt="Dry kitchen console with coffee machine and timber shelving" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6563.jpg" alt="Bonsai feature console with stone niche and LED cove lighting" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6567.jpg" alt="Bonsai close-up with rock garden and pagoda figurine" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6565.jpg" alt="Stone column texture detail with bonsai and starburst light" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6524.jpg" alt="LED arch framing kitchen view with curved console" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6496.jpg" alt="Master bedroom headboard with dual pendant lights" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6489.jpg" alt="Master bedroom side view with timber headboard" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6500.jpg" alt="Master bedroom front view with timber panel wall" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6493.jpg" alt="Master bedroom detail with pendant light and bonsai" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6504.jpg" alt="Master bedroom from foot of bed showing wardrobe" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6507.jpg" alt="Master bedroom alternate angle with venetian blinds" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6530.jpg" alt="Kitchen with under-cabinet LED lighting and stone backsplash" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6528.jpg" alt="Kitchen cabinetry with black sink and induction hob" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6533.jpg" alt="Kitchen countertop with water purifier and travertine backsplash" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6579.jpg" alt="Common bathroom with stone basin and backlit mirror" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6512.jpg" alt="Ensuite toilet with hand-carved stone basin and timber vanity" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6513.jpg" alt="Ensuite bathroom with warm cove lighting" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6516.jpg" alt="Ensuite shelving niche with toiletries" loading="lazy"></div>
   </div>
-</section>
-<script>
-(function(){
-  var items=document.querySelectorAll('.gallery-item');
-  var ob=new IntersectionObserver(function(entries){
+</section>IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(e.isIntersecting){e.target.style.animationDelay=Math.random()*0.15+'s';e.target.classList.add('visible');ob.unobserve(e.target);}
     });
