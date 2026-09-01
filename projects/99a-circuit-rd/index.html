@@ -122,6 +122,10 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
 </style>
 </head>
 <body>
+<div id="loader"><div class="loader-line"></div></div>
+<div class="cur" id="cur"></div>
+<div class="cur-r" id="cur-r"></div>
+
 <nav id="nav">
   <a class="nav-back" href="../../index.html">All Works</a>
   <a class="nav-logo" href="../../index.html">Brennan Phua</a>
@@ -186,5 +190,11 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
   <p class="ft-l">Brennan Phua Â· Interior Designer</p>
   <p class="ft-r">Â© 2026 SG Interior Design</p>
 </footer>
+<script>
+// loader
+window.addEventListener('load',()=>{const l=document.getElementById('loader');if(l){l.classList.add('gone');}});
+// cursor
+(function(){const cur=document.getElementById('cur');const curR=document.getElementById('cur-r');if(!cur||!curR)return;let mx=0,my=0,rx=0,ry=0;document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});setInterval(function(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;curR.style.left=rx+'px';curR.style.top=ry+'px';},16);document.querySelectorAll('a,button').forEach(function(el){el.addEventListener('mouseenter',function(){cur.classList.add('cur-h');curR.style.width='48px';curR.style.height='48px';});el.addEventListener('mouseleave',function(){cur.classList.remove('cur-h');curR.style.width='32px';curR.style.height='32px';});});})();
+</script>
 </body>
 </html>
