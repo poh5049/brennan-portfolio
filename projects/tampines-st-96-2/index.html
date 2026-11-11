@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0f0e0d;--text:#d8d0c4;--text-dim:#6e6860;--gold:#8a7560;--ease:cubic-bezier(0.16,1,0.3,1)}
+:root{--bg:#0f0e0d;--text:#d8d0c4;--text-dim:#8c857b;--gold:#9a8268;--ease:cubic-bezier(0.16,1,0.3,1)}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased}
 ::selection{background:rgba(138,117,96,.22);color:var(--text)}
@@ -24,24 +24,24 @@ body{background:var(--bg);color:var(--text);font-family:'Montserrat',sans-serif;
 .cur-r.h{width:56px;height:56px;border-color:rgba(138,117,96,.12)}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:36px 60px;transition:padding .7s var(--ease),background .7s,border-color .7s;border-bottom:1px solid transparent}
 nav.s{padding:20px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px);border-color:rgba(138,117,96,.08)}
-.nav-back{display:flex;align-items:center;gap:14px;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .4s;cursor:none}
+.nav-back{display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .4s;cursor:none}
 .nav-back::before{content:'';width:24px;height:1px;background:currentColor;transition:width .4s var(--ease)}
 .nav-back:hover{color:var(--text)}
 .nav-back:hover::before{width:36px}
 .nav-logo{font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:var(--text);font-weight:400;text-decoration:none;transition:opacity .3s}
 .nav-logo:hover{opacity:.55}
 .proj-header{padding:180px 60px 80px;border-bottom:1px solid rgba(138,117,96,.08)}
-.proj-type{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;opacity:0;animation:fu .9s var(--ease) .8s forwards}
+.proj-type{font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;opacity:0;animation:fu .9s var(--ease) .8s forwards}
 .proj-title{font-size:clamp(40px,6vw,96px);font-weight:100;letter-spacing:.18em;text-transform:uppercase;line-height:1;color:var(--text);overflow:hidden;margin-bottom:40px}
 .proj-title span{display:block;animation:lu 1.2s var(--ease) .95s both}
 .proj-meta{display:flex;gap:60px;border-top:1px solid rgba(138,117,96,.1);padding-top:28px}
-.meta-item .lbl{font-size:7px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
-.meta-item .val{font-size:9px;letter-spacing:.18em;color:var(--text)}
+.meta-item .lbl{font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
+.meta-item .val{font-size:11px;letter-spacing:.18em;color:var(--text)}
 .proj-meta-wrap{opacity:0;animation:fu .9s var(--ease) 1.2s forwards}
 .proj-featured{margin-top:28px;padding-top:28px;border-top:1px solid rgba(138,117,96,.1)}
-.featured-lbl{font-size:7px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px}
+.featured-lbl{font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px}
 .featured-links{display:flex;gap:20px;flex-wrap:wrap}
-.featured-link{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .3s}
+.featured-link{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .3s}
 .featured-link:hover{color:var(--text)}
 .featured-link::before{content:attr(data-icon);font-size:10px}
 .gallery{padding:4px 4px 120px}
@@ -82,7 +82,7 @@ nav.s{padding:20px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .lb-close:hover{opacity:1}
 .lb-close::before,.lb-close::after{content:'';position:absolute;width:22px;height:1px;background:var(--text)}
 .lb-close::before{transform:rotate(45deg)}.lb-close::after{transform:rotate(-45deg)}
-.lb-info{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);opacity:0;transition:opacity .4s var(--ease) .3s;font-size:8px;letter-spacing:.3em;color:var(--text-dim);text-transform:uppercase;white-space:nowrap}
+.lb-info{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);opacity:0;transition:opacity .4s var(--ease) .3s;font-size:11px;letter-spacing:.3em;color:var(--text-dim);text-transform:uppercase;white-space:nowrap}
 #lightbox.open .lb-info{opacity:1}
 .lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:80px;display:flex;align-items:center;justify-content:center;cursor:none;opacity:.3;transition:opacity .3s;background:none;border:none}
 .lb-nav:hover{opacity:1}
@@ -94,16 +94,18 @@ nav.s{padding:20px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .proj-nav-item:first-child{border-right:1px solid rgba(138,117,96,.08)}
 .proj-nav-item::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .6s var(--ease);transform-origin:left}
 .proj-nav-item:hover::after{transform:scaleX(1)}
-.proj-nav-label{font-size:7px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim)}
+.proj-nav-label{font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim)}
 .proj-nav-title{font-size:clamp(14px,2vw,22px);font-weight:100;letter-spacing:.16em;text-transform:uppercase;color:var(--text);transition:color .4s}
 .proj-nav-item:hover .proj-nav-title{color:rgba(216,208,196,.65)}
 footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(138,117,96,.08)}
-.ft-l{font-size:7px;letter-spacing:.32em;text-transform:uppercase;color:var(--text-dim)}
-.ft-r{font-size:7px;letter-spacing:.22em;color:var(--text-dim)}
+.ft-l{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--text-dim)}
+.ft-r{font-size:10px;letter-spacing:.22em;color:var(--text-dim)}
 @keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes lu{from{transform:translateY(110%)}to{transform:translateY(0)}}
 @media(max-width:900px){nav{padding-left:28px;padding-right:28px;padding-top:28px}nav.s{padding-top:18px;padding-left:28px;padding-right:28px}.proj-header{padding:140px 28px 72px}.gallery{padding:4px 4px 80px}.proj-footer{grid-template-columns:1fr}.proj-nav-item:first-child{border-right:none;border-bottom:1px solid rgba(138,117,96,.08)}.proj-nav-item{padding:40px 28px}footer{padding:24px 28px}.proj-meta{gap:32px;flex-wrap:wrap}}
 @media(max-width:600px){}
+.ft-m{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-dim)}.ft-m a{color:inherit;text-decoration:none;transition:color .3s}.ft-m a:hover{color:var(--text)}
+@media(max-width:600px){footer{flex-direction:column;align-items:flex-start;gap:10px}}
 </style>
 
 <meta name="author" content="Brennan Phua">
@@ -116,6 +118,11 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
 <meta name="twitter:title" content="Tampines St 96 Interior Design by Brennan Phua">
 <link rel="canonical" href="https://www.brennanphua.com/projects/tampines-st-96-2/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Tampines St 96 Interior Design","description":"Interior design project at Tampines St 96 by Brennan Phua, Singapore interior designer at SG Interior, specialising in Japanese luxury aesthetics.","creator":{"@type":"Person","name":"Brennan Phua","jobTitle":"Interior Designer","url":"https://www.brennanphua.com","worksFor":{"@type":"Organization","name":"SG Interior","url":"https://sginterior.com.sg"}},"url":"https://www.brennanphua.com/projects/tampines-st-96-2/"}</script>
+<meta property="og:image" content="https://www.brennanphua.com/media/d3e159e8320cc89019fb379307e1f5f8.jpg"/>
+<meta name="twitter:image" content="https://www.brennanphua.com/media/d3e159e8320cc89019fb379307e1f5f8.jpg"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 </head>
 <body>
 <div id="loader"><div class="loader-line"></div></div>
@@ -146,30 +153,30 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
 <section class="gallery">
   <div class="slides">
     <div class="slide slide-1">
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/d3e159e8320cc89019fb379307e1f5f8.jpg" width="2400" height="1350" alt="" loading="eager" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/d3e159e8320cc89019fb379307e1f5f8.jpg" width="2400" height="1350" alt="Tampines St 96 — 5 room bto interior design by Brennan Phua, Singapore (photo 1)" loading="eager" decoding="async"/></div>
     </div>
     <div class="slide slide-3-ppp">
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/89667afcbe71135ec425c4b85553fd46.jpg" width="900" height="1599" alt="" loading="lazy" decoding="async"/></div>
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/e4cd1d03d1e12d34b8d1b10a15103014.jpg" width="900" height="1599" alt="" loading="lazy" decoding="async"/></div>
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/37a10012a88762e7c1e0ae893f734f6e.jpg" width="900" height="1599" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/89667afcbe71135ec425c4b85553fd46.jpg" width="900" height="1599" alt="Tampines St 96 — 5 room bto interior design by Brennan Phua, Singapore (photo 2)" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/e4cd1d03d1e12d34b8d1b10a15103014.jpg" width="900" height="1599" alt="Tampines St 96 — 5 room bto interior design by Brennan Phua, Singapore (photo 3)" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/37a10012a88762e7c1e0ae893f734f6e.jpg" width="900" height="1599" alt="Tampines St 96 — 5 room bto interior design by Brennan Phua, Singapore (photo 4)" loading="lazy" decoding="async"/></div>
     </div>
     <div class="slide slide-1">
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/4c62561cddc5bf229f5c40c98347b459.jpg" width="2400" height="1350" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/4c62561cddc5bf229f5c40c98347b459.jpg" width="2400" height="1350" alt="Tampines St 96 — 5 room bto interior design by Brennan Phua, Singapore (photo 5)" loading="lazy" decoding="async"/></div>
     </div>
     <div class="slide slide-1">
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/2436d2e783521ac9fe2be0048d2f1c8b.png" width="2326" height="1404" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/2436d2e783521ac9fe2be0048d2f1c8b.jpg" width="2326" height="1404" alt="Tampines St 96 — 5 room bto interior design by Brennan Phua, Singapore (photo 6)" loading="lazy" decoding="async"/></div>
     </div>
     <div class="slide slide-1">
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/c8cbe7027b545f32f236ff772355c8fd.png" width="2374" height="966" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/c8cbe7027b545f32f236ff772355c8fd.jpg" width="2374" height="966" alt="Tampines St 96 — 5 room bto interior design by Brennan Phua, Singapore (photo 7)" loading="lazy" decoding="async"/></div>
     </div>
     <div class="slide slide-1">
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/dc8995c2e4cf3c58c8b3aba8e8c56999.png" width="2400" height="1449" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/dc8995c2e4cf3c58c8b3aba8e8c56999.jpg" width="2400" height="1449" alt="Tampines St 96 — 5 room bto interior design by Brennan Phua, Singapore (photo 8)" loading="lazy" decoding="async"/></div>
     </div>
     <div class="slide slide-1">
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/8cc5bf8a6599700dce8204749180e9c8.png" width="2400" height="1481" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/8cc5bf8a6599700dce8204749180e9c8.jpg" width="2400" height="1481" alt="Tampines St 96 — 5 room bto interior design by Brennan Phua, Singapore (photo 9)" loading="lazy" decoding="async"/></div>
     </div>
     <div class="slide slide-1">
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/b52da155655d9f373b1a678dd864037d.png" width="2142" height="1612" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/b52da155655d9f373b1a678dd864037d.jpg" width="2142" height="1612" alt="Tampines St 96 — 5 room bto interior design by Brennan Phua, Singapore (photo 10)" loading="lazy" decoding="async"/></div>
     </div>
   </div>
 </section>
@@ -178,13 +185,14 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
     <span class="proj-nav-label">&larr; Back</span>
     <span class="proj-nav-title">All Works</span>
   </a>
-  <a class="proj-nav-item" href="mailto:brennan@sginterior.com.sg">
+  <a class="proj-nav-item" href="/#contact">
     <span class="proj-nav-label">Get in touch &rarr;</span>
     <span class="proj-nav-title">Start a Project</span>
   </a>
 </div>
 <footer>
   <p class="ft-l">Brennan Phua &middot; Interior Designer</p>
+  <p class="ft-m"><a href="https://www.instagram.com/brennanphua/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://wa.me/6593832172" target="_blank" rel="noopener">WhatsApp</a></p>
   <p class="ft-r">&copy; 2026 SG Interior Design</p>
 </footer>
 <script>
