@@ -1,1335 +1,206 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta name="description" content="Brennan Phua is a Singapore interior designer at SG Interior, specialising in Japanese luxury aesthetics. Explore 70+ completed projects across HDB, condo and commercial spaces."/>
-<title>Brennan Phua | Interior Designer Singapore | Japanese Luxury Design</title>
+<meta name="description" content="99A Circuit Rd Ã¢ÂÂ Japanese luxury 4 Room BTO by Brennan Phua. Features wabi-sabi stone columns, Japanese shoji screens, bonsai feature cabinet, bespoke timber joinery, and hand-crafted stone basins."/>
+<title>99A Circuit Rd Ã¢ÂÂ Japanese Luxury HDB Interior Design by Brennan Phua | Singapore</title>
+<meta name="author" content="Brennan Phua"/>
+<meta name="keywords" content="Brennan Phua, 99A Circuit Rd, HDB resale interior design Singapore, Japanese luxury interior, wabi-sabi, SG Interior"/>
+<meta property="og:title" content="99A Circuit Rd Ã¢ÂÂ Japanese Luxury HDB by Brennan Phua"/>
+<meta property="og:description" content="HDB resale transformation featuring wabi-sabi stone textures, Japanese shoji screens, bonsai feature wall and bespoke carpentry by Brennan Phua."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.brennanphua.com/projects/99a-circuit-rd/"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="99A Circuit Rd Interior Design by Brennan Phua"/>
+<link rel="canonical" href="https://www.brennanphua.com/projects/99a-circuit-rd/"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"99A Circuit Rd Interior Design","creator":{"@type":"Person","name":"Brennan Phua"},"description":"Japanese luxury HDB resale renovation featuring wabi-sabi stone, bonsai feature, and bespoke timber joinery","url":"https://www.brennanphua.com/projects/99a-circuit-rd/"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet"/>
-<link rel="preload" as="image" href="brennen-hero.jpg"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#0f0e0d;
-  --text:#d8d0c4;
-  --text-dim:#6e6860;
-  --gold:#8a7560;
-  --gold-dim:rgba(138,117,96,.15);
-  --ease:cubic-bezier(0.16,1,0.3,1);
-  --ease-out:cubic-bezier(0.22,1,0.36,1);
-}
+:root{--bg:#0f0e0d;--text:#d8d0c4;--text-dim:#6e6860;--gold:#8a7560;--ease:cubic-bezier(0.16,1,0.3,1)}
 html{scroll-behavior:smooth}
-body{
-  background:var(--bg);color:var(--text);
-  font-family:'Montserrat',sans-serif;font-weight:300;
-  overflow-x:hidden;cursor:none;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-}
+body{background:var(--bg);color:var(--text);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased}
 ::selection{background:rgba(138,117,96,.22);color:var(--text)}
-
-/* &#8212; Loader &#8212; */
-#loader{
-  position:fixed;inset:0;background:var(--bg);z-index:9999;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
-  transition:opacity 1.6s var(--ease),visibility 1.6s;
-}
+#loader{position:fixed;inset:0;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity 1.4s var(--ease),visibility 1.4s}
 #loader.gone{opacity:0;visibility:hidden;pointer-events:none}
-.loader-line{width:1px;height:0;background:var(--gold);animation:loaderGrow 1.1s var(--ease) .2s forwards}
-.loader-word{font-size:7px;letter-spacing:.6em;text-transform:uppercase;color:var(--text-dim);opacity:0;animation:fu .8s var(--ease) .9s forwards}
-@keyframes loaderGrow{to{height:72px}}
-
-/* &#8212; Cursor &#8212; */
-.cur{
-  position:fixed;width:6px;height:6px;background:var(--gold);
-  border-radius:50%;pointer-events:none;z-index:9998;
-  transform:translate(-50%,-50%);
-  transition:width .3s var(--ease),height .3s var(--ease),background .3s;
-}
-.cur-r{
-  position:fixed;width:32px;height:32px;
-  border:1px solid rgba(138,117,96,.35);border-radius:50%;
-  pointer-events:none;z-index:9997;transform:translate(-50%,-50%);
-  transition:width .5s var(--ease),height .5s var(--ease),border-color .4s;
-}
+.loader-line{width:1px;height:0;background:var(--gold);animation:loaderGrow 1s var(--ease) .1s forwards}
+@keyframes loaderGrow{to{height:60px}}
+.cur{position:fixed;width:6px;height:6px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s var(--ease),height .3s var(--ease)}
+.cur-r{position:fixed;width:32px;height:32px;border:1px solid rgba(138,117,96,.35);border-radius:50%;pointer-events:none;z-index:9997;transform:translate(-50%,-50%);transition:width .5s var(--ease),height .5s var(--ease),border-color .4s}
 .cur.h{width:12px;height:12px;background:transparent;border:1px solid var(--gold)}
 .cur-r.h{width:56px;height:56px;border-color:rgba(138,117,96,.12)}
-
-/* &#8212; Nav &#8212; */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  display:flex;justify-content:space-between;align-items:center;
-  padding:40px 60px;
-  transition:padding .7s var(--ease),background .7s,border-color .7s;
-  border-bottom:1px solid transparent;
-  opacity:0;animation:fu 1s var(--ease) 1.6s forwards;
-}
-nav.s{padding:22px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-color:rgba(138,117,96,.08)}
-.nav-logo{
-  font-size:10px;letter-spacing:.38em;text-transform:uppercase;
-  color:var(--text);font-weight:400;text-decoration:none;
-  transition:opacity .3s;
-}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:36px 60px;transition:padding .7s var(--ease),background .7s,border-color .7s;border-bottom:1px solid transparent}
+nav.s{padding:20px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px);border-color:rgba(138,117,96,.08)}
+.nav-back{display:flex;align-items:center;gap:14px;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .4s;cursor:none}
+.nav-back::before{content:'';width:24px;height:1px;background:currentColor;transition:width .4s var(--ease)}
+.nav-back:hover{color:var(--text)}
+.nav-back:hover::before{width:36px}
+.nav-logo{font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:var(--text);font-weight:400;text-decoration:none;transition:opacity .3s}
 .nav-logo:hover{opacity:.55}
-.nav-right{display:flex;align-items:center;gap:48px}
-.nav-right a{
-  font-size:8px;letter-spacing:.32em;text-transform:uppercase;
-  color:var(--text-dim);text-decoration:none;
-  transition:color .4s;position:relative;
-  background:none;border:none;cursor:none;
-}
-.nav-right a::after{
-  content:'';position:absolute;bottom:-3px;left:0;
-  width:0;height:1px;background:var(--gold);
-  transition:width .4s var(--ease);
-}
-.nav-right a:hover{color:var(--text)}
-.nav-right a:hover::after{width:100%}
-
-/* &#8212; About Overlay &#8212; */
-#about-overlay{
-  position:fixed;inset:0;z-index:300;
-  display:flex;pointer-events:none;visibility:hidden;
-}
-#about-overlay.open{pointer-events:all;visibility:visible}
-.about-backdrop{
-  position:absolute;inset:0;background:rgba(10,9,8,.65);
-  opacity:0;transition:opacity .8s var(--ease);
-  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
-}
-#about-overlay.open .about-backdrop{opacity:1}
-.about-panel{
-  position:relative;margin-left:auto;
-  width:min(580px,92vw);height:100%;
-  background:var(--bg);
-  border-left:1px solid rgba(138,117,96,.1);
-  padding:100px 56px 80px;
-  overflow-y:auto;
-  transform:translateX(100%);
-  transition:transform .9s var(--ease);
-  display:flex;flex-direction:column;justify-content:center;
-}
-#about-overlay.open .about-panel{transform:translateX(0)}
-.about-close{
-  position:absolute;top:40px;right:48px;
-  width:32px;height:32px;
-  display:flex;align-items:center;justify-content:center;
-  cursor:none;opacity:.5;transition:opacity .3s;
-  background:none;border:none;
-}
-.about-close:hover{opacity:1}
-.about-close::before,.about-close::after{
-  content:'';position:absolute;width:20px;height:1px;background:var(--text);
-}
-.about-close::before{transform:rotate(45deg)}
-.about-close::after{transform:rotate(-45deg)}
-.about-label{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:40px}
-.about-tagline{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(26px,3.2vw,44px);
-  font-weight:300;font-style:italic;
-  line-height:1.2;color:var(--text);margin-bottom:48px;
-}
-.about-divider{width:32px;height:1px;background:rgba(138,117,96,.3);margin-bottom:44px}
-.about-bio{
-  font-size:13px;line-height:2;
-  color:var(--text-dim);letter-spacing:.02em;
-  font-weight:300;margin-bottom:24px;
-}
-.about-bio:last-child{margin-bottom:0}
-
-/* &#8212; Reveal &#8212; */
-.r{opacity:0;transform:translateY(44px);transition:opacity 1.3s var(--ease),transform 1.3s var(--ease)}
-.r.v{opacity:1;transform:translateY(0)}
-.d1{transition-delay:.1s}.d2{transition-delay:.22s}.d3{transition-delay:.38s}.d4{transition-delay:.56s}
-.d5{transition-delay:.76s}.d6{transition-delay:.98s}.d7{transition-delay:1.22s}.d8{transition-delay:1.48s}
-
-/* &#8212; Hero &#8212; */
-#hero{width:100vw}
-.hero-photo{
-  position:relative;width:100%;height:88vh;overflow:hidden;
-  animation:heroKB 5s var(--ease-out) both;
-}
-@keyframes heroKB{from{transform:scale(1.07)}to{transform:scale(1)}}
-.hero-img{
-  width:100%;height:100%;
-  object-fit:cover;object-position:90% 20%;
-  will-change:transform;
-}
-.hero-photo-grad{
-  position:absolute;inset:0;
-  background:
-    linear-gradient(to top, rgba(15,14,13,.82) 0%, rgba(15,14,13,.2) 42%, transparent 68%),
-    linear-gradient(to right, rgba(15,14,13,.24) 0%, transparent 52%);
-}
-.hero-text{
-  position:absolute;bottom:40px;left:60px;z-index:2;
-  display:flex;flex-direction:column;gap:10px;
-}
-.hero-tag{
-  font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);
-  opacity:0;animation:fu 1s var(--ease) 1.5s forwards;
-}
-.hero-name{
-  font-size:clamp(32px,4.6vw,70px);font-weight:100;
-  letter-spacing:.22em;text-transform:uppercase;
-  line-height:1;color:var(--text);overflow:hidden;
-}
-.hero-name span{display:block;animation:lu 1.3s var(--ease) 1.7s both}
-
-  /* &#8212; Works &#8212; */
-#works{padding:80px 60px}
-.works-header{
-  display:flex;justify-content:space-between;align-items:flex-end;
-  margin-bottom:64px;
-  border-bottom:1px solid rgba(138,117,96,.1);
-  padding-bottom:24px;
-}
-.works-label{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold)}
-.works-count{font-size:8px;letter-spacing:.22em;color:var(--text-dim)}
-.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-.work-item{
-  aspect-ratio:3/2;position:relative;overflow:hidden;background:#1a1815;
-  cursor:none;display:block;text-decoration:none;
-  }
-/* Varied aspect ratios &#8212; organic editorial masonry rhythm */
-.work-item.featured{display:block;aspect-ratio:3/2}
-
-.work-img{
-  width:100%;height:100%;object-fit:cover;display:block;
-  transition:transform 1.4s var(--ease),filter 1.4s var(--ease);
-  filter:brightness(.76) saturate(.85);
-}
-.work-item:hover .work-img{filter:brightness(.94) saturate(1.05);transform:scale(1.06)}
-.work-info{
-  position:absolute;bottom:0;left:0;right:0;
-  padding:40px 26px 28px;
-  background:linear-gradient(to top,rgba(15,14,13,.92) 0%,rgba(15,14,13,.3) 60%,transparent 100%);
-  transform:translateY(12px);opacity:0;
-  transition:transform .7s var(--ease),opacity .7s var(--ease);
-}
-.work-item:hover .work-info{transform:translateY(0);opacity:1}
-.work-num{
-  font-size:7px;letter-spacing:.4em;color:var(--gold);
-  opacity:.6;margin-bottom:6px;
-}
-.work-type{font-size:7px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
-.work-name{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--text);font-weight:300}
-
-/* &#8212; Statement &#8212; */
-#statement{
-  padding:140px 60px;
-  display:flex;flex-direction:column;align-items:center;
-  text-align:center;
-  border-top:1px solid rgba(138,117,96,.08);
-  border-bottom:1px solid rgba(138,117,96,.08);
-}
-.stmt-line{
-  height:1px;background:rgba(138,117,96,.3);margin:0 auto 56px;
-  width:0;transition:width 1.2s var(--ease);
-}
-.stmt-line.v{width:72px}
-.stmt-text{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(36px,5.5vw,82px);
-  font-weight:300;font-style:italic;
-  line-height:1.2;color:var(--text);
-  max-width:960px;letter-spacing:.01em;
-}
-/* word reveal */
-.word-outer{display:inline-block;overflow:hidden;vertical-align:bottom}
-.word-inner{
-  display:inline-block;
-  transform:translateY(112%) rotate(1.5deg);
-  opacity:0;
-  transition:transform 1.1s var(--ease),opacity .5s ease;
-}
-.stmt-text.revealed .word-inner{transform:translateY(0) rotate(0deg);opacity:1}
-.stmt-attr{
-  font-size:7px;letter-spacing:.45em;text-transform:uppercase;
-  color:var(--text-dim);margin-top:52px;
-  opacity:0;transition:opacity 1s ease;
-}
-.stmt-attr.revealed{opacity:1}
-/* — Recognition — */
-.recog{margin-top:72px;display:flex;flex-direction:column;align-items:center;gap:26px;transition-delay:.9s}
-.recog-label{font-size:7px;letter-spacing:.45em;text-transform:uppercase;color:var(--text-dim)}
-.recog-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
-.recog-item{
-  position:relative;display:flex;align-items:center;gap:14px;
-  padding:6px 34px;text-decoration:none;color:var(--text);
-  transition:opacity .5s var(--ease);
-}
-.recog-item+.recog-item::before{
-  content:'';position:absolute;left:0;top:50%;width:1px;height:30px;
-  background:rgba(138,117,96,.25);transform:translateY(-50%);
-}
-.recog-row:hover .recog-item{opacity:.4}
-.recog-row .recog-item:hover{opacity:1}
-.recog-icon{width:22px;height:22px;flex-shrink:0;color:var(--gold)}
-.recog-text{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left}
-.recog-name{font-size:8px;letter-spacing:.34em;text-transform:uppercase;font-weight:400;color:var(--text);transition:color .4s}
-.recog-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;line-height:1;color:var(--text-dim)}
-.recog-arrow{font-size:10px;color:var(--gold);opacity:0;transform:translate(-4px,4px);transition:opacity .4s var(--ease),transform .4s var(--ease)}
-.recog-item:hover .recog-name{color:var(--gold)}
-.recog-item:hover .recog-arrow{opacity:1;transform:translate(0,0)}
-@media(max-width:640px){
-  .recog{margin-top:56px}
-  .recog-row{flex-direction:column;align-items:flex-start;gap:24px}
-  .recog-item{padding:0}
-  .recog-item+.recog-item::before{display:none}
-}
-
-/* &#8212; Contact &#8212; */
-#contact{
-  padding:140px 60px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:0 100px;
-  align-items:start;
-}
-.contact-left{display:flex;flex-direction:column}
-.contact-pre{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:32px}
-.contact-heading{
-  font-size:clamp(34px,4vw,68px);font-weight:100;
-  letter-spacing:.16em;text-transform:uppercase;
-  line-height:1.05;color:var(--text);margin-bottom:60px;
-}
-.contact-details{
-  display:flex;flex-direction:column;gap:28px;
-  border-top:1px solid rgba(138,117,96,.08);padding-top:40px;
-}
-.detail .lbl{font-size:7px;letter-spacing:.4em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
-.detail .val{font-size:10px;letter-spacing:.14em;color:var(--text-dim)}
-.detail a{color:var(--text-dim);text-decoration:none;transition:color .3s}
-.detail a:hover{color:var(--gold)}
-
-/* &#8212; Contact Form &#8212; */
-.contact-right{padding-top:4px}
-.cf-label{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:40px;display:block}
-.cf-group{position:relative;margin-bottom:0}
-.cf-field{
-  width:100%;background:transparent;border:none;
-  border-bottom:1px solid rgba(138,117,96,.2);
-  padding:18px 0 14px;
-  font-family:'Montserrat',sans-serif;font-size:11px;
-  font-weight:300;letter-spacing:.08em;
-  color:var(--text);outline:none;
-  transition:border-color .4s var(--ease);
-  appearance:none;-webkit-appearance:none;
-}
-.cf-field::placeholder{color:var(--text-dim);transition:opacity .3s}
-.cf-field:focus::placeholder{opacity:.4}
-.cf-field:focus{border-color:rgba(138,117,96,.6)}
-.cf-field:focus + .cf-bar{transform:scaleX(1)}
-.cf-bar{
-  position:absolute;bottom:0;left:0;
-  width:100%;height:1px;background:var(--gold);
-  transform:scaleX(0);transform-origin:left;
-  transition:transform .5s var(--ease);
-}
-select.cf-field option{background:var(--bg);color:var(--text)}
-.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
-.cf-textarea{resize:none;height:100px;padding-top:18px}
-.cf-submit{
-  margin-top:48px;
-  background:transparent;border:1px solid rgba(138,117,96,.35);
-  padding:18px 48px;
-  font-family:'Montserrat',sans-serif;font-size:7px;
-  letter-spacing:.45em;text-transform:uppercase;color:var(--text);
-  cursor:none;position:relative;overflow:hidden;
-  transition:color .5s var(--ease),border-color .5s var(--ease);
-}
-.cf-submit::before{
-  content:'';position:absolute;inset:0;
-  background:var(--gold);
-  transform:translateX(-101%);
-  transition:transform .6s var(--ease);
-}
-.cf-submit:hover{color:var(--bg);border-color:var(--gold)}
-.cf-submit:hover::before{transform:translateX(0)}
-.cf-submit span{position:relative;z-index:1}
-.cf-success{
-  display:none;padding:32px 0;
-  font-size:7px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);
-}
-.cf-form.sent .cf-success{display:block}
-.cf-form.sent .cf-fields{display:none}
-.cf-form.sent .cf-submit{display:none}
-
-/* &#8212; Lightbox &#8212; */
-#lightbox{
-  position:fixed;inset:0;z-index:500;
-  background:rgba(10,9,8,.96);
-  display:flex;align-items:center;justify-content:center;
-  opacity:0;visibility:hidden;
-  transition:opacity .5s var(--ease),visibility .5s;
-  cursor:none;
-}
+.proj-header{padding:180px 60px 80px;border-bottom:1px solid rgba(138,117,96,.08)}
+.proj-type{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;opacity:0;animation:fu .9s var(--ease) .8s forwards}
+.proj-title{font-size:clamp(40px,6vw,96px);font-weight:100;letter-spacing:.18em;text-transform:uppercase;line-height:1;color:var(--text);overflow:hidden;margin-bottom:40px}
+.proj-title span{display:block;animation:lu 1.2s var(--ease) .95s both}
+.proj-meta{display:flex;gap:60px;border-top:1px solid rgba(138,117,96,.1);padding-top:28px}
+.meta-item .lbl{font-size:7px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
+.meta-item .val{font-size:9px;letter-spacing:.18em;color:var(--text)}
+.proj-meta-wrap{opacity:0;animation:fu .9s var(--ease) 1.2s forwards}
+.proj-featured{margin-top:28px;padding-top:28px;border-top:1px solid rgba(138,117,96,.1)}
+.featured-lbl{font-size:7px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px}
+.featured-links{display:flex;gap:20px;flex-wrap:wrap}
+.featured-link{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .3s}
+.featured-link:hover{color:var(--text)}
+.featured-link::before{content:attr(data-icon);font-size:10px}
+.gallery{padding:4px 4px 120px}
+.slides{display:flex;flex-direction:column;gap:4px}
+.slide{width:100%;overflow:hidden}
+.gallery-item{overflow:hidden;cursor:none;position:relative;background:#1a1815}
+.slide:not(.slide-1) .gallery-item{height:100%}
+.gallery-item img{width:100%;display:block;filter:brightness(.88);transition:filter 1.3s var(--ease),transform 1.4s var(--ease);will-change:transform,filter}
+.slide-1 .gallery-item img{height:auto}
+.slide:not(.slide-1) .gallery-item img{height:100%;object-fit:cover}
+.gallery-item:hover img{filter:brightness(1);transform:scale(1.03)}
+.gallery-item{animation:gslide .8s cubic-bezier(0.16,1,0.3,1) both}
+@keyframes gslide{from{transform:translateY(20px)}to{transform:translateY(0)}}
+.slide-2-ll,.slide-2-pp{display:grid;grid-template-columns:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-2-lp{display:grid;grid-template-columns:56fr 44fr;gap:4px;aspect-ratio:16/9}
+.slide-2-pl{display:grid;grid-template-columns:44fr 56fr;gap:4px;aspect-ratio:16/9}
+.slide-3-llp{display:grid;grid-template-columns:62fr 38fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-3-llp .gallery-item:nth-child(3){grid-row:1/3}
+.slide-3-pll{display:grid;grid-template-columns:38fr 62fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-3-pll .gallery-item:nth-child(1){grid-row:1/3}
+.slide-3-lpl,.slide-3-lll,.slide-3-ppp{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-3-lpp{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:55fr 45fr;gap:4px;aspect-ratio:16/9}
+.slide-3-lpp .gallery-item:nth-child(1){grid-column:1/3}
+.slide-3-ppl{display:grid;grid-template-columns:38fr 62fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-3-ppl .gallery-item:nth-child(3){grid-row:1/3}
+.slide-4{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-5{display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-5 .gallery-item:nth-child(1),.slide-5 .gallery-item:nth-child(2),.slide-5 .gallery-item:nth-child(3){grid-column:span 2}
+.slide-5 .gallery-item:nth-child(4){grid-column:1/4}
+.slide-5 .gallery-item:nth-child(5){grid-column:4/7}
+.slide-6{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/9}
+.slide-many{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;aspect-ratio:16/9}
+#lightbox{position:fixed;inset:0;z-index:500;background:rgba(10,9,8,.97);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility .5s;cursor:none}
 #lightbox.open{opacity:1;visibility:visible}
-#lightbox img{
-  max-width:92vw;max-height:90vh;
-  object-fit:contain;
-  transform:scale(.96);
-  transition:transform .6s var(--ease);
-  display:block;
-}
+#lightbox img{max-width:92vw;max-height:90vh;object-fit:contain;transform:scale(.96);transition:transform .6s var(--ease);display:block}
 #lightbox.open img{transform:scale(1)}
-.lb-close{
-  position:absolute;top:36px;right:48px;
-  width:36px;height:36px;
-  display:flex;align-items:center;justify-content:center;
-  cursor:none;opacity:.5;transition:opacity .3s;
-  background:none;border:none;
-}
+.lb-close{position:absolute;top:36px;right:48px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:none;opacity:.5;transition:opacity .3s;background:none;border:none}
 .lb-close:hover{opacity:1}
-.lb-close::before,.lb-close::after{
-  content:'';position:absolute;width:22px;height:1px;background:var(--text);
-}
-.lb-close::before{transform:rotate(45deg)}
-.lb-close::after{transform:rotate(-45deg)}
-.lb-info{
-  position:absolute;bottom:40px;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:6px;
-  opacity:0;transition:opacity .4s var(--ease) .3s;
-}
+.lb-close::before,.lb-close::after{content:'';position:absolute;width:22px;height:1px;background:var(--text)}
+.lb-close::before{transform:rotate(45deg)}.lb-close::after{transform:rotate(-45deg)}
+.lb-info{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);opacity:0;transition:opacity .4s var(--ease) .3s;font-size:8px;letter-spacing:.3em;color:var(--text-dim);text-transform:uppercase;white-space:nowrap}
 #lightbox.open .lb-info{opacity:1}
-.lb-num{font-size:7px;letter-spacing:.44em;color:var(--gold);text-transform:uppercase}
-.lb-title{font-size:8px;letter-spacing:.28em;color:var(--text-dim);text-transform:uppercase}
-.lb-nav{
-  position:absolute;top:50%;transform:translateY(-50%);
-  width:48px;height:80px;
-  display:flex;align-items:center;justify-content:center;
-  cursor:none;opacity:.3;transition:opacity .3s;
-  background:none;border:none;
-}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:80px;display:flex;align-items:center;justify-content:center;cursor:none;opacity:.3;transition:opacity .3s;background:none;border:none}
 .lb-nav:hover{opacity:1}
-.lb-nav::after{
-  content:'';width:10px;height:10px;
-  border-top:1px solid var(--text);
-  border-right:1px solid var(--text);
-}
+.lb-nav::after{content:'';width:10px;height:10px;border-top:1px solid var(--text);border-right:1px solid var(--text)}
 .lb-prev{left:24px}.lb-prev::after{transform:rotate(-135deg)}
 .lb-next{right:24px}.lb-next::after{transform:rotate(45deg)}
-
-/* &#8212; Footer &#8212; */
-footer{
-  padding:28px 60px;
-  display:flex;justify-content:space-between;align-items:center;
-  border-top:1px solid rgba(138,117,96,.08);
-}
+.proj-footer{border-top:1px solid rgba(138,117,96,.08);display:grid;grid-template-columns:1fr 1fr}
+.proj-nav-item{padding:56px 60px;display:flex;flex-direction:column;gap:12px;text-decoration:none;cursor:none;transition:background .4s;position:relative;overflow:hidden}
+.proj-nav-item:first-child{border-right:1px solid rgba(138,117,96,.08)}
+.proj-nav-item::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .6s var(--ease);transform-origin:left}
+.proj-nav-item:hover::after{transform:scaleX(1)}
+.proj-nav-label{font-size:7px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim)}
+.proj-nav-title{font-size:clamp(14px,2vw,22px);font-weight:100;letter-spacing:.16em;text-transform:uppercase;color:var(--text);transition:color .4s}
+.proj-nav-item:hover .proj-nav-title{color:rgba(216,208,196,.65)}
+footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(138,117,96,.08)}
 .ft-l{font-size:7px;letter-spacing:.32em;text-transform:uppercase;color:var(--text-dim)}
 .ft-r{font-size:7px;letter-spacing:.22em;color:var(--text-dim)}
-
-/* &#8212; Keyframes &#8212; */
-@keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes lu{from{transform:translateY(110%)}to{transform:translateY(0)}}
-@keyframes sp{0%,100%{opacity:.2}50%{opacity:1}}
+@media(max-width:900px){nav{padding-left:28px;padding-right:28px;padding-top:28px}nav.s{padding-top:18px;padding-left:28px;padding-right:28px}.proj-header{padding:140px 28px 72px}.gallery{padding:4px 4px 80px}.proj-footer{grid-template-columns:1fr}.proj-nav-item:first-child{border-right:none;border-bottom:1px solid rgba(138,117,96,.08)}.proj-nav-item{padding:40px 28px}footer{padding:24px 28px}.proj-meta{gap:32px;flex-wrap:wrap}}
+@media(max-width:600px){}
 
-/* &#8212; Responsive &#8212; */
-@media(max-width:900px){
-  nav,#works,#statement,#contact,footer{padding-left:28px;padding-right:28px}
-  nav{padding-top:28px}nav.s{padding-top:18px}
-  .hero-photo{height:70vh}
-  .hero-text{left:28px;bottom:28px}
-  .works-grid{grid-template-columns:repeat(2,1fr)}
-  #contact{grid-template-columns:1fr;gap:64px 0;padding-top:100px;padding-bottom:80px}
-  .contact-details{flex-direction:row;flex-wrap:wrap;gap:36px}
-  .about-panel{padding:80px 32px 60px}
-  .about-close{right:28px}
-  .cf-row{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-  nav{padding:20px 20px}
-  nav.s{padding:14px 20px}
-  .nav-logo{font-size:8px;letter-spacing:.22em}
-  .nav-right{gap:20px}
-  .nav-right a{font-size:7px;letter-spacing:.18em}
-  .works-header{flex-direction:column;align-items:flex-start;gap:10px}
-  .works-grid{grid-template-columns:repeat(2,1fr)}
-  .stmt-text{font-size:clamp(28px,8vw,48px)}
-  #works,#statement,#contact,footer{padding-left:20px;padding-right:20px}
-  .hero-text{left:20px;bottom:20px}
-  .works-grid{grid-template-columns:repeat(2,1fr)}
-  .work-item{margin-bottom:2px}
-      /* Keep desktop variation &#8212; only rein in 4/3 landscape which looks squished at half-phone width */
-  }
-
-  /* &#8212; PRESS / FEATURED SECTION &#8212; */
-  #press{padding:100px 60px 90px;background:#100f0a;border-top:3px solid #c4a060;border-bottom:3px solid rgba(196,160,96,.25);text-align:center}
-  .press-label{font-size:11px;letter-spacing:.4em;color:#c4a060;margin-bottom:8px;text-transform:uppercase;font-weight:400}
-  .press-sublabel{font-size:14px;letter-spacing:.05em;color:rgba(255,255,255,.5);margin-bottom:52px;font-weight:300}
-  .press-badges{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-  .press-badge{display:flex;align-items:center;gap:20px;padding:26px 48px;background:#c4a060;border:none;border-radius:2px;text-decoration:none;cursor:pointer;transition:all .25s ease;min-width:260px}
-  .press-badge:hover{background:#d4b070;transform:translateY(-3px);box-shadow:0 16px 48px rgba(196,160,96,.4)}
-  .press-icon{font-size:22px;color:#0c0a06;flex-shrink:0}
-  .press-info{display:flex;flex-direction:column;text-align:left}
-  .press-name{font-size:13px;letter-spacing:.2em;color:#0c0a06;font-weight:500;line-height:1}
-  .press-sub{font-size:8px;letter-spacing:.22em;color:rgba(12,10,6,.6);margin-top:5px}
-  .press-arrow{font-size:16px;color:rgba(12,10,6,.7);margin-left:auto;padding-left:20px;transition:transform .25s}
-  .press-badge:hover .press-arrow{transform:translateX(5px);color:#0c0a06}
-  @media(max-width:640px){#press{padding:70px 24px 60px} .press-badge{padding:22px 28px;min-width:0;width:100%;max-width:320px} .press-badges{flex-direction:column;align-items:center}}
-#testimonials{padding:100px 60px 90px;background:#0c0a06;text-align:center;border-top:1px solid rgba(196,160,96,.15)}
-.test-label{font-size:11px;letter-spacing:.4em;color:#c4a060;margin-bottom:8px;text-transform:uppercase;font-weight:400}
-.test-sub{font-size:14px;letter-spacing:.05em;color:rgba(255,255,255,.4);margin-bottom:64px;font-weight:300}
-.test-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;max-width:1300px;margin:0 auto;background:rgba(196,160,96,.12)}
-.test-card{background:#0c0a06;padding:52px 44px;text-align:left;grid-column:span 2}
-.test-card:nth-child(4){grid-column:2/4}
-.test-card:nth-child(5){grid-column:4/6}
-.test-stars{color:#c4a060;letter-spacing:4px;font-size:11px;margin-bottom:28px}
-.test-quote{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;font-weight:300;line-height:1.75;color:rgba(255,255,255,.82);margin-bottom:36px}
-.test-name{font-size:10px;letter-spacing:.3em;color:#c4a060;text-transform:uppercase;font-weight:500}
-.test-via{font-size:9px;letter-spacing:.18em;color:rgba(255,255,255,.28);margin-top:5px}
-@media(max-width:960px){.test-grid{grid-template-columns:1fr 1fr;background:none;gap:2px}.test-card{grid-column:auto!important;padding:40px 32px}}
-@media(max-width:580px){#testimonials{padding:70px 0 60px}.test-grid{grid-template-columns:1fr}.test-card{padding:40px 28px}}
-#testimonials{padding:100px 60px 90px;background:#0c0a06;text-align:center;border-top:1px solid rgba(196,160,96,.15)}
-.test-label{font-size:11px;letter-spacing:.4em;color:#c4a060;margin-bottom:60px;text-transform:uppercase;font-weight:400}
-.test-slider{position:relative;max-width:800px;margin:0 auto;padding:0 40px}
-.test-track{position:relative;overflow:hidden;transition:height 0.4s ease}
-.test-slide{position:absolute;top:0;left:0;width:100%;opacity:0;transition:opacity 0.3s ease;pointer-events:none}
-.test-slide.active{opacity:1;pointer-events:auto}
-.test-stars{color:#c4a060;letter-spacing:5px;font-size:11px;margin-bottom:32px}
-.test-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(19px,2.4vw,26px);font-style:italic;font-weight:300;line-height:1.75;color:rgba(255,255,255,.85);margin-bottom:44px}
-.test-name{font-size:10px;letter-spacing:.3em;color:#c4a060;text-transform:uppercase;font-weight:500}
-.test-via{font-size:9px;letter-spacing:.18em;color:rgba(255,255,255,.28);margin-top:6px}
-.test-dots{display:flex;justify-content:center;gap:12px;margin-top:52px}
-.test-dot{width:28px;height:2px;background:rgba(196,160,96,.25);border:none;padding:8px 0;cursor:pointer;transition:background .3s;box-sizing:content-box}
-.test-dot.active{background:#c4a060}
-.test-prev,.test-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(196,160,96,.12);border:1px solid rgba(196,160,96,.3);border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:rgba(196,160,96,.8);font-size:22px;cursor:pointer;transition:background .25s,color .25s,border-color .25s;padding:0;line-height:1;z-index:10}
-.test-prev{left:0}.test-next{right:0}
-.test-prev:hover,.test-next:hover{background:rgba(196,160,96,.25);color:#c4a060;border-color:rgba(196,160,96,.7)}
-@media(max-width:640px){#testimonials{padding:70px 24px 60px}.test-slider{padding:0 28px}.test-quote{font-size:18px}.test-prev,.test-next{width:36px;height:36px;font-size:18px}.test-prev{left:0}.test-next{right:0}}
+/* Gallery: 2-col masonry, no crop, no gaps */
+.photo-grid{display:block;padding:0}
+.photo-grid .pg-item{display:block;margin-bottom:2px}
+.photo-grid .pg-item img{width:100%;height:auto;display:block}
 </style>
-
-<meta name="author" content="Brennan Phua">
-<meta name="keywords" content="Brennan Phua, interior designer Singapore, Japanese luxury interior design, SG Interior, HDB interior design Singapore, condo interior design">
-<meta property="og:title" content="Brennan Phua | Interior Designer Singapore | Japanese Luxury Design">
-<meta property="og:description" content="Brennan Phua is a Singapore interior designer at SG Interior, specialising in Japanese luxury aesthetics. Explore 70+ completed projects.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.brennanphua.com/">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Brennan Phua | Interior Designer Singapore">
-<link rel="canonical" href="https://www.brennanphua.com/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Brennan Phua","jobTitle":"Interior Designer","description":"Singapore interior designer specialising in Japanese luxury aesthetics with 70+ completed projects across HDB, condo, and commercial spaces.","url":"https://www.brennanphua.com","sameAs":["https://www.linkedin.com/in/brennan-phua-b1a955a1","https://linktr.ee/brennanphua"],"worksFor":{"@type":"Organization","name":"SG Interior","url":"https://sginterior.com.sg"},"knowsAbout":["Interior Design","Japanese Design","Luxury Interior","HDB Renovation","Condo Interior Design","Commercial Interior Design"],"areaServed":{"@type":"City","name":"Singapore"}}</script>
 </head>
 <body>
-
-<!-- Loader -->
-<div id="loader">
-  <div class="loader-line"></div>
-  <p class="loader-word">Brennan Phua</p>
-</div>
-
+<div id="loader"><div class="loader-line"></div></div>
 <div class="cur" id="cur"></div>
-<div class="cur-r" id="curR"></div>
+<div class="cur-r" id="cur-r"></div>
 
-<!-- About Overlay -->
-<div id="about-overlay">
-  <div class="about-backdrop" id="aboutBackdrop"></div>
-  <div class="about-panel">
-    <button class="about-close" id="aboutClose" aria-label="Close"></button>
-    <p class="about-label">About</p>
-    <h2 class="about-tagline">Spaces with identity.</h2>
-    <div class="about-divider"></div>
-    <p class="about-bio">
-      Brennan Phua is a Singapore-based senior interior designer at SG Interior Design, known for creating homes and commercial spaces that are both beautiful and practical. His work is guided by contrast &#8212; light and dark, bold and calm, open and cosy &#8212; resulting in interiors that feel personal, thoughtful, and never generic.
-    </p>
-    <p class="about-bio">
-      With a focus on materials, atmosphere, and everyday living, Brennan designs for clients who want more than a standard renovation. They want a space that feels like their own &#8212; a place to live, rest, host, and enjoy.
-    </p>
-  </div>
-</div>
-
-<!-- Lightbox -->
-<div id="lightbox">
-  <button class="lb-close" id="lbClose" aria-label="Close"></button>
-  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous"></button>
-  <img id="lbImg" src="" alt=""/>
-  <button class="lb-nav lb-next" id="lbNext" aria-label="Next"></button>
-  <div class="lb-info">
-    <p class="lb-num" id="lbNum"></p>
-    <p class="lb-title" id="lbTitle"></p>
-  </div>
-</div>
-
-<!-- Nav -->
 <nav id="nav">
-  <a class="nav-logo" href="#">Brennan Phua</a>
-  <div class="nav-right">
-    <a href="#" id="aboutBtn">About</a>
-    <a href="#works">Works</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <a class="nav-back" href="../../index.html">All Works</a>
+  <a class="nav-logo" href="../../index.html">Brennan Phua</a>
 </nav>
-
-<!-- Hero -->
-<section id="hero">
-  <div class="hero-photo">
-    <img class="hero-img" id="heroImg" src="brennen-hero.jpg" alt="Brennan Phua" fetchpriority="high"/>
-    <div class="hero-photo-grad"></div>
-    <div class="hero-text">
-      <p class="hero-tag">Senior Interior Designer &middot; Singapore</p>
-      <h1 class="hero-name"><span>Brennan Phua</span></h1>
+<section class="proj-header">
+  <p class="proj-type">4 Room BTO</p>
+  <h1 class="proj-title"><span>99A Circuit Rd</span></h1>
+  <div class="proj-meta-wrap">
+    <div class="proj-meta">
+      <div class="meta-item"><p class="lbl">Category</p><p class="val">4 Room BTO</p></div>
+      <div class="meta-item"><p class="lbl">Location</p><p class="val">Singapore</p></div>
+      <div class="meta-item"><p class="lbl">Photos</p><p class="val">24 Images</p></div>
     </div>
   </div>
 </section>
+<section class="gallery">
+  <div class="slides">
 
-<!-- Statement -->
-<section id="statement">
-  <div class="stmt-line r"></div>
-  <p class="stmt-text">Spaces with identity.</p>
-  <p class="stmt-attr">Brennan Phua &mdash; Interior Designer</p>
-  <div class="recog r">
-    <p class="recog-label">Recognition</p>
-    <div class="recog-row">
-      <a class="recog-item" href="https://idcs.sg/dea2025/gallery/idea" target="_blank" rel="noopener" aria-label="I-DEA 2025 Finalist, Upp Changi Rd">
-        <svg class="recog-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
-          <path d="M9 20.5C5.5 18.5 3.5 15.5 3.5 11.5c0-3 1-5.5 3-7.5"/>
-          <path d="M15 20.5c3.5-2 5.5-5 5.5-9 0-3-1-5.5-3-7.5"/>
-          <path d="M4.2 15.2c1.4-.2 2.4.4 3 1.6M3.6 11.6c1.3-.4 2.4 0 3.1 1.1M4.4 8c1.2-.6 2.3-.4 3.1.5M6 5.2c1-.7 2.1-.7 2.9 0"/>
-          <path d="M19.8 15.2c-1.4-.2-2.4.4-3 1.6M20.4 11.6c-1.3-.4-2.4 0-3.1 1.1M19.6 8c-1.2-.6-2.3-.4-3.1.5M18 5.2c-1-.7-2.1-.7-2.9 0"/>
-          <path d="M10 21.5h4"/>
-        </svg>
-        <span class="recog-text">
-          <span class="recog-name">I-DEA 2025</span>
-          <span class="recog-sub">Finalist &middot; Upp Changi Rd</span>
-        </span>
-        <span class="recog-arrow" aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="recog-item" href="https://www.asiaone.com/lifestyle/4-room-bto-flat-japanese-inspired-sanctuary" target="_blank" rel="noopener" aria-label="Featured in AsiaOne">
-        <svg class="recog-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
-          <rect x="5" y="3" width="14" height="18" rx="1"/>
-          <path d="M8.5 7.5h7M8.5 11h7M8.5 14.5h4.5"/>
-        </svg>
-        <span class="recog-text">
-          <span class="recog-name">AsiaOne</span>
-          <span class="recog-sub">Featured &middot; 99A Circuit Rd</span>
-        </span>
-        <span class="recog-arrow" aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="recog-item" href="https://stackedhomes.com/interior-designer-spent-120k-his-own/" target="_blank" rel="noopener" aria-label="Featured in Stacked Homes">
-        <svg class="recog-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
-          <rect x="5" y="3" width="14" height="18" rx="1"/>
-          <path d="M8.5 7.5h7M8.5 11h7M8.5 14.5h4.5"/>
-        </svg>
-        <span class="recog-text">
-          <span class="recog-name">Stacked Homes</span>
-          <span class="recog-sub">Featured &middot; 99A Circuit Rd</span>
-        </span>
-        <span class="recog-arrow" aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="recog-item" href="https://www.edgeprop.sg/living/experiences/family-legacy-speakeasy-and-culinary-craft-manna-concepts-strategic-new-chapter" target="_blank" rel="noopener" aria-label="Featured in EdgeProp Singapore">
-        <svg class="recog-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
-          <rect x="5" y="3" width="14" height="18" rx="1"/>
-          <path d="M8.5 7.5h7M8.5 11h7M8.5 14.5h4.5"/>
-        </svg>
-        <span class="recog-text">
-          <span class="recog-name">EdgeProp</span>
-          <span class="recog-sub">Featured &middot; Bencoolen St</span>
-        </span>
-        <span class="recog-arrow" aria-hidden="true">&#8599;</span>
-      </a>
-      <a class="recog-item" href="https://www.lookboxliving.com.sg/project/a-holiday-home-with-a-man-cave-twist" target="_blank" rel="noopener" aria-label="Featured in Lookbox Living">
-        <svg class="recog-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" aria-hidden="true">
-          <rect x="5" y="3" width="14" height="18" rx="1"/>
-          <path d="M8.5 7.5h7M8.5 11h7M8.5 14.5h4.5"/>
-        </svg>
-        <span class="recog-text">
-          <span class="recog-name">Lookbox Living</span>
-          <span class="recog-sub">Featured &middot; Upp Changi Rd</span>
-        </span>
-        <span class="recog-arrow" aria-hidden="true">&#8599;</span>
-      </a>
+    <!-- Living Room -->
+    <div class="s<section class="gallery">
+  <div class="photo-grid">
+    <div class="pg-item"><img src="SWA_6558.jpg" alt="99A Circuit Rd — open-plan living and dining by Brennan Phua" loading="eager">
     </div>
-  </div>
-</section>
 
-<!-- Works -->
-<section id="works">
-  <div class="works-header r">
-    <p class="works-label">Selected Works</p>
-  </div>
-  <div class="works-grid">
-    <a class="work-item r" href="projects/99a-circuit-rd/index.html">
-      <img class="work-img" src="projects/99a-circuit-rd/SWA_6573.jpg" alt="99A Circuit Rd" loading="eager" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">01</p>
-        <p class="work-type">4 Room BTO</p>
-        <p class="work-name">99A Circuit Rd</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/lor-3-geylang/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/49d9428f0ce81789928df17208779281.jpg" alt="Lor 3 Geylang" loading="eager" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">01</p>
-        <p class="work-type">4 Room BTO</p>
-        <p class="work-name">Lor 3 Geylang</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/upp-changi-rd/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/8563cd13a12bbef409976d1b4646b8f7.jpg" alt="Upp Changi Rd" loading="eager" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">02</p>
-        <p class="work-type">2 Bedder Condo</p>
-        <p class="work-name">Upp Changi Rd</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/bras-basah-rd/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/73f7ae20fd0fdd9784e0bf75465ee842.jpg" alt="Bras Basah Rd" loading="eager" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">03</p>
-        <p class="work-type">F&B Restaurant</p>
-        <p class="work-name">Bras Basah Rd</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/netheravon-rd/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/4ff6d167614dc7ec03c449ba3081f51d.jpg" alt="Netheravon Rd" loading="eager" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">04</p>
-        <p class="work-type">F&B Restaurant</p>
-        <p class="work-name">Netheravon Rd</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/bencoolen-st/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/a21fbd6bb26abe096832ca2eb94fe19c.png" alt="Bencoolen St" loading="eager" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">05</p>
-        <p class="work-type">F&B Restaurant</p>
-        <p class="work-name">Bencoolen St</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/lor-8-toa-payoh/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/c12f053707b10c433abe9c16cf6dbdcb.jpg" alt="Lor 8 Toa Payoh" loading="eager" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">06</p>
-        <p class="work-type">SGI Showroom</p>
-        <p class="work-name">Lor 8 Toa Payoh</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/tampines-st-96/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/b4bd8ba3f42a49e432266ae7457e8e2e.jpg" alt="Tampines St 96" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">07</p>
-        <p class="work-type">5 Room BTO</p>
-        <p class="work-name">Tampines St 96</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/upp-jurong-rd/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/fa55336f6373f30ae98c8f0850406718.jpg" alt="Upp Jurong Rd" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">08</p>
-        <p class="work-type">5 Room BTO</p>
-        <p class="work-name">Upp Jurong Rd</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/upp-jurong-rd-2/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/8f5eec974645cfbdc05e2e9cec77dc96.jpg" alt="Upp Jurong Rd" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">09</p>
-        <p class="work-type">4 Room BTO</p>
-        <p class="work-name">Upp Jurong Rd</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/circuit-rd/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/5d8676266328fdbabb0c71080df805bf.png" alt="Circuit Rd" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">10</p>
-        <p class="work-type">4 Room BTO</p>
-        <p class="work-name">Circuit Rd</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/orchard-boulevard/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/057a906154d29c947bb3633fa91561ad.png" alt="Orchard Boulevard" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">11</p>
-        <p class="work-type">4 Bedder Condo</p>
-        <p class="work-name">Orchard Boulevard</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/normanton-park/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/c996bc73623adfa320f1e4a81e247669.jpg" alt="Normanton Park" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">12</p>
-        <p class="work-type">3 Bedder Condo</p>
-        <p class="work-name">Normanton Park</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/normanton-park-2/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/e662c60fb46ef3c15630529265d577b4.png" alt="Normanton Park" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">13</p>
-        <p class="work-type">3 Bedder Condo</p>
-        <p class="work-name">Normanton Park</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/choa-chu-kang-ave-3/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/054ace6bf3ebc306288a1932f70568ac.png" alt="Choa Chu Kang Ave 3" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">14</p>
-        <p class="work-type">3 Bedder Condo</p>
-        <p class="work-name">Choa Chu Kang Ave 3</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/canberra-drive/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/b7464bd811e44fdfbd9d7bf1ab5efe7e.png" alt="Canberra Drive" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">15</p>
-        <p class="work-type">2 Bedder Condo</p>
-        <p class="work-name">Canberra Drive</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/hillview-rise/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/48022bb80f47c6c046b787b4de01289b.jpg" alt="Hillview Rise" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">16</p>
-        <p class="work-type">3 Bedder Condo</p>
-        <p class="work-name">Hillview Rise</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/tampines-st-96-2/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/9dac3c696e8bfd7c57e1a469cb591bc4.jpg" alt="Tampines St 96" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">17</p>
-        <p class="work-type">5 Room BTO</p>
-        <p class="work-name">Tampines St 96</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/north-gaia/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/b1440317156d9d3af66051e25b47aefa.jpg" alt="North Gaia" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">18</p>
-        <p class="work-type">4 Bedder Condo</p>
-        <p class="work-name">North Gaia</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/serangoon-ave-4/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/480769edf3492a6b85f6de1d109cd45a.jpg" alt="Serangoon Ave 4" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">19</p>
-        <p class="work-type">3 Room HDB</p>
-        <p class="work-name">Serangoon Ave 4</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/west-coast-vale/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/f9982ee3521a6f0bf40153a460a6456d.jpg" alt="West Coast Vale" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">20</p>
-        <p class="work-type">4 Bedder Condo</p>
-        <p class="work-name">West Coast Vale</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/butterworth-lane/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/64ae88fb89dc5298a66f56e2f32c229c.png" alt="Butterworth Lane" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">21</p>
-        <p class="work-type">3 Bedder Condo</p>
-        <p class="work-name">Butterworth Lane</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/upp-aljunied-rd/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/97f58cc2b70b3095642042ffcb91961f.png" alt="Upp Aljunied Rd" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">22</p>
-        <p class="work-type">4 Room BTO</p>
-        <p class="work-name">Upp Aljunied Rd</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/serangoon-garden-way/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/f2005ecabec36146d88ae82184da560e.png" alt="Serangoon Garden Way" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">23</p>
-        <p class="work-type">Landed</p>
-        <p class="work-name">Serangoon Garden Way</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/normanton-park-3/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/923a5ba2cde05b96c5ad6ec5196f5555.jpg" alt="Normanton Park" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">24</p>
-        <p class="work-type">2 Bedder Condo</p>
-        <p class="work-name">Normanton Park</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/choa-chu-kang-ave-3-2/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/2ae0ee00b5c6b85bf9bc706da35ded03.png" alt="Choa Chu Kang Ave 3" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">25</p>
-        <p class="work-type">3 Bedder Condo</p>
-        <p class="work-name">Choa Chu Kang Ave 3</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/woodlands-cres/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/a1efb9de3b83e4aea212e9e4bf037eed.png" alt="Woodlands Cres" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">26</p>
-        <p class="work-type">4 Room BTO</p>
-        <p class="work-name">Woodlands Cres</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/ang-mo-kio-ave-6/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/cbc05bf96a4da371a02e51a54010f749.png" alt="Ang Mo Kio Ave 6" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">27</p>
-        <p class="work-type">HDB Shophouse</p>
-        <p class="work-name">Ang Mo Kio Ave 6</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/anchorvale-rd/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/0034b9c9ecb9813594dfaa7d54a8ed87.jpg" alt="Anchorvale Rd" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">28</p>
-        <p class="work-type">F&B Restaurant</p>
-        <p class="work-name">Anchorvale Rd</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/ang-mo-kio-ave-3/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/9272313948e3edddcb3691b3d3528b41.jpg" alt="Ang Mo Kio Ave 3" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">29</p>
-        <p class="work-type">F&B Restaurant</p>
-        <p class="work-name">Ang Mo Kio Ave 3</p>
-      </div>
-    </a>
-    <a class="work-item r" href="projects/bedok-north-st-3/index.html">
-      <img class="work-img" src="https://brennanp.my.canva.site/_assets/media/797df667a8b9ad708d4149aeffcfa941.jpg" alt="Bedok North St 3" loading="lazy" decoding="async"/>
-      <div class="work-info">
-        <p class="work-num">30</p>
-        <p class="work-type">F&B Restaurant</p>
-        <p class="work-name">Bedok North St 3</p>
-      </div>
-    </a>
-  </div>
-</section>
-
-<section id="testimonials">
-  <p class="test-label">Client Stories</p>
-  <div class="test-slider">
-    <div class="test-track">
-      <div class="test-slide active">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">&#8220;He went out of his way throughout. Furniture shopping, defects checks, site coordination. The design turned out better than expected. We are extremely pleased.&#8221;</p>
-        <p class="test-name">Gideon Tan</p>
-        <p class="test-via">Google Review &#183; Local Guide</p>
-      </div>
-      <div class="test-slide">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">&#8220;His ability to balance both aesthetics and functionality was commendable. He managed to align the design perfectly with our needs.&#8221;</p>
-        <p class="test-name">Lauren Lim</p>
-        <p class="test-via">Google Review</p>
-      </div>
-      <div class="test-slide">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">&#8220;Their ability to translate our ideas into a space that feels both beautiful and functional is truly remarkable. A home we are proud to call our own.&#8221;</p>
-        <p class="test-name">Melody Tan</p>
-        <p class="test-via">Google Review</p>
-      </div>
-      <div class="test-slide">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">&#8220;Designed the space well and were practical throughout. Transparent, easy to communicate with. Honestly the smoothest renovation experience we could have asked for.&#8221;</p>
-        <p class="test-name">Just Nx</p>
-        <p class="test-via">Google Review</p>
-      </div>
-    
-    
-      <div class="test-slide">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">"Very detailed carpentry work and meticulous execution throughout. One of the most responsible and reliable designers I've worked with. Strongly recommend."</p>
-        <p class="test-name">Boon Hon Tan</p>
-        <p class="test-via">Google Review</p>
-      </div>
-      <div class="test-slide">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">"Patient through every change of mind. Transparent guidance, zero pressure &#8212; just a designer who genuinely wants you to love the result."</p>
-        <p class="test-name">Winne</p>
-        <p class="test-via">Google Review &#183; Local Guide</p>
-      </div>
-      <div class="test-slide">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">"Exceptionally hands-on &#8212; liaising with contractors until 1am when needed. The kind of designer you can leave everything to. My project was in the best hands."</p>
-        <p class="test-name">Marcus Ang</p>
-        <p class="test-via">Google Review &#183; Local Guide</p>
-      </div>
-      <div class="test-slide">
-        <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="test-quote">"No delays, no stress. Brennan took time to truly understand my vision &#8212; and delivered it with workmanship that exceeded expectations."</p>
-        <p class="test-name">Caz Wee</p>
-        <p class="test-via">Google Review</p>
-      </div>
-      <div class="test-slide">
-        <span class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <p class="test-quote">"From start to finish, Brennan delivered exceptional work with professionalism and responsibility. He listened to what we envisioned and delivered it perfectly &mdash; on schedule, matching the 3D renderings exactly."</p>
-        <p class="test-name">Jun Liong Tan</p>
-        <p class="test-via">Google Review &middot; 10 Reviews</p>
-      </div>
-      <div class="test-slide"><span class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p class="test-quote">"Brennan was our main ID and assisting him was Stephanie. They were both prompt, professional, and organised throughout the entire process. He was easy to communicate with and paid good attention to details, keeping everything on schedule. We are really happy with the final outcome &mdash; would definitely recommend to anyone looking for a reliable ID."</p><p class="test-name">Jamie Ann Chew</p><p class="test-via">Google Review</p></div>
-    
-        <div class="test-slide">
-          <div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="test-quote">&ldquo;Brennan perfectly captured our vision of a modern luxe design and brought it to life in ways we couldn&rsquo;t have imagined. His attention to detail is truly remarkable &mdash; from marble and bespoke carpentry to strategically placed mirrors. The design arch in the living room became a standout feature that tied the whole space together. Every detail was immaculate. He transformed our home into a luxurious haven.&rdquo;</p>
-          <p class="test-name">Belicia Tan</p>
-          <p class="test-via">Google Review</p>
-        </div>
-        </div>
-            <button class="test-prev" aria-label="Previous review">&#8249;</button>
-    <button class="test-next" aria-label="Next review">&#8250;</button>
-    <div class="test-dots">
-    <button class="test-dot active" aria-label="Review 1"></button>
-    <button class="test-dot" aria-label="Review 2"></button>
-    <button class="test-dot" aria-label="Review 3"></button>
-    <button class="test-dot" aria-label="Review 4"></button>
-    <button class="test-dot" aria-label="Review 5"></button>
-    <button class="test-dot" aria-label="Review 6"></button>
-    <button class="test-dot" aria-label="Review 7"></button>
-       <button class="test-dot" aria-label="Review 8"></button>
-    <button class="test-dot" aria-label="Review 9"></button>
-    <button class="test-dot" aria-label="Review 10"></button>
-      <button class="test-dot" aria-label="Review 11"></button>
-  </div>
+    <div class="pg-item"><img src="SWA_6573.jpg" alt="Living room — fluted glass partition and bonsai console" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6551.jpg" alt="TV feature wall with timber slats and yin-yang rug" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6554.jpg" alt="Living room sofa with rust throw and curved coffee table" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6548.jpg" alt="Dining area with woven pendant lights" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6586.jpg" alt="Arched fluted glass door and hallway corridor" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6541.jpg" alt="Dry kitchen console with coffee machine and timber shelving" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6563.jpg" alt="Bonsai feature console with stone niche and LED cove lighting" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6567.jpg" alt="Bonsai close-up with rock garden and pagoda figurine" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6565.jpg" alt="Stone column texture detail with bonsai and starburst light" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6524.jpg" alt="LED arch framing kitchen view with curved console" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6496.jpg" alt="Master bedroom headboard with dual pendant lights" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6493.jpg" alt="Master bedroom detail with pendant light and bonsai" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6504.jpg" alt="Master bedroom from foot of bed showing wardrobe" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6530.jpg" alt="Kitchen with under-cabinet LED lighting and stone backsplash" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6533.jpg" alt="Kitchen countertop with water purifier and travertine backsplash" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6579.jpg" alt="Common bathroom with stone basin and backlit mirror" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6513.jpg" alt="Ensuite bathroom with warm cove lighting" loading="lazy"></div>
+    <div class="pg-item"><img src="SWA_6516.jpg" alt="Ensuite shelving niche with toiletries" loading="lazy"></div>
   </div>
 </section>
 <script>
 (function(){
-  var sl=document.querySelectorAll('.test-slide'),dt=document.querySelectorAll('.test-dot'),cur=0,hts=[],busy=false;
-  var track=document.querySelector('.test-track');
-  function setH(){if(hts.length)track.style.height=hts[cur]+'px';}
-  function goTo(n){
-    if(busy)return;
-    busy=true;
-    sl[cur].classList.remove('active');
-    dt[cur].classList.remove('active');
-    var next=(n+sl.length)%sl.length;
-    setTimeout(function(){
-      cur=next;
-      sl[cur].classList.add('active');
-      dt[cur].classList.add('active');
-      setH();
-      busy=false;
-    },320);
-  }
-  document.fonts.ready.then(function(){
-    var tw=track.clientWidth||320,md=document.createElement('div');
-    md.style.cssText='position:fixed;visibility:hidden;top:-9999px;left:0;width:'+tw+'px;overflow:visible';
-    document.body.appendChild(md);
-    Array.from(sl).forEach(function(s){var c=s.cloneNode(true);c.style.cssText='position:static;display:block;opacity:1;pointer-events:auto';md.appendChild(c);hts.push(md.lastChild.scrollHeight);md.removeChild(c);});
-    document.body.removeChild(md);
-    setH();
-  });
-  dt.forEach(function(d,i){d.addEventListener('click',function(){goTo(i);});});
-  document.querySelector('.test-prev').addEventListener('click',function(){goTo(cur-1);});
-  document.querySelector('.test-next').addEventListener('click',function(){goTo(cur+1);});
-  var tx=0;
-  var ws=document.querySelector('.test-slider');
-  ws.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
-  ws.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>40){goTo(dx<0?cur+1:cur-1);}},{passive:true});
+  const items = document.querySelectorAll('.pg-item');
+  const ob = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.style.animationDelay=Math.random()*0.15+'s';e.target.classList.add('visible');ob.unobserve(e.target);}
+    });
+  },{threshold:0.08});
+  items.forEach(function(el){ob.observe(el);});
 })();
 </script>
 
-<!-- Contact -->
-<section id="contact">
-
-  <!-- Left: heading + info -->
-  <div class="contact-left">
-    <p class="contact-pre r">Begin a Conversation</p>
-    <h2 class="contact-heading r d1">Start a<br/>Project.</h2>
-    <div class="contact-details r d2">
-      <div class="detail">
-        <p class="lbl">Email</p>
-        <p class="val"><a href="mailto:brennan@sginterior.com.sg">brennan@sginterior.com.sg</a></p>
-      </div>
-      <div class="detail">
-        <p class="lbl">Studio</p>
-        <p class="val">Singapore</p>
-      </div>
-      <div class="detail">
-        <p class="lbl">Instagram</p>
-        <p class="val"><a href="https://www.instagram.com/brennanphua/" target="_blank">@brennanphua</a></p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Right: form -->
-  <div class="contact-right r d2">
-    <span class="cf-label">Send an Enquiry</span>
-    <form name="contact" netlify netlify-honeypot="bot-field" class="cf-form" id="cfForm">
-      <input type="hidden" name="form-name" value="contact"/>
-      <p style="display:none"><input name="bot-field"/></p>
-      <div class="cf-fields">
-        <div class="cf-row">
-          <div class="cf-group">
-            <input class="cf-field" type="text" name="name" placeholder="Your Name" required/>
-            <span class="cf-bar"></span>
-          </div>
-          <div class="cf-group">
-            <input class="cf-field" type="email" name="email" placeholder="Email Address" required/>
-            <span class="cf-bar"></span>
-          </div>
-        </div>
-        <div class="cf-group">
-          <input class="cf-field" type="tel" name="phone" placeholder="Phone Number (optional)"/>
-          <span class="cf-bar"></span>
-        </div>
-        <div class="cf-group">
-          <select class="cf-field" name="project-type" required>
-            <option value="" disabled selected>Project Type</option>
-            <option value="Residential HDB">Residential &#8212; HDB</option>
-            <option value="Residential Condo">Residential &#8212; Condo / Landed</option>
-            <option value="Commercial">Commercial / F&amp;B</option>
-            <option value="Other">Other</option>
-          </select>
-          <span class="cf-bar"></span>
-        </div>
-        <div class="cf-group">
-          <textarea class="cf-field cf-textarea" name="message" placeholder="Tell me about your space and vision"></textarea>
-          <span class="cf-bar"></span>
-        </div>
-        <button type="submit" class="cf-submit"><span>Send Enquiry</span></button>
-      </div>
-      <div class="cf-success">Message received &#8212; I&rsquo;ll be in touch shortly.</div>
-    </form>
-  </div>
-
-</section>
-
-<!-- Footer -->
-
-
-
-
+<div class="proj-footer">
+  <a class="proj-nav-item" href="../../index.html#works">
+    <span class="proj-nav-label">â Back</span>
+    <span class="proj-nav-title">All Works</span>
+  </a>
+  <a class="proj-nav-item" href="mailto:brennan@sginterior.com.sg">
+    <span class="proj-nav-label">Get in touch â</span>
+    <span class="proj-nav-title">Start a Project</span>
+  </a>
+</div>
 <footer>
-  <p class="ft-l">Brennan Phua &middot; Interior Designer</p>
-  <p class="ft-r">&copy; 2026 SG Interior Design</p>
+  <p class="ft-l">Brennan Phua Â· Interior Designer</p>
+  <p class="ft-r">Â© 2026 SG Interior Design</p>
 </footer>
-
 <script>
-// &#8212; Loader &#8212;
-window.addEventListener('load', () => {
-  setTimeout(() => document.getElementById('loader').classList.add('gone'), 700);
-});
-
-// &#8212; Cursor &#8212;
-const cur = document.getElementById('cur');
-const curR = document.getElementById('curR');
-let mx = window.innerWidth / 2, my = window.innerHeight / 2, rx = mx, ry = my;
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cur.style.left = mx + 'px'; cur.style.top = my + 'px';
-});
-(function tick() {
-  rx += (mx - rx) * 0.075;
-  ry += (my - ry) * 0.075;
-  curR.style.left = rx + 'px'; curR.style.top = ry + 'px';
-  requestAnimationFrame(tick);
-})();
-document.querySelectorAll('a, button, .work-item').forEach(el => {
-  el.addEventListener('mouseenter', () => { cur.classList.add('h'); curR.classList.add('h'); });
-  el.addEventListener('mouseleave', () => { cur.classList.remove('h'); curR.classList.remove('h'); });
-});
-
-// &#8212; About &#8212;
-const overlay = document.getElementById('about-overlay');
-function openAbout() { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
-function closeAbout() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
-document.getElementById('aboutBtn').addEventListener('click', e => { e.preventDefault(); openAbout(); });
-document.getElementById('aboutClose').addEventListener('click', closeAbout);
-document.getElementById('aboutBackdrop').addEventListener('click', closeAbout);
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAbout(); });
-
-// &#8212; Nav &#8212;
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('s', scrollY > 60), { passive: true });
-
-// &#8212; Scroll Reveal &#8212;
-const io = new IntersectionObserver(es => {
-  es.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('v'); io.unobserve(e.target); }
-  });
-}, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.r, .rf').forEach(el => io.observe(el));
-
-// &#8212; Hero Parallax + fade &#8212;
-const heroImg = document.getElementById('heroImg');
-const heroTag = document.querySelector('.hero-tag');
-const heroName = document.querySelector('.hero-name');
-let ticking = false;
-window.addEventListener('scroll', () => {
-  if (!ticking) {
-    requestAnimationFrame(() => {
-      const ph = document.querySelector('.hero-photo').offsetHeight;
-      const p = scrollY / ph;
-      // parallax
-      if (p < 1.4) heroImg.style.transform = `translateY(${scrollY * 0.1}px) scale(1.04)`;
-      // fade text on scroll
-      const fade = Math.max(1 - p / 0.45, 0);
-      const shift = (1 - fade) * 22;
-      if (heroTag) { heroTag.style.opacity = fade; heroTag.style.transform = `translateY(${-shift}px)`; }
-      if (heroName) { heroName.style.opacity = fade; heroName.style.transform = `translateY(${-shift * 1.2}px)`; }
-      ticking = false;
-    });
-    ticking = true;
-  }
-}, { passive: true });
-
-// &#8212; Works Mouse Parallax &#8212;
-document.querySelectorAll('.work-item').forEach(item => {
-  let raf;
-  item.addEventListener('mousemove', e => {
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(() => {
-      const r = item.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - 0.5;
-      const y = (e.clientY - r.top) / r.height - 0.5;
-      const img = item.querySelector('.work-img');
-      img.style.transform = `scale(1.06) translate(${x * 10}px, ${y * 10}px)`;
-      img.style.filter = 'brightness(.94) saturate(1.05)';
-      img.style.transition = 'transform .12s ease, filter .3s ease';
-    });
-  });
-  item.addEventListener('mouseleave', () => {
-    cancelAnimationFrame(raf);
-    const img = item.querySelector('.work-img');
-    img.style.transform = '';
-    img.style.filter = '';
-    img.style.transition = 'transform 1.4s var(--ease), filter 1.4s var(--ease)';
-  });
-});
-
-// &#8212; Smooth Scroll &#8212;
-document.querySelectorAll('a[href^="#"]:not(#aboutBtn)').forEach(a => {
-  a.addEventListener('click', e => {
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-  });
-});
-
-// &#8212; Contact Form &#8212;
-const cfForm = document.querySelector('.cf-form');
-if (cfForm) {
-  cfForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = cfForm.querySelector('.cf-submit');
-    if (btn) btn.disabled = true;
-    try {
-      const res = await fetch('https://formspree.io/f/xqerwkbk', {
-        method: 'POST',
-        body: new FormData(cfForm),
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        cfForm.classList.add('sent');
-      } else {
-        const json = await res.json();
-        const msg = (json.errors||[]).map(function(err){return err.message;}).join(', ') || 'Submission failed. Please try again.';
-        alert(msg);
-        if (btn) btn.disabled = false;
-      }
-    } catch(err) {
-      alert('Network error. Please try again.');
-      if (btn) btn.disabled = false;
-    }
-  });
-}
-
-// &#8212; Statement Word Reveal &#8212;
-(function(){
-  const el = document.querySelector('.stmt-text');
-  const attr = document.querySelector('.stmt-attr');
-  if (!el) return;
-
-  // split into word spans
-  const words = el.textContent.trim().split(/\s+/);
-  el.textContent = '';
-  words.forEach((w, i) => {
-    if (i > 0) el.appendChild(document.createTextNode(' '));
-    const outer = document.createElement('span');
-    outer.className = 'word-outer';
-    const inner = document.createElement('span');
-    inner.className = 'word-inner';
-    inner.textContent = w;
-    inner.style.transitionDelay = (0.08 + i * 0.14) + 's';
-    outer.appendChild(inner);
-    el.appendChild(outer);
-  });
-
-  const lastDelay = 0.08 + (words.length - 1) * 0.14;
-  if (attr) attr.style.transitionDelay = (lastDelay + 0.5) + 's';
-
-  const obs = new IntersectionObserver(([e]) => {
-    if (e.isIntersecting) {
-      el.classList.add('revealed');
-      if (attr) attr.classList.add('revealed');
-      obs.unobserve(el);
-    }
-  }, { threshold: 0.35 });
-  obs.observe(el);
-})();
-
-// &#8212; Lightbox &#8212;
-const lb       = document.getElementById('lightbox');
-const lbImg    = document.getElementById('lbImg');
-const lbNum    = document.getElementById('lbNum');
-const lbTitle  = document.getElementById('lbTitle');
-const items    = Array.from(document.querySelectorAll('.work-item'));
-let current    = 0;
-
-function lbData(i) {
-  const img   = items[i].querySelector('.work-img');
-  const num   = items[i].querySelector('.work-num').textContent;
-  const title = items[i].querySelector('.work-name').textContent;
-  return { src: img.src, num, title };
-}
-
-function openLb(i) {
-  current = i;
-  const d = lbData(i);
-  lbImg.src           = d.src;
-  lbNum.textContent   = d.num;
-  lbTitle.textContent = d.title;
-  lb.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeLb() {
-  lb.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function lbGo(dir) {
-  current = (current + dir + items.length) % items.length;
-  const d = lbData(current);
-  lbImg.style.opacity = '0';
-  setTimeout(() => {
-    lbImg.src           = d.src;
-    lbNum.textContent   = d.num;
-    lbTitle.textContent = d.title;
-    lbImg.style.opacity = '1';
-  }, 180);
-}
-
-lbImg.style.transition = 'opacity .18s ease, transform .6s var(--ease)';
-
-// project cards navigate via href &#8212; lightbox not triggered from grid
-document.getElementById('lbClose').addEventListener('click', closeLb);
-document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); lbGo(-1); });
-document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); lbGo(1); });
-lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
-document.addEventListener('visibilitychange', () => { if (document.hidden && lb.classList.contains('open')) closeLb(); });
-document.addEventListener('keydown', e => {
-  if (!lb.classList.contains('open')) return;
-  if (e.key === 'Escape')      closeLb();
-  if (e.key === 'ArrowLeft')   lbGo(-1);
-  if (e.key === 'ArrowRight')  lbGo(1);
-});
-
-// register lightbox elements for cursor hover
-[document.getElementById('lbClose'),
- document.getElementById('lbPrev'),
- document.getElementById('lbNext')].forEach(el => {
-  el.addEventListener('mouseenter', () => { cur.classList.add('h'); curR.classList.add('h'); });
-  el.addEventListener('mouseleave', () => { cur.classList.remove('h'); curR.classList.remove('h'); });
-});
+// loader
+window.addEventListener('load',()=>{const l=document.getElementById('loader');if(l){l.classList.add('gone');}});
+// cursor
+(function(){const cur=document.getElementById('cur');const curR=document.getElementById('cur-r');if(!cur||!curR)return;let mx=0,my=0,rx=0,ry=0;document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});setInterval(function(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;curR.style.left=rx+'px';curR.style.top=ry+'px';},16);document.querySelectorAll('a,button').forEach(function(el){el.addEventListener('mouseenter',function(){cur.classList.add('cur-h');curR.style.width='48px';curR.style.height='48px';});el.addEventListener('mouseleave',function(){cur.classList.remove('cur-h');curR.style.width='32px';curR.style.height='32px';});});})();
 </script>
 </body>
 </html>
