@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Cormorant+Garamond:ital,wght@0,300;1,300&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0f0e0d;--text:#d8d0c4;--text-dim:#6e6860;--gold:#8a7560;--ease:cubic-bezier(0.16,1,0.3,1)}
+:root{--bg:#0f0e0d;--text:#d8d0c4;--text-dim:#8c857b;--gold:#9a8268;--ease:cubic-bezier(0.16,1,0.3,1)}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden;cursor:none;-webkit-font-smoothing:antialiased}
 ::selection{background:rgba(138,117,96,.22);color:var(--text)}
@@ -24,24 +24,24 @@ body{background:var(--bg);color:var(--text);font-family:'Montserrat',sans-serif;
 .cur-r.h{width:56px;height:56px;border-color:rgba(138,117,96,.12)}
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:36px 60px;transition:padding .7s var(--ease),background .7s,border-color .7s;border-bottom:1px solid transparent}
 nav.s{padding:20px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px);border-color:rgba(138,117,96,.08)}
-.nav-back{display:flex;align-items:center;gap:14px;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .4s;cursor:none}
+.nav-back{display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .4s;cursor:none}
 .nav-back::before{content:'';width:24px;height:1px;background:currentColor;transition:width .4s var(--ease)}
 .nav-back:hover{color:var(--text)}
 .nav-back:hover::before{width:36px}
 .nav-logo{font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:var(--text);font-weight:400;text-decoration:none;transition:opacity .3s}
 .nav-logo:hover{opacity:.55}
 .proj-header{padding:180px 60px 80px;border-bottom:1px solid rgba(138,117,96,.08)}
-.proj-type{font-size:7px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;opacity:0;animation:fu .9s var(--ease) .8s forwards}
+.proj-type{font-size:10px;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;opacity:0;animation:fu .9s var(--ease) .8s forwards}
 .proj-title{font-size:clamp(40px,6vw,96px);font-weight:100;letter-spacing:.18em;text-transform:uppercase;line-height:1;color:var(--text);overflow:hidden;margin-bottom:40px}
 .proj-title span{display:block;animation:lu 1.2s var(--ease) .95s both}
 .proj-meta{display:flex;gap:60px;border-top:1px solid rgba(138,117,96,.1);padding-top:28px}
-.meta-item .lbl{font-size:7px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
-.meta-item .val{font-size:9px;letter-spacing:.18em;color:var(--text)}
+.meta-item .lbl{font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim);margin-bottom:8px}
+.meta-item .val{font-size:11px;letter-spacing:.18em;color:var(--text)}
 .proj-meta-wrap{opacity:0;animation:fu .9s var(--ease) 1.2s forwards}
 .proj-featured{margin-top:28px;padding-top:28px;border-top:1px solid rgba(138,117,96,.1)}
-.featured-lbl{font-size:7px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px}
+.featured-lbl{font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px}
 .featured-links{display:flex;gap:20px;flex-wrap:wrap}
-.featured-link{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .3s}
+.featured-link{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color .3s}
 .featured-link:hover{color:var(--text)}
 .featured-link::before{content:attr(data-icon);font-size:10px}
 .gallery{padding:4px 4px 120px}
@@ -84,7 +84,7 @@ nav.s{padding:20px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .lb-close:hover{opacity:1}
 .lb-close::before,.lb-close::after{content:'';position:absolute;width:22px;height:1px;background:var(--text)}
 .lb-close::before{transform:rotate(45deg)}.lb-close::after{transform:rotate(-45deg)}
-.lb-info{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);opacity:0;transition:opacity .4s var(--ease) .3s;font-size:8px;letter-spacing:.3em;color:var(--text-dim);text-transform:uppercase;white-space:nowrap}
+.lb-info{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);opacity:0;transition:opacity .4s var(--ease) .3s;font-size:11px;letter-spacing:.3em;color:var(--text-dim);text-transform:uppercase;white-space:nowrap}
 #lightbox.open .lb-info{opacity:1}
 .lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:80px;display:flex;align-items:center;justify-content:center;cursor:none;opacity:.3;transition:opacity .3s;background:none;border:none}
 .lb-nav:hover{opacity:1}
@@ -96,16 +96,18 @@ nav.s{padding:20px 60px;background:rgba(15,14,13,.92);backdrop-filter:blur(20px)
 .proj-nav-item:first-child{border-right:1px solid rgba(138,117,96,.08)}
 .proj-nav-item::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .6s var(--ease);transform-origin:left}
 .proj-nav-item:hover::after{transform:scaleX(1)}
-.proj-nav-label{font-size:7px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim)}
+.proj-nav-label{font-size:10px;letter-spacing:.44em;text-transform:uppercase;color:var(--text-dim)}
 .proj-nav-title{font-size:clamp(14px,2vw,22px);font-weight:100;letter-spacing:.16em;text-transform:uppercase;color:var(--text);transition:color .4s}
 .proj-nav-item:hover .proj-nav-title{color:rgba(216,208,196,.65)}
 footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(138,117,96,.08)}
-.ft-l{font-size:7px;letter-spacing:.32em;text-transform:uppercase;color:var(--text-dim)}
-.ft-r{font-size:7px;letter-spacing:.22em;color:var(--text-dim)}
+.ft-l{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--text-dim)}
+.ft-r{font-size:10px;letter-spacing:.22em;color:var(--text-dim)}
 @keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes lu{from{transform:translateY(110%)}to{transform:translateY(0)}}
 @media(max-width:900px){nav{padding-left:28px;padding-right:28px;padding-top:28px}nav.s{padding-top:18px;padding-left:28px;padding-right:28px}.proj-header{padding:140px 28px 72px}.gallery{padding:4px 4px 80px}.proj-footer{grid-template-columns:1fr}.proj-nav-item:first-child{border-right:none;border-bottom:1px solid rgba(138,117,96,.08)}.proj-nav-item{padding:40px 28px}footer{padding:24px 28px}.proj-meta{gap:32px;flex-wrap:wrap}}
 @media(max-width:600px){}
+.ft-m{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--text-dim)}.ft-m a{color:inherit;text-decoration:none;transition:color .3s}.ft-m a:hover{color:var(--text)}
+@media(max-width:600px){footer{flex-direction:column;align-items:flex-start;gap:10px}}
 </style>
 
 <meta name="author" content="Brennan Phua">
@@ -118,6 +120,11 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
 <meta name="twitter:title" content="Netheravon Rd Interior Design by Brennan Phua">
 <link rel="canonical" href="https://www.brennanphua.com/projects/netheravon-rd/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CreativeWork","name":"Netheravon Rd Interior Design","description":"Interior design project at Netheravon Rd by Brennan Phua, Singapore interior designer at SG Interior, specialising in Japanese luxury aesthetics.","creator":{"@type":"Person","name":"Brennan Phua","jobTitle":"Interior Designer","url":"https://www.brennanphua.com","worksFor":{"@type":"Organization","name":"SG Interior","url":"https://sginterior.com.sg"}},"url":"https://www.brennanphua.com/projects/netheravon-rd/"}</script>
+<meta property="og:image" content="https://www.brennanphua.com/media/54db608e3fec97bd373caeb7ef05bf8c.jpg"/>
+<meta name="twitter:image" content="https://www.brennanphua.com/media/54db608e3fec97bd373caeb7ef05bf8c.jpg"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 </head>
 <body>
 <div id="loader"><div class="loader-line"></div></div>
@@ -148,22 +155,22 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
 <section class="gallery">
   <div class="slides">
     <div class="slide slide-1">
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/54db608e3fec97bd373caeb7ef05bf8c.jpg" width="2399" height="1591" alt="" loading="eager" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/54db608e3fec97bd373caeb7ef05bf8c.jpg" width="2399" height="1591" alt="Netheravon Rd — f&amp;b restaurant interior design by Brennan Phua, Singapore (photo 1)" loading="eager" decoding="async"/></div>
     </div>
     <div class="slide slide-3-ppl">
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/75c52430370efb6205789ad350337280.jpg" width="800" height="533" alt="" loading="lazy" decoding="async"/></div>
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/f1424915ad5d4f98d75f0f6e731fdf98.jpg" width="800" height="533" alt="" loading="lazy" decoding="async"/></div>
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/cb2d4f5bade4b00ed2b73909f000532d.jpg" width="1599" height="1066" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/75c52430370efb6205789ad350337280.jpg" width="800" height="533" alt="Netheravon Rd — f&amp;b restaurant interior design by Brennan Phua, Singapore (photo 2)" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/f1424915ad5d4f98d75f0f6e731fdf98.jpg" width="800" height="533" alt="Netheravon Rd — f&amp;b restaurant interior design by Brennan Phua, Singapore (photo 3)" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/cb2d4f5bade4b00ed2b73909f000532d.jpg" width="1599" height="1066" alt="Netheravon Rd — f&amp;b restaurant interior design by Brennan Phua, Singapore (photo 4)" loading="lazy" decoding="async"/></div>
     </div>
     <div class="slide slide-3-ppl-l">
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/a0787bb060687ba3dd8d9d85ddeeca22.jpg" width="1599" height="1093" alt="" loading="lazy" decoding="async"/></div>
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/4ff6d167614dc7ec03c449ba3081f51d.jpg" width="800" height="535" alt="" loading="lazy" decoding="async"/></div>
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/30c78f065f052593f173084f279d85a3.jpg" width="800" height="533" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/a0787bb060687ba3dd8d9d85ddeeca22.jpg" width="1599" height="1093" alt="Netheravon Rd — f&amp;b restaurant interior design by Brennan Phua, Singapore (photo 5)" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/4ff6d167614dc7ec03c449ba3081f51d.jpg" width="800" height="535" alt="Netheravon Rd — f&amp;b restaurant interior design by Brennan Phua, Singapore (photo 6)" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/30c78f065f052593f173084f279d85a3.jpg" width="800" height="533" alt="Netheravon Rd — f&amp;b restaurant interior design by Brennan Phua, Singapore (photo 7)" loading="lazy" decoding="async"/></div>
     </div>
     <div class="slide slide-3-ppl">
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/4b359c04300550feacdec7b1869ca19c.jpg" width="1599" height="1066" alt="" loading="lazy" decoding="async"/></div>
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/a58d4571fc5a7e01f9f0af776bef1a03.jpg" width="1599" height="1066" alt="" loading="lazy" decoding="async"/></div>
-      <div class="gallery-item"><img src="https://brennanp.my.canva.site/_assets/media/489d09feee79f2e313342a2735165c6b.jpg" width="1599" height="1066" alt="" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/4b359c04300550feacdec7b1869ca19c.jpg" width="1599" height="1066" alt="Netheravon Rd — f&amp;b restaurant interior design by Brennan Phua, Singapore (photo 8)" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/a58d4571fc5a7e01f9f0af776bef1a03.jpg" width="1599" height="1066" alt="Netheravon Rd — f&amp;b restaurant interior design by Brennan Phua, Singapore (photo 9)" loading="lazy" decoding="async"/></div>
+      <div class="gallery-item"><img src="/media/489d09feee79f2e313342a2735165c6b.jpg" width="1599" height="1066" alt="Netheravon Rd — f&amp;b restaurant interior design by Brennan Phua, Singapore (photo 10)" loading="lazy" decoding="async"/></div>
     </div>
   </div>
 </section>
@@ -172,13 +179,14 @@ footer{padding:24px 60px;display:flex;justify-content:space-between;align-items:
     <span class="proj-nav-label">&larr; Back</span>
     <span class="proj-nav-title">All Works</span>
   </a>
-  <a class="proj-nav-item" href="mailto:brennan@sginterior.com.sg">
+  <a class="proj-nav-item" href="/#contact">
     <span class="proj-nav-label">Get in touch &rarr;</span>
     <span class="proj-nav-title">Start a Project</span>
   </a>
 </div>
 <footer>
   <p class="ft-l">Brennan Phua &middot; Interior Designer</p>
+  <p class="ft-m"><a href="https://www.instagram.com/brennanphua/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://wa.me/6593832172" target="_blank" rel="noopener">WhatsApp</a></p>
   <p class="ft-r">&copy; 2026 SG Interior Design</p>
 </footer>
 <script>
