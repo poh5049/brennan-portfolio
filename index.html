@@ -508,14 +508,12 @@ footer{
 @media (hover:none){.work-info{opacity:1;transform:none;padding:28px 14px 14px}.work-name{font-size:11px}.work-type{font-size:9px}.work-num{display:none}}
 
 /* audit round 2: hero line, readable labels, undimmed grid */
-.hero-line{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(17px,1.7vw,24px);letter-spacing:.04em;color:var(--text);opacity:0;animation:fu 1s var(--ease) 2.1s forwards;margin-top:6px}
 .about-label,.works-label,.cf-label{font-size:12px;letter-spacing:.42em;color:#b39a7c}
 .recog-label{font-size:12px;letter-spacing:.4em;color:#a39b90}
 .test-label,.press-label{font-size:12px}
 .nav-right a{font-size:12px;color:#a39b90}
 .work-img{filter:none}
 .work-item:hover .work-img{filter:brightness(1.03)}
-@media(max-width:640px){.hero-text{left:24px;right:24px}.hero-line{font-size:17px}}
 </style>
 
 <meta name="author" content="Brennan Phua">
@@ -597,7 +595,6 @@ footer{
     <div class="hero-text">
       <p class="hero-tag">Senior Interior Designer &middot; Singapore</p>
       <h1 class="hero-name"><span>Brennan Phua</span></h1>
-      <p class="hero-line">Spaces with identity.</p>
     </div>
   </div>
 </section>
@@ -1192,7 +1189,6 @@ document.querySelectorAll('.r, .rf').forEach(el => io.observe(el));
 const heroImg = document.getElementById('heroImg');
 const heroTag = document.querySelector('.hero-tag');
 const heroName = document.querySelector('.hero-name');
-const heroLine = document.querySelector('.hero-line');
 let ticking = false;
 window.addEventListener('scroll', () => {
   if (!ticking) {
@@ -1206,7 +1202,6 @@ window.addEventListener('scroll', () => {
       const shift = (1 - fade) * 22;
       if (heroTag) { heroTag.style.opacity = fade; heroTag.style.transform = `translateY(${-shift}px)`; }
       if (heroName) { heroName.style.opacity = fade; heroName.style.transform = `translateY(${-shift * 1.2}px)`; }
-      if (heroLine) { heroLine.style.opacity = fade; }
       ticking = false;
     });
     ticking = true;
