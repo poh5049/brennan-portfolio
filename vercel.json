@@ -1,4 +1,57 @@
 {
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/:slug/index.html",
+      "destination": "/projects/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/white-tiffin/:path*",
+      "destination": "/projects/bras-basah-rd/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/blue-tiffin/:path*",
+      "destination": "/projects/netheravon-rd/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/geylang/:path*",
+      "destination": "/projects/lor-3-geylang/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/:old(jurong|yishun|727-ang-mo-kio|foundry|tampines-936|tampines-965)/:path*",
+      "destination": "/#works",
+      "permanent": true
+    },
+    {
+      "source": "/projects",
+      "destination": "/#works",
+      "permanent": true
+    },
+    {
+      "source": "/:page(about|reviews|work|works|contact)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:page(about|reviews|work|works|contact).html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:slug(99a-circuit-rd|lor-3-geylang|upp-changi-rd|bras-basah-rd|netheravon-rd|bencoolen-st|lor-8-toa-payoh|tampines-st-96|upp-jurong-rd|upp-jurong-rd-2|circuit-rd|orchard-boulevard|normanton-park|normanton-park-2|choa-chu-kang-ave-3|canberra-drive|hillview-rise|tampines-st-96-2|north-gaia|serangoon-ave-4|west-coast-vale|butterworth-lane|upp-aljunied-rd|serangoon-garden-way|normanton-park-3|choa-chu-kang-ave-3-2|woodlands-cres|ang-mo-kio-ave-6|anchorvale-rd|ang-mo-kio-ave-3|bedok-north-st-3)",
+      "destination": "/projects/:slug/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*).html",
@@ -18,5 +71,8 @@
         }
       ]
     }
-  ]
+  ],
+  "git": {
+    "deploymentEnabled": false
+  }
 }
